@@ -7,13 +7,13 @@ a {
   text-decoration: none;
 }
 body {
-  max-width: 1200px;
+  max-width: 1111px;
   margin: auto !important;
 }
 #nexmoe-background .nexmoe-bg {
   opacity: 0.2;
   background-size: cover;
-  filter: blur(30px);
+  filter: blur(0px);
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -42,6 +42,8 @@ body {
 #nexmoe-header .mdui-drawer {
   left: unset;
   scrollbar-width: none;
+  box-shadow: inset 0px 0px 1rem 0px rgba(18,18,18,0.478);
+  background-color: rgba(255,255,255,0.55);
 }
 #nexmoe-header .mdui-drawer::-webkit-scrollbar {
   display: none;
@@ -319,6 +321,7 @@ body {
   z-index: 1;
   margin: 0;
   font-weight: normal;
+  background-color: rgba(174,255,255,0.42);
 }
 #nexmoe-content .nexmoe-post .nexmoe-post-cover h1:after {
   background-image: -webkit-linear-gradient(to top, rgba(10,17,25,0.2) 10%, rgba(10,17,25,0) 100%);
@@ -871,6 +874,58 @@ article .mdui-btn:hover {
 font.douyin {
   text-shadow: -2px 0 rgba(0,255,255,0.5), 2px 0 rgba(255,0,0,0.5);
   animation: shake-it 0.5s reverse infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+* {
+  cursor: url("/a.png"), auto !important;
+}
+:active {
+  cursor: url("/link.png"), auto !important;
+}
+.cell {
+  color: #4b0001;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.722);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.cell .cellcontext {
+  display: block;
+  position: absolute;
+  top: 250px;
+  right: 558px;
+}
+.cell .fun {
+  position: relative;
+  top: 26px;
+  right: 82px;
+}
+.spinner {
+  width: 4rem;
+  height: 4rem;
+}
+.spinner.spinner3 {
+  border-top: 5px solid #f00;
+  border-right: 3px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: rotation 0.8s linear infinite;
+  animation: rotation 0.8s linear infinite;
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 @-moz-keyframes shake-it {
   0% {

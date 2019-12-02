@@ -8,10 +8,16 @@
 
 $('#searchHover').click(function(){
 	$('#search-main').removeAttr("style");
+	$('#nexmoe-header').css("display","none");
+	$('#searchFigure').css("display","none");
+	$('#nexmoe-content').css("display","none");
 showMsg('点击搜索框上的logo 返回','center');
 });
 
 $('.container .logo').click(function(){
+	$('#nexmoe-header').removeAttr("style");
+	$('#searchFigure').removeAttr("style");
+	$('#nexmoe-content').removeAttr("style");
 	$('#search-main').css("display","none");
 });
 

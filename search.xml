@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>博客第一个测试.md</title>
+      <link href="/2019/11/25/demo/"/>
+      <url>/2019/11/25/demo/</url>
+      
+        <content type="html"><![CDATA[<p>概述</p><a id="more"></a><p>准备工作</p><p>目录</p><p>多级嵌套</p><p>岳母的要求</p><div class="toc"><!-- toc --><ul><li><a href="#zhun-bei-gong-zuo">准备工作</a></li><li><a href="#zhun-bei-gong-zuo-1">准备工作</a></li><li><a href="#zhun-bei-gong-zuo-2">准备工作</a></li><li><a href="#zhun-bei-gong-zuo-3">准备工作</a></li><li><a href="#zhun-bei-gong-zuo-4">准备工作</a></li></ul><!-- tocstop --></div><h2><span id="zhun-bei-gong-zuo">准备工作</span><a href="#zhun-bei-gong-zuo" class="header-anchor">#</a></h2><h2><span id="zhun-bei-gong-zuo">准备工作</span><a href="#zhun-bei-gong-zuo" class="header-anchor">#</a></h2><h2><span id="zhun-bei-gong-zuo">准备工作</span><a href="#zhun-bei-gong-zuo" class="header-anchor">#</a></h2><h2><span id="zhun-bei-gong-zuo">准备工作</span><a href="#zhun-bei-gong-zuo" class="header-anchor">#</a></h2><h2><span id="zhun-bei-gong-zuo">准备工作</span><a href="#zhun-bei-gong-zuo" class="header-anchor">#</a></h2><pre><code class="language-md">tp://yoursite.com/2019/11/25/demo/著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。来源：http://localhost:4000/2019/11/25/demo/</code></pre><p><strong>女生择偶标准（摘自网友）</strong></p><ul><li>要会耍帅耍酷</li><li>要有漂亮的房子</li><li>要有很多钱</li><li>要会心疼人</li></ul><p><strong>男生择偶标准（摘自网友）</strong></p><ol><li>不圆不肥不瘦</li><li>吃的不多</li><li>用的不多</li><li>穿的不多</li></ol><p><strong><em>多级嵌套</em></strong></p><ul><li><strong>岳母的要求</strong><ol><li>有房有车</li><li>工作体面</li><li>收入要高</li></ol></li><li><strong>岳父的要求</strong> (注：有序列表只会读取第一个的索引，后面开始累加)<ol start="3"><li>疼爱女儿</li><li>会做家务</li><li>不抽烟，少喝酒</li></ol></li></ul><p><img src="img/ico/loading.gif" data-original="https://upload-images.jianshu.io/upload_images/6641072-c400c431ccf033d8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我就是我" title="提示"></p><p><a href="https://www.jianshu.com/u/2edcacb129cb" target="_blank" rel="noopener" title="打开我的主页">我的主页</a></p><table><thead><tr><th>表头</th><th>表头</th></tr></thead><tbody><tr><td>单元格</td><td>单元格</td></tr><tr><td>单元格</td><td>单元格</td></tr></tbody></table> <h2><span id="ww">ww </span><a href="#ww" class="header-anchor">#</a></h2>| 左对齐 | 右对齐 | 居中对齐 || :-----| ----: | :----: || 单元格 | 单元格 | 单元格 || 单元格 | 单元格 | 单元格 |]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

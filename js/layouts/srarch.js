@@ -4,21 +4,39 @@
  * CSDN博客:https://blog.csdn.net/u013350495
  * 微信公众号:web-7258
  */
-// 搜索按钮 
 
+// 搜索按钮 
 $('#searchHover').click(function(){
 	$('#search-main').removeAttr("style");
 	$('#nexmoe-header').css("display","none");
 	$('#searchFigure').css("display","none");
 	$('#nexmoe-content').css("display","none");
 showMsg('点击搜索框上的logo 返回','center');
+	
 });
 
+// 隐藏搜索
 $('.container .logo').click(function(){
 	$('#nexmoe-header').removeAttr("style");
 	$('#searchFigure').removeAttr("style");
 	$('#nexmoe-content').removeAttr("style");
 	$('#search-main').css("display","none");
+});
+// 搜索颜色设置
+$('.picker-list1').click(function(){
+	$('.container .input').css("box-shadow","rgba(255, 155, 216, 0.63) 0px 0px 10px 0px inset");
+});
+$('.picker-list2').click(function(){
+	$('.container .input').css("box-shadow","rgba(36, 138, 255, 0.63) 0px 0px 10px 0px inset");
+});
+$('.picker-list3').click(function(){
+	$('.container .input').css("box-shadow","rgba(255, 1, 17, 0.43) 0px 0px 10px 0px inset");
+});
+$('.picker-list4').click(function(){
+	$('.container .input').css("box-shadow","rgba(68, 255, 0, 0.43) 0px 0px 10px 0px inset");
+});
+$('.picker-list5').click(function(){
+	$('.container .input').css("box-shadow","rgba(234, 176, 29, 0.56) 0px 0px 10px 0px inset");
 });
 
 
@@ -48,7 +66,7 @@ var helangSearch={
             pickerList:$(".picker-list"),
             logo:$(".logo"),
             hotList:$(".hot-list"),
-            input:$("#search-input"),
+            input:$("#local-search-input"),
             button:$(".search")
         };
 
@@ -111,19 +129,30 @@ var helangSearch={
             var searchArr=['本站','百度','搜狗','必应','谷歌'];
             //alert(searchArr[_this.searchIndex]+"搜索："+_this.els.input.val());
 			if(searchArr[_this.searchIndex] == '本站'){
-				window.location.href = window.location.protocol+_this.els.input.val();
 			   }
 			if(searchArr[_this.searchIndex] == '百度'){
-				window.location.href = 'https://www.baidu.com/baidu?word='+_this.els.input.val();
+				var temp = _this.els.input.val();
+				if(temp != ""){
+					window.location.href = 'https://www.baidu.com/baidu?word='+_this.els.input.val();
+				   }
 			   }
 			if(searchArr[_this.searchIndex] == '搜狗'){
-				window.location.href = 'https://www.sogou.com/web?query='+_this.els.input.val();
+				var temp = _this.els.input.val();
+				if(temp != ""){
+					window.location.href = 'https://www.sogou.com/web?query='+_this.els.input.val();
+				   }
 			   }
 			if(searchArr[_this.searchIndex] == '必应'){
-				window.location.href = 'https://cn.bing.com/search?q='+_this.els.input.val();
+				var temp = _this.els.input.val();
+				if(temp != ""){
+					window.location.href = 'https://cn.bing.com/search?q='+_this.els.input.val();
+				   }
 			   }
 			if(searchArr[_this.searchIndex] == '谷歌'){
-				window.location.href = 'https://www.google.com/search?q='+_this.els.input.val();
+				var temp = _this.els.input.val();
+				if(temp != ""){
+					window.location.href = 'https://www.google.com/search?q='+_this.els.input.val();
+				   }
 			   }
         });
         /* 文档 */

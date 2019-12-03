@@ -101,7 +101,7 @@ width: 100rem;
     border-left: #ccc solid 1px;
     border-radius: 4px 0 0 4px;
     background-color: aliceblue;
-    box-shadow: inset 0px 0px 10px 0px rgba(43, 155, 209, 0.63);
+    box-shadow: inset 0px 0px 10px 0px rgba(101, 101, 101, 0.63);
 } 
 .container .input>input{
     outline: none;
@@ -148,6 +148,7 @@ width: 100rem;
     box-shadow: 0 1px 5px rgba(0,0,0,.2);
     background-color: #fff;
     display: none;
+z-index: 1;
 }
 .container .input .picker-list>li{
     padding-left: 36px;
@@ -198,9 +199,9 @@ width: 100rem;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 0 4px 4px 0;
-    cursor: pointer;
+    cursor: not-allowed;
 }
-
+// 自适应
 @media all and (max-width: 595px) {
     #search-main #searchform .container{
 	width: 390px;
@@ -209,3 +210,17 @@ width: 100rem;
 	width: 300px;
 }
 }
+
+.container .input #local-search-result{
+    padding: 10px 0;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    margin: 0;
+    line-height: 22px;
+    font-size: 14px;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(0,0,0,.2);
+    background-color: #fff;
+}
+

@@ -201,15 +201,8 @@ z-index: 1;
     border-radius: 0 4px 4px 0;
     cursor: not-allowed;
 }
-// 自适应
-@media all and (max-width: 595px) {
-    #search-main #searchform .container{
-	width: 390px;
-}
-    #search-main #searchform .container .input{
-	width: 300px;
-}
-}
+
+
 
 .container .input #local-search-result{
     padding: 10px 0;
@@ -222,5 +215,13 @@ z-index: 1;
     border-radius: 2px;
     box-shadow: 0 1px 5px rgba(0,0,0,.2);
     background-color: #fff;
+}
+@media all and (max-width: 595px) {
+    #search-main .container{
+	width: 390px;
+}
+    #search-main .input{
+	width: 300px;
+    }
 }
 

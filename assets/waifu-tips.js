@@ -38,8 +38,6 @@ $('.waifu-tool .fui-top').click(function (){
     //window.location = 'https://www.fghrsh.net/';
     //window.location = window.location.protocol+'//'+window.location.hostname
     //window.location = window.location.protocol+'//'+window.location.hostname + ':4000/2019/11/25/demo/#nexmoe-content'
-
-	$('#search-main').css("display","none");
    $('.nexmoe-primary').animate({
           scrollTop: 0
         },
@@ -195,7 +193,7 @@ function initModel(waifuPath){
         
         /* 首次访问加载 指定模型 的 指定材质 */
         
-        var modelId = 1;            // 模型 ID
+        var modelId = 4;            // 模型 ID
         var modelTexturesId = 53    // 材质 ID
         
     } loadModel(modelId, modelTexturesId);

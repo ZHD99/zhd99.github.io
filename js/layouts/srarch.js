@@ -87,7 +87,8 @@ var helangSearch={
                     +'</a>';
 					   
 				   }else{
-                str+='<a href="'+_this.els.zhd99Href+'/categories/'+item+'/" target="_blank">'
+                //str+='<a href="'+_this.els.zhd99Href+'/categories/'+item+'" target="_blank">'
+                str+='<a href="www.zhd99.top/categories/博客" target="_blank">'
                     +'<div class="number" style="color: '+_this.hot.color[index]+'">'+(index+1)+'</div>'
                     +'<div>'+item+'</div>'
                     +'</a>';

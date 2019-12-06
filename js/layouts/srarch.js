@@ -67,7 +67,8 @@ var helangSearch={
             logo:$(".logo"),
             hotList:$(".hot-list"),
             input:$("#local-search-input"),
-            button:$(".search")
+            button:$(".search"),
+			zhd99Href: window.location.host,
         };
 
         /* 设置热门搜索列表 */
@@ -86,7 +87,7 @@ var helangSearch={
                     +'</a>';
 					   
 				   }else{
-                str+='<a href="http://localhost:4000/categories/'+item+'" target="_blank">'
+                str+='<a href="'+_this.els.zhd99Href+'/categories/'+item+'/" target="_blank">'
                     +'<div class="number" style="color: '+_this.hot.color[index]+'">'+(index+1)+'</div>'
                     +'<div>'+item+'</div>'
                     +'</a>';

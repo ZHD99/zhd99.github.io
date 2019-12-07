@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/">
+<url>
+ <loc>https://zhd99.top</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-07</lastmod>
+ <changefreq>always</changefreq>
+</url>
+<url>
+ <loc>https://zhd99.top/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-07</lastmod>
+ <changefreq>always</changefreq>
+</url>
+<url>
+ <loc>https://zhd99.top/about.html</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-07</lastmod>
+ <changefreq>always</changefreq>
+</url>
+<url>
+ <loc>https://zhd99.top/py.html</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-07</lastmod>
+ <changefreq>always</changefreq>
+</url>
+<url>
+ <loc>https://zhd99.top/categories/博客/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-07</lastmod>
+ <changefreq>always</changefreq>
+</url>
+<url>
+ <loc>https://zhd99.top/tags/hexo/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-07</lastmod>
+ <changefreq>always</changefreq>
+</url>
+<url>
+ <loc>https://zhd99.top/archives/2019/11/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-07</lastmod>
+ <changefreq>always</changefreq>
+</url>
+<url>
+ <loc>https://zhd99.top/about.html</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-07</lastmod>
+ <changefreq>always</changefreq>
+</url>
+<url>
+ <loc>https://zhd99.top/2019/11/25/demo/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-07</lastmod>
+ <changefreq>always</changefreq>
+</url>
+<url>
+ <loc>https://zhd99.top/categories/%e5%8d%9a%e5%ae%a2/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-07</lastmod>
+ <changefreq>always</changefreq>
+</url>
+<url>
+ <loc>https://zhd99.top/tags/hexo/</loc>
+ <mobile:mobile type="pc,mobile" />
+ <priority>0.5</priority>
+ <lastmod>2019-12-07</lastmod>
+ <changefreq>always</changefreq>
+</url>
+</urlset>

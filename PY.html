@@ -37,16 +37,18 @@
   
 
   <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-  <meta name="description" content="wwwwwwwwwwwwwwww wwwwwwww">
+  <meta name="description" content="#grid {   display: grid;   grid-template-columns: repeat(auto-fill, 150px);   grid-column-gap: 30px;   grid-row-gap: 30px;   align-items: center;   justify-content: center;   width: 100%; } #grid .ca">
 <meta name="keywords" content="zhd99.cn | zhd99.top">
 <meta property="og:type" content="website">
 <meta property="og:title" content="py">
 <meta property="og:url" content="http:&#x2F;&#x2F;www.zhd99.top&#x2F;PY.html">
 <meta property="og:site_name" content="zhd99">
-<meta property="og:description" content="wwwwwwwwwwwwwwww wwwwwwww">
+<meta property="og:description" content="#grid {   display: grid;   grid-template-columns: repeat(auto-fill, 150px);   grid-column-gap: 30px;   grid-row-gap: 30px;   align-items: center;   justify-content: center;   width: 100%; } #grid .ca">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-26T10:01:49.249Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.zhd99.top&#x2F;img">
+<meta property="og:updated_time" content="2019-12-13T09:11:35.246Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;www.zhd99.top&#x2F;img">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
    
@@ -54,7 +56,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1576062879060">
+  <link rel="stylesheet" href="/css/style.css?v=1576242217780">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -173,6 +175,21 @@ for (var j=0; j<tli.length; j++){
 <!-- js 启动 -->
 <script>
 $(function() {
+	// 离开网页提示
+	var OriginTitile = document.title;
+    var titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)我藏好了哦~ ' + OriginTitile;
+            clearTimeout(titleTime);
+        }
+        else {
+            document.title = '(*´∇｀*) 被你发现啦~ ' + OriginTitile;
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            }, 2000);
+        }
+    });
 	// 隐藏 全部
 	//$('body').css("overflow","hidden");
 	// jq 设置属性
@@ -211,8 +228,12 @@ $(window).load(function(){
 	$('.vcontrol').css("padding-right","66px");
 	$('.vctrl').css("padding-right","66px");
 	$('#veditor').removeAttr("placeholder");
-	$("#veditor").attr("placeholder","输入前请确认 <昵称> <邮箱> <你的网站> 是否已填写~");
-	$(".vlist").after("<p></br></p><p></br></p><p></br></p><p></br></p><p>博客初步建设完成&copy; </p>");
+	$("#veditor").attr("placeholder","输入前请确认 <昵称> <邮箱> <你的网站> 是否已填写，支持markdown 格式编写 ");
+	$('.v .vwrap .vheader .vinput:nth-child(3)').removeAttr("placeholder");
+	$(".v .vwrap .vheader .vinput:nth-child(3)").attr("placeholder","你的HOME(例：https://www.baidu.com)");
+	$(".info").after("<p></br></p><p></br></p><p></br></p><p></br></p><p>博客初步建设完成&copy; </p>");
+	
+	
 	
 });
 </script>
@@ -239,7 +260,7 @@ $(window).load(function(){
 	</a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>1</div>
+        <div><span>文章</span>2</div>
         <div><span>标签</span>1</div>
         <div><span>分类</span>1</div>
     </div>
@@ -285,7 +306,7 @@ $(window).load(function(){
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/博客/">博客</a>
-          <span class="category-list-count">1</span>
+          <span class="category-list-count">2</span>
         </li>
 
         
@@ -449,9 +470,128 @@ $(window).load(function(){
 
 <div class="nexmoe-post">
   <article class="nexmoe-py">
-    <p>wwww<br>wwww<br>wwww<br>wwww</p>
-<p>wwww<br>wwww</p>
+    <style>
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#grid .card {
+  background-color: #ccc;
+  width: 150px;
+  height: 150px;
+  transition: all 0.1s ease;
+  border-radius: 3px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  cursor: pointer;
+}
+#grid .card:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  z-index: 2;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+#grid .card:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+#grid .card .reflection {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  transition: all 0.1s ease;
+  opacity: 0;
+  mix-blend-mode: soft-light;
+}
+#grid .card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: grayscale(0.65);
+          filter: grayscale(0.65);
+  transition: all 0.3s ease;
+}
+    </style>
 
+<p> &nbsp</p><p> &nbsp</p><p> &nbsp</p>
+<div class="grid" id="grid">
+  <photo-card img="img/jq22-1.png" link="#"></photo-card>
+1111
+  <photo-card img="img/jq22-2.png" link="#"></photo-card>
+  <photo-card img="img/jq22-3.png" link="#"></photo-card>
+  <photo-card img="img/jq22-4.png" link="#"></photo-card>
+  <photo-card img="img/jq22-4.png" link="#"></photo-card>
+  <photo-card img="img/jq22-3.png" link="#"></photo-card>
+  <photo-card img="img/jq22-2.png" link="#"></photo-card>
+  <photo-card img="img/jq22-1.png" link="#"></photo-card>
+</div>
+
+<script src="https://www.jq22.com/jquery/vue.min.js"></script>
+<script>
+Vue.component("photo-card", {
+  template: `<a class="card"
+                :href="link"
+                target="_blank"
+                ref="card"
+                @mousemove="move"
+                @mouseleave="leave"
+                @mouseover="over">
+                  <div class="reflection" ref="refl"></div>
+                  <img :src="img"/>
+            </a>`,
+  props: ["img", "link"],
+  mounted() {},
+  data: () => ({
+    debounce: null }),
+  methods: {
+    over() {
+      const refl = this.$refs.refl;
+      refl.style.opacity = 1;
+    },
+    leave() {
+      const card = this.$refs.card;
+      const refl = this.$refs.refl;
+      card.style.transform = `perspective(500px) scale(1)`;
+      refl.style.opacity = 0;
+    },
+
+    move() {
+      const card = this.$refs.card;
+      const refl = this.$refs.refl;
+
+      const relX = (event.offsetX + 1) / card.offsetWidth;
+      const relY = (event.offsetY + 1) / card.offsetHeight;
+      const rotY = `rotateY(${(relX - 0.5) * 60}deg)`;
+      const rotX = `rotateX(${(relY - 0.5) * -60}deg)`;
+      card.style.transform = `perspective(500px) scale(2) ${rotY} ${rotX}`;
+
+      const lightX = this.scale(relX, 0, 1, 150, -50);
+      const lightY = this.scale(relY, 0, 1, 30, -100);
+      const lightConstrain = Math.min(Math.max(relY, 0.3), 0.7);
+      const lightOpacity = this.scale(lightConstrain, 0.3, 1, 1, 0) * 255;
+      const lightShade = `rgba(${lightOpacity}, ${lightOpacity}, ${lightOpacity}, 1)`;
+      const lightShadeBlack = `rgba(0, 0, 0, 1)`;
+      refl.style.backgroundImage = `radial-gradient(circle at ${lightX}% ${lightY}%, ${lightShade} 20%, ${lightShadeBlack})`;
+    },
+    scale: (val, inMin, inMax, outMin, outMax) =>
+    outMin + (val - inMin) * (outMax - outMin) / (inMax - inMin) } });
+
+
+
+const app = new Vue({
+  el: "#grid" });
+</script>
   </article>
   
 <section class="nexmoe-comment">
@@ -462,7 +602,7 @@ $(window).load(function(){
     new Valine({
         el: '.valine',
         appId: 'jNrzXxvqR3NhebnE7swyQBFp-gzGzoHsz',
-        appKey: 'iqXsTlkThMqeaKdhYcgajztG'
+        appKey: 'iqXsTlkThMqeaKdhYcgajztG',
     })
 </script>
 </section>
@@ -484,7 +624,7 @@ $(window).load(function(){
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1576062879064"></script>
+<script src="/js/app.js?v=1576242217785"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

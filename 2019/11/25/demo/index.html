@@ -46,7 +46,7 @@
 <meta property="og:description" content="Markdown 的使用和快捷键方法.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;www.zhd99.top&#x2F;2019&#x2F;11&#x2F;25&#x2F;demo&#x2F;img&#x2F;ico&#x2F;loading.gif">
-<meta property="og:updated_time" content="2019-12-04T07:00:57.242Z">
+<meta property="og:updated_time" content="2019-12-13T09:07:03.669Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;www.zhd99.top&#x2F;2019&#x2F;11&#x2F;25&#x2F;demo&#x2F;img&#x2F;ico&#x2F;loading.gif">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
@@ -56,7 +56,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1576062878915">
+  <link rel="stylesheet" href="/css/style.css?v=1576242218033">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -175,6 +175,21 @@ for (var j=0; j<tli.length; j++){
 <!-- js 启动 -->
 <script>
 $(function() {
+	// 离开网页提示
+	var OriginTitile = document.title;
+    var titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)我藏好了哦~ ' + OriginTitile;
+            clearTimeout(titleTime);
+        }
+        else {
+            document.title = '(*´∇｀*) 被你发现啦~ ' + OriginTitile;
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            }, 2000);
+        }
+    });
 	// 隐藏 全部
 	//$('body').css("overflow","hidden");
 	// jq 设置属性
@@ -213,8 +228,12 @@ $(window).load(function(){
 	$('.vcontrol').css("padding-right","66px");
 	$('.vctrl').css("padding-right","66px");
 	$('#veditor').removeAttr("placeholder");
-	$("#veditor").attr("placeholder","输入前请确认 <昵称> <邮箱> <你的网站> 是否已填写~");
-	$(".vlist").after("<p></br></p><p></br></p><p></br></p><p></br></p><p>博客初步建设完成&copy; </p>");
+	$("#veditor").attr("placeholder","输入前请确认 <昵称> <邮箱> <你的网站> 是否已填写，支持markdown 格式编写 ");
+	$('.v .vwrap .vheader .vinput:nth-child(3)').removeAttr("placeholder");
+	$(".v .vwrap .vheader .vinput:nth-child(3)").attr("placeholder","你的HOME(例：https://www.baidu.com)");
+	$(".info").after("<p></br></p><p></br></p><p></br></p><p></br></p><p>博客初步建设完成&copy; </p>");
+	
+	
 	
 });
 </script>
@@ -241,7 +260,7 @@ $(window).load(function(){
 	</a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>1</div>
+        <div><span>文章</span>2</div>
         <div><span>标签</span>1</div>
         <div><span>分类</span>1</div>
     </div>
@@ -287,7 +306,7 @@ $(window).load(function(){
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/博客/">博客</a>
-          <span class="category-list-count">1</span>
+          <span class="category-list-count">2</span>
         </li>
 
         
@@ -444,6 +463,7 @@ $(window).load(function(){
 <!-- tocstop -->
 
 </div>
+
 
 <h1><span id="markdown"><strong>markdown</strong></span><a href="#markdown" class="header-anchor">#</a></h1><blockquote>
 <p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档<br>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。<br>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong>。</p>
@@ -833,7 +853,7 @@ $H_{2SO_4}$</code></pre>
     new Valine({
         el: '.valine',
         appId: 'jNrzXxvqR3NhebnE7swyQBFp-gzGzoHsz',
-        appKey: 'iqXsTlkThMqeaKdhYcgajztG'
+        appKey: 'iqXsTlkThMqeaKdhYcgajztG',
     })
 </script>
 </section>
@@ -854,7 +874,7 @@ $H_{2SO_4}$</code></pre>
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1576062878919"></script>
+<script src="/js/app.js?v=1576242218036"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

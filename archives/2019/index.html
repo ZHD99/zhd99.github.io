@@ -53,7 +53,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1576242217796">
+  <link rel="stylesheet" href="/css/style.css?v=1576477470019">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -172,6 +172,19 @@ for (var j=0; j<tli.length; j++){
 <!-- js 启动 -->
 <script>
 $(function() {
+	// 百度推送
+	var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+
+
 	// 离开网页提示
 	var OriginTitile = document.title;
     var titleTime;
@@ -194,17 +207,6 @@ $(function() {
 });
 //$(window).load(funtion(){});//页面加载完之后自动加载
 $(window).load(function(){
-	// 百度推送
-	var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
 
 	// 设置 overflow 可显示
 	//$("body").attr("overflow","auto");
@@ -496,7 +498,7 @@ $(window).load(function(){
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1576242217799"></script>
+<script src="/js/app.js?v=1576477470021"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

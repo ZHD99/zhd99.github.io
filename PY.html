@@ -46,7 +46,7 @@
 <meta property="og:description" content="#grid {   display: grid;   grid-template-columns: repeat(auto-fill, 150px);   grid-column-gap: 30px;   grid-row-gap: 30px;   align-items: center;   justify-content: center;   width: 100%; } #grid .ca">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;www.zhd99.top&#x2F;img">
-<meta property="og:updated_time" content="2019-12-16T06:20:21.640Z">
+<meta property="og:updated_time" content="2019-12-16T07:44:26.340Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;www.zhd99.top&#x2F;img">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
@@ -56,7 +56,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1576477470011">
+  <link rel="stylesheet" href="/css/style.css?v=1577090678271">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -147,6 +147,7 @@
 		</span>
 	</div>
 </div>
+	
 <!-- 旧版
 <div class="cell">
 	<div class="cellcontext"> 
@@ -175,6 +176,11 @@ for (var j=0; j<tli.length; j++){
 <!-- js 启动 -->
 <script>
 $(function() {
+	// 淡入淡出
+	$('#nexmoe-header').css("display","none");
+	$('#nexmoe-content').css("display","none");
+	$('#searchFigure').css("display","none");
+	$('#searchHover span').css("color","#ff6767");
 	// 百度推送
 	var bp = document.createElement('script');
     var curProtocol = window.location.protocol.split(':')[0];
@@ -215,9 +221,6 @@ $(window).load(function(){
 	//$("body").attr("overflow","auto");
 	//$("body").removeAttr("style");.delay(timeout).fadeTo(200, 0)
 	
-	// 左侧滚动条
-	$('#drawer').scrollTop(280);
-	
 	// 代码高亮背景
 	$('.hljs').css("background","rgb(255, 190, 145)");
 	$('.hljs').css("color","#647fb3");
@@ -235,8 +238,14 @@ $(window).load(function(){
 	$(".v .vwrap .vheader .vinput:nth-child(3)").attr("placeholder","你的HOME(例：https://www.baidu.com)");
 	$(".info").after("<p></br></p><p></br></p><p></br></p><p></br></p><p>博客初步建设完成&copy; </p>");
 	
+	//页面淡入淡出
+	$('#nexmoe-header').fadeIn(6000);
+	$('#nexmoe-content').fadeIn(3000);
+	$('#searchFigure').fadeIn(500);
+	$('#searchHover span').css("color","rgba(0, 0, 0, 0.59)");
 	
-	
+	// 左侧滚动条
+	$('#drawer').scrollTop(280);
 });
 </script>
 <!-- end -->
@@ -262,7 +271,7 @@ $(window).load(function(){
 	</a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>2</div>
+        <div><span>文章</span>25</div>
         <div><span>标签</span>1</div>
         <div><span>分类</span>1</div>
     </div>
@@ -282,10 +291,10 @@ $(window).load(function(){
             </div>
         </a>
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的友链">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="分享链接">
             <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
             <div class="mdui-list-item-content">
-                我的友链
+                分享链接
             </div>
         </a>
         
@@ -308,7 +317,7 @@ $(window).load(function(){
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/博客/">博客</a>
-          <span class="category-list-count">2</span>
+          <span class="category-list-count">25</span>
         </li>
 
         
@@ -524,9 +533,9 @@ $(window).load(function(){
           filter: grayscale(0.65);
   transition: all 0.3s ease;
 }
-    </style>
 
-<p> &nbsp</p><p> &nbsp</p><p> &nbsp</p>
+</style>
+<p> &nbsp</p>
 <div class="grid" id="grid">
   <photo-card img="img/jq22-1.png" link></photo-card>
   1
@@ -633,7 +642,7 @@ const app = new Vue({
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1576477470014"></script>
+<script src="/js/app.js?v=1577090678276"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

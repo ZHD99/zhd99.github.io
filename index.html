@@ -1,33 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="baidu-site-verification" content="sW9c6kKFwr" />
-<meta name="sogou_site_verification" content="R3psDb4fvh"/>
-<meta name="msvalidate.01" content="BC6EEEB6F7FBE40A3BD1BE1286126F4C" />
-<meta name="360-site-verification" content="4576a5ac365928655abc9031e97f7653" />
-<!-- 网站加载条 -->
-<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-<script   src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
- 
-<!-- 网页加载效果 css-->
-<link rel="stylesheet" href="/css/loading.css">
-
-<!-- 网页看板娘 css -->
-    <link rel="stylesheet" type="text/css" href="/assets/waifu.css"/>
-
-<!-- 搜索按钮 css -->
-    <link rel="stylesheet" type="text/css" href="/css/ss.css"/>
-<!-- 搜索页面 css -->
-<!-- 消息提示 css -->
-    <link rel="stylesheet" type="text/css" href="/css/jQueryMessage.css"/>
-
-<!-- 右击菜单 -->
-    <link rel="stylesheet" type="text/css" href="/css/MunRight.css"/>
-
-<!-- 滚动条 -->
-    <link rel="stylesheet" type="text/css" href="/css/MunRight.css"/>
-
+	
   
   <title>zhd99</title>
   <meta charset="UTF-8">
@@ -36,6 +10,24 @@
   
   
 
+<!-- ZHDconfig head -->
+	<!-- 网站加载条 -->
+	<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+	<link href="https://cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+	<!-- 网页加载效果 css-->
+	<link rel="stylesheet" href="/css/loading.css">
+	
+	<!-- 网页看板娘 css -->
+		<link rel="stylesheet" type="text/css" href="/assets/waifu.css"/>
+
+	<!-- 搜索按钮 css -->
+		<link rel="stylesheet" type="text/css" href="/css/ss.css"/>
+	<!-- 搜索页面 css -->
+	<!-- 消息提示 css -->
+		<link rel="stylesheet" type="text/css" href="/css/jQueryMessage.css"/>
+<!-- END -->
+	
   <link rel="shortcut icon" href="/favicon.png" type="image/png" />
   <meta name="description" content="最好的收藏,不过是分享">
 <meta name="keywords" content="zhd99.cn | zhd99.top">
@@ -53,32 +45,16 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1577637329508">
+  <link rel="stylesheet" href="/css/style.css?v=1578042343565">
+	
 </head>
 
 <body class="mdui-drawer-body-left">
-<!-- 置顶top_button htm -->
-<div id="tpDing" style="display: none;">
-	<a href="#nexmoe-header" class="rocket-button">
-    <div class="default">点我上去</div>
-    <div class="success">
-        <svg>
-			<use xlink:href="#check"/>
-        </svg>
-        <div>回到顶部</div>
-    </div>
-    <div class="animation">
-        <div class="rocket">
-            <svg>
-                <use xlink:href="#rocket" />
-            </svg>
-        </div>
-        <div class="smoke">
-            <i></i><i></i><i></i><i></i><i></i><i></i>
-        </div>
-    </div>
-	</a>
-</div>
+	
+<!-- ZHDconfig main -->
+	
+	<!-- loading -->
+	  
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11" id="check">
         <polyline stroke="currentColor" points="1 5.5 5 9.5 12 1.5"></polyline>
@@ -151,6 +127,7 @@
 		<div class="spinner spinner3"></div>
 		<div class="fun">努力的加载img/ico中耐性的等待哦~</div>
 	</div>
+
 </div>
 -->
 	
@@ -168,211 +145,36 @@ for (var j=0; j<tli.length; j++){
 	tli[j].style.display=j==n?"block":"none";
 	}
 }
-</script>
-
-<!-- js 启动 -->
-<script>
-$(function() {
-	// 淡入淡出
-	$('#nexmoe-header').css("display","none");
-	$('#nexmoe-content').css("display","none");
-	$('#searchFigure').css("display","none");
-	$('#searchHover span').css("color","#ff6767");
-	// 百度推送
-	var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-
-
-	// 离开网页提示
-	var OriginTitile = document.title;
-    var titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '(つェ⊂)我藏好了哦~ ' + OriginTitile;
-            clearTimeout(titleTime);
-        }
-        else {
-            document.title = '(*´∇｀*) 被你发现啦~ ' + OriginTitile;
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            }, 2000);
-        }
-    });
-	// 隐藏 全部
-	//$('body').css("overflow","hidden");
-	// jq 设置属性
-	//$("body").attr("width","180");
-});
-//$(window).load(funtion(){});//页面加载完之后自动加载
-$(window).load(function(){
-
-	// 设置 overflow 可显示
-	//$("body").attr("overflow","auto");
-	//$("body").removeAttr("style");.delay(timeout).fadeTo(200, 0)
 	
-	// 代码高亮背景
-	$('.hljs').css("background","rgb(255, 243, 234)");
-	$('.hljs').css("color","#647fb3");
+
+$(window).load(function(){
 	// 加载完成显示页面
 	$('.Pomloader').css("display","none"); 
-	// 去valine版权
-	$('.info').css("display","none");
-	// 去valine位移
-	$('.vmeta').css("padding-right","66px");
-	$('.vcontrol').css("padding-right","66px");
-	$('.vctrl').css("padding-right","66px");
-	$('#veditor').removeAttr("placeholder");
-	$("#veditor").attr("placeholder","输入前请确认 <昵称> <邮箱> <你的网站> 是否已填写，支持markdown 格式编写 ");
-	$('.v .vwrap .vheader .vinput:nth-child(3)').removeAttr("placeholder");
-	$(".v .vwrap .vheader .vinput:nth-child(3)").attr("placeholder","你的HOME(例：https://www.baidu.com)");
-	$(".info").after("<p></br></p><p></br></p><p></br></p><p></br></p><p>博客初步建设完成&copy; </p>");
-	
-	//页面淡入淡出
-	$('#nexmoe-header').fadeIn(6000);
-	$('#nexmoe-content').fadeIn(3000);
-	$('#searchFigure').fadeIn(500);
-	$('#searchHover span').css("color","rgba(0, 0, 0, 0.59)");
-	
-	// 左侧滚动条
-	$('#drawer').scrollTop(280);
 });
+
 </script>
-<!-- end -->
-
-  
-  <div id="nexmoe-background">
-    <div class="nexmoe-bg" style="background-image: url(https://img.xjh.me/random_img.php?type=bg&amp;ctype=nature&amp;return=302)"></div>
-    <div class="mdui-appbar mdui-shadow-0">
-      <div class="mdui-toolbar">
-        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
-        <div class="mdui-toolbar-spacer"></div>
-        <!--<a href="javascript:;" target="_blank" rel="noopener" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
-        <a href="/" title="Hxx" class="mdui-btn mdui-btn-icon"><img src="/img/g.jpg"></a>
-	</div>
+	<!-- 网页看板娘 -->
+	  
+<!-- live2D 娘 -->
+<div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-top"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
     </div>
-  </div>
-  <div id="nexmoe-header">
-      <div class="nexmoe-drawer mdui-drawer" id="drawer">
-    <div class="nexmoe-avatar mdui-ripple">
-        <a href="/" title="Hxx">
-			<img src="/img/g.jpg" alt="Hxx">
-		<div id="three-container"></div> 
-	</a>
-    </div>
-    <div class="nexmoe-count">
-        <div><span>文章</span>3</div>
-        <div><span>标签</span>3</div>
-        <div><span>分类</span>2</div>
-    </div>
-    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
-        
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
-            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
-            <div class="mdui-list-item-content">
-                回到首页
-            </div>
-        </a>
-        
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
-            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
-            <div class="mdui-list-item-content">
-                关于博客
-            </div>
-        </a>
-        
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="分享链接">
-            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
-            <div class="mdui-list-item-content">
-                分享链接
-            </div>
-        </a>
-        
-    </ul>
-    <aside id="nexmoe-sidebar">
-  
-  
-  <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">文章分类</h3>
-    <div class="nexmoe-widget">
-
-      <ul class="category-list">
-
-        
-
-
-        
-
-        
-
-        <li class="category-list-item">
-          <a class="category-list-link" href="/categories/GitHub/">GitHub</a>
-          <span class="category-list-count">1</span>
-        </li>
-
-        
-
-        <li class="category-list-item">
-          <a class="category-list-link" href="/categories/博客/">博客</a>
-          <span class="category-list-count">1</span>
-        </li>
-
-        
-      </ul>
-
-    </div>
-  </div>
-
-
-  
-  
-  <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">标签</h3>
-    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
-      <a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
-    </div>
-    
-  </div>
-
-  
-  
-  <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">文章归档</h3>
-    <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-  <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">社交按钮</h3>
-    <div class="nexmoe-widget nexmoe-social">
-        <a class="mdui-ripple" href="https://space.bilibili.com/" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
-            <i class="nexmoefont icon-bilibili"></i>
-        </a><a class="mdui-ripple" href="https://github.com/ZHD99/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
-            <i class="nexmoefont icon-github"></i>
-        </a>
-    </div>
-</div>
-  
-</aside>
-    <div class="nexmoe-copyright">
-        &copy; 2019 Hxx</br>
-        Powered by <a href="/about.html">Hxx</a>
-	 基于 Hexo & nexmoe开发
-    </div>
-</div><!-- .nexmoe-drawer -->
-  </div>
-
-<!-- 搜索按钮 -->
+    <script src="/assets/waifu-tips.js"></script>
+    <script src="/assets/live2d.js"></script>
+    <script type="text/javascript">initModel("/assets/")</script>
+	<!-- 搜索 -->
+	  <!-- 搜索按钮 -->
 <!-- partial:index.partial.html -->
 <div id="searchFigure">
   <div id="searchHover">
@@ -428,17 +230,256 @@ $(window).load(function(){
      searchFunc(path, 'local-search-input', 'local-search-result');
 </script>
 <!-- END -->
+	<!-- 用户体验特效 -->
+	  <script>
+$(function() {
 
-<!-- 右击菜单 -->
-<script src="/js/layouts/Rightmenu.js" type="text/javascript" charset="utf-8"></script>
-<!-- END -->
+
+	// 淡入淡出
+	$('#nexmoe-header').css("display","none");
+	$('#nexmoe-content').css("display","none");
+	$('#searchFigure').css("display","none");
+	$('#searchHover span').css("color","#ff6767");
+
+	// 离开网页提示
+	var OriginTitile = document.title;
+    var titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '震惊！某女子因为一些不言启齿的(つェ⊂)~ ' + OriginTitile;
+            clearTimeout(titleTime);
+        }
+        else {
+            document.title = '(*´∇｀*) 被你发现啦~ ' + OriginTitile;
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            }, 2000);
+        }
+    });
+
+});
+//$(window).load(funtion(){});//页面加载完之后自动加载
+$(window).load(function(){
+	
+	// 代码高亮背景
+	$('.hljs').css("background","rgb(255, 243, 234)");
+	$('.hljs').css("color","#647fb3");
+	//页面淡入淡出
+	$('#nexmoe-header').fadeIn(6000);
+	$('#nexmoe-content').fadeIn(3000);
+	$('#searchFigure').fadeIn(500);
+
+	$('#searchHover span').css("color","rgba(0, 0, 0, 0.59)");
+	
+	// 左侧滚动条
+	$('#drawer').scrollTop(280);
+	
+	
+	
+	// 随机 变化的淡入
+var arr = ['1s ease 0s 1 normal forwards running action_translateY','1s linear 0s 1 normal forwards running action_skew','1s ease 0s 1 normal forwards running action_scale','1s linear 0s 1 normal forwards running action_rotateY','1s cubic-bezier(0, 3.53, 0.29, -1.58) 0s 1 normal forwards running action_scale']; 
+var index = Math.floor((Math.random()*arr.length)); 
+	// 随机main页面
+	$('.nexmoe-post').css("animation",arr[index]);
+	// 随机search页面
+	$('#searchform').css("animation",'1s ease 0s 1 normal forwards running action_translateY');
+	
+}); 
+</script>
+	
+	
+<!-- ZHDconfig main END -->
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://img.xjh.me/random_img.php?type=bg&amp;ctype=nature&amp;return=302)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" target="_blank" rel="noopener" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="Hxx" class="mdui-btn mdui-btn-icon"><img src="/img/g.jpg"></a>
+	</div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="Hxx">
+			<img src="/img/g.jpg" alt="Hxx">
+		<div id="three-container"></div> 
+	</a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>5</div>
+        <div><span>标签</span>5</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="分享链接">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                分享链接
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/GitHub/">GitHub</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/博客/">博客</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/操作系统/">操作系统</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">标签</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
+      <a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/MySql/" style="font-size: 10px;">MySql</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/ZHD99/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 Hxx</br>
+        Powered by <a href="/about.html">Hxx</a>
+	 基于 Hexo &amp; nexmoe
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+
 
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
         <section class="nexmoe-posts" id="brand-waterfall">
     
     <div class="nexmoe-post">
-        <a href="/2019/12/30/20191230/">
+        <a href="/2019/12/31/1912311726/">
+            <div class="nexmoe-post-cover mdui-ripple"> 
+                
+                <img src="https://img.xjh.me/desktop/bg/nature/63288664_p0.jpg" alt="windows 禁止更新的问题">
+                
+                <h1>windows 禁止更新的问题</h1>
+            </div>
+        </a>
+        <div class="nexmoe-post-meta">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月31日</a>
+            <a><i class="nexmoefont icon-areachart"></i>180 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+            
+                <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
+            
+            
+                <a class="nexmoefont icon-tag-fill -link" href="/tags/Windows/" rel="tag">Windows</a>
+            
+        </div>
+        <article>
+            
+            <p>windows 禁止更新的问题</p>
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2019/12/30/1912301045/">
+            <div class="nexmoe-post-cover mdui-ripple"> 
+                
+                <img src="https://img.xjh.me/desktop/bg/nature/64606548_p0.jpg" alt="windows My sql 解压版安装方法">
+                
+                <h1>windows My sql 解压版安装方法</h1>
+            </div>
+        </a>
+        <div class="nexmoe-post-meta">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月30日</a>
+            <a><i class="nexmoefont icon-areachart"></i>994 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+            
+            
+                <a class="nexmoefont icon-tag-fill -link" href="/tags/MySql/" rel="tag">MySql</a>
+            
+        </div>
+        <article>
+            
+            <p>My sql 解压版安装方法 <a href="https://www.cnblogs.com/shenliang123/p/3203546.html" target="_blank" rel="noopener">相关链接</a>  <a href="https://www.cnblogs.com/ayyl/p/5978418.html" target="_blank" rel="noopener">相关链接</a>  </p>
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2019/12/30/1912300034/">
             <div class="nexmoe-post-cover mdui-ripple"> 
                 
                 <img src="https://img.xjh.me/desktop/bg/nature/64658536_p0.jpg" alt="java环境变量配置">
@@ -448,7 +489,7 @@ $(window).load(function(){
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月30日</a>
-            <a><i class="nexmoefont icon-areachart"></i>155 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>163 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
             
@@ -463,7 +504,7 @@ $(window).load(function(){
     </div>
     
     <div class="nexmoe-post">
-        <a href="/2019/12/29/20191229/">
+        <a href="/2019/12/29/1912292348/">
             <div class="nexmoe-post-cover mdui-ripple"> 
                 
                 <img src="https://img.xjh.me/desktop/bg/nature/65057010_p0.jpg" alt="git Please tell me who you are.">
@@ -539,7 +580,7 @@ $(window).load(function(){
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1577637329513"></script>
+<script src="/js/app.js?v=1578042343569"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
@@ -553,24 +594,5 @@ $(window).load(function(){
 
 
 
-<!-- live2D 娘 -->
-<div class="waifu">
-        <div class="waifu-tips"></div>
-        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
-        <div class="waifu-tool">
-            <span class="fui-home"></span>
-            <span class="fui-top"></span>
-            <span class="fui-chat"></span>
-            <span class="fui-eye"></span>
-            <span class="fui-user"></span>
-            <span class="fui-photo"></span>
-            <span class="fui-info-circle"></span>
-            <span class="fui-cross"></span>
-        </div>
-    </div>
-    <script src="/assets/waifu-tips.js"></script>
-    <script src="/assets/live2d.js"></script>
-    <script type="text/javascript">initModel("/assets/")</script>
-<!-- end -->	
-<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script></body>
+</body>
 </html>

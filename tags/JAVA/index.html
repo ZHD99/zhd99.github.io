@@ -1,30 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="baidu-site-verification" content="sW9c6kKFwr" />
-<meta name="sogou_site_verification" content="R3psDb4fvh"/>
-<meta name="msvalidate.01" content="BC6EEEB6F7FBE40A3BD1BE1286126F4C" />
-<meta name="360-site-verification" content="4576a5ac365928655abc9031e97f7653" />
-<!-- 网站加载条 -->
-<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-<script   src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
- 
-<!-- 网页加载效果 css-->
-<link rel="stylesheet" href="/css/loading.css">
-
-<!-- 网页看板娘 css -->
-    <link rel="stylesheet" type="text/css" href="/assets/waifu.css"/>
-
-<!-- 搜索按钮 css -->
-    <link rel="stylesheet" type="text/css" href="/css/ss.css"/>
-<!-- 搜索页面 css -->
-<!-- 消息提示 css -->
-    <link rel="stylesheet" type="text/css" href="/css/jQueryMessage.css"/>
-
-<!-- 滚动条 -->
-    <link rel="stylesheet" type="text/css" href="/css/MunRight.css"/>
-
+	
   
   <title>标签：JAVA - zhd99</title>
   <meta charset="UTF-8">
@@ -33,11 +10,23 @@
   
   
 
+<!-- ZHDconfig head -->
+	<!-- 网站加载条 -->
+	<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+	<link href="https://cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+	<!-- 网页加载效果 css-->
+	<link rel="stylesheet" href="/css/loading.css">
 	
-	<!-- ZHDconfig -->
-	
-	<!-- END -->
-	
+	<!-- 网页看板娘 css -->
+		<link rel="stylesheet" type="text/css" href="/assets/waifu.css"/>
+
+	<!-- 搜索按钮 css -->
+		<link rel="stylesheet" type="text/css" href="/css/ss.css"/>
+	<!-- 搜索页面 css -->
+	<!-- 消息提示 css -->
+		<link rel="stylesheet" type="text/css" href="/css/jQueryMessage.css"/>
+<!-- END -->
 	
   <link rel="shortcut icon" href="/favicon.png" type="image/png" />
   <meta name="description" content="最好的收藏,不过是分享">
@@ -56,32 +45,16 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1578152146068">
+  <link rel="stylesheet" href="/css/style.css?v=1578154148568">
+	
 </head>
 
 <body class="mdui-drawer-body-left">
-<!-- 置顶top_button htm -->
-<div id="tpDing" style="display: none;">
-	<a href="#nexmoe-header" class="rocket-button">
-    <div class="default">点我上去</div>
-    <div class="success">
-        <svg>
-			<use xlink:href="#check"/>
-        </svg>
-        <div>回到顶部</div>
-    </div>
-    <div class="animation">
-        <div class="rocket">
-            <svg>
-                <use xlink:href="#rocket" />
-            </svg>
-        </div>
-        <div class="smoke">
-            <i></i><i></i><i></i><i></i><i></i><i></i>
-        </div>
-    </div>
-	</a>
-</div>
+	
+<!-- ZHDconfig main -->
+	
+	<!-- loading -->
+	  
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11" id="check">
         <polyline stroke="currentColor" points="1 5.5 5 9.5 12 1.5"></polyline>
@@ -172,28 +145,101 @@ for (var j=0; j<tli.length; j++){
 	tli[j].style.display=j==n?"block":"none";
 	}
 }
-</script>
+	
 
-<!-- js 启动 -->
+$(window).load(function(){
+	// 加载完成显示页面
+	$('.Pomloader').css("display","none"); 
+});
+
+</script>
+	<!-- 网页看板娘 -->
+	  
+<!-- live2D 娘 -->
+<div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-top"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+    <script src="/assets/waifu-tips.js"></script>
+    <script src="/assets/live2d.js"></script>
+    <script type="text/javascript">initModel("/assets/")</script>
+	<!-- 搜索 -->
+	  <!-- 搜索按钮 -->
+<!-- partial:index.partial.html -->
+<div id="searchFigure">
+  <div id="searchHover">
+    <span>本站搜索~</span>
+    <span>可各种浏览器搜索！</span>
+  </div>
+</div>
+
+
+<!-- 消息框 -->
+<script src="/js/layouts/jQueryMessage.js"></script>
+<!-- 搜索框 -->
+<div id="search-main" style="display: none;">
+	<form id="searchform" action="#" target="_blank">
+<div class="container">
+    <div class="logo" style="background-image: url(/img/search/favicon.png)"></div>
+    <div class="input">
+        <input type="text" placeholder="请输入要搜索的内容" autocomplete="off" id="local-search-input">
+        <div class="picker">本站</div>
+        <ul class="picker-list">
+            <li class="picker-list1" style="background-image: url(/img/search/favicon.png)" data-logo="favicon.png">本站</li>
+            <li class="picker-list2" style="background-image: url(/img/search/ico_baidu.png)" data-logo="baidu.png">百度</li>
+            <li class="picker-list3" style="background-image: url(/img/search/ico_sogou.png)" data-logo="sogou.png">搜狗</li>
+            <li class="picker-list4" style="background-image: url(/img/search/ico_bing.png)" data-logo="bing.png">bing</li>
+            <li class="picker-list5" style="background-image: url(/img/search/ico_google.ico)" data-logo="google.png">Google</li>
+        </ul>
+        <div class="hot-list"></div>
+        <div id="local-search-result"></div>
+    </div>
+<script src="/js/layouts/s.js"></script>
+    <div class="search"></div>
+</div>
+</form>
+<script type="text/javascript" src="/js/layouts/srarch.js"></script>
+<script type="text/javascript">
+    $(function () {
+        helangSearch.init();
+    })
+</script>
+</div>
+<!-- partial -->
+<!--<div id="site_search">
+  <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control"/>
+  <div id="local-search-result"><a>搜索</a></div>
+</div>
+<script src="/js/layouts/s.js"></script>-->
 <script>
+ var search_path = "search.xml";
+     if (search_path.length == 0) {
+     	search_path = "/search.xml";
+     }
+     var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+<!-- END -->
+	<!-- 用户体验特效 -->
+	  <script>
 $(function() {
+
+
 	// 淡入淡出
 	$('#nexmoe-header').css("display","none");
 	$('#nexmoe-content').css("display","none");
 	$('#searchFigure').css("display","none");
 	$('#searchHover span').css("color","#ff6767");
-	// 百度推送
-	var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-
 
 	// 离开网页提示
 	var OriginTitile = document.title;
@@ -210,47 +256,39 @@ $(function() {
             }, 2000);
         }
     });
-	// 隐藏 全部
-	//$('body').css("overflow","hidden");
-	// jq 设置属性
-	//$("body").attr("width","180");
+
 });
 //$(window).load(funtion(){});//页面加载完之后自动加载
 $(window).load(function(){
-
-	// 设置 overflow 可显示
-	//$("body").attr("overflow","auto");
-	//$("body").removeAttr("style");.delay(timeout).fadeTo(200, 0)
 	
 	// 代码高亮背景
 	$('.hljs').css("background","rgb(255, 243, 234)");
 	$('.hljs').css("color","#647fb3");
-	// 加载完成显示页面
-	$('.Pomloader').css("display","none"); 
-	// 去valine版权
-	$('.info').css("display","none");
-	// 去valine位移
-	$('.vmeta').css("padding-right","66px");
-	$('.vcontrol').css("padding-right","66px");
-	$('.vctrl').css("padding-right","66px");
-	$('#veditor').removeAttr("placeholder");
-	$("#veditor").attr("placeholder","输入前请确认 <昵称> <邮箱> <你的网站> 是否已填写，支持markdown 格式编写 ");
-	$('.v .vwrap .vheader .vinput:nth-child(3)').removeAttr("placeholder");
-	$(".v .vwrap .vheader .vinput:nth-child(3)").attr("placeholder","你的HOME(例：https://www.baidu.com)");
-	$(".info").after("<p></br></p><p></br></p><p></br></p><p></br></p><p>博客初步建设完成&copy; </p>");
-	
 	//页面淡入淡出
 	$('#nexmoe-header').fadeIn(6000);
 	$('#nexmoe-content').fadeIn(3000);
 	$('#searchFigure').fadeIn(500);
+
 	$('#searchHover span').css("color","rgba(0, 0, 0, 0.59)");
 	
 	// 左侧滚动条
 	$('#drawer').scrollTop(280);
-});
+	
+	
+	
+	// 随机 变化的淡入
+var arr = ['1s ease 0s 1 normal forwards running action_translateY','1s linear 0s 1 normal forwards running action_skew','1s ease 0s 1 normal forwards running action_scale','1s linear 0s 1 normal forwards running action_rotateY','1s cubic-bezier(0, 3.53, 0.29, -1.58) 0s 1 normal forwards running action_scale']; 
+var index = Math.floor((Math.random()*arr.length)); 
+	// 随机main页面
+	$('.nexmoe-post').css("animation",arr[index]);
+	// 随机search页面
+	$('#searchform').css("animation",'1s ease 0s 1 normal forwards running action_translateY');
+	
+}); 
 </script>
-<!-- end -->
-
+	
+	
+<!-- ZHDconfig main END -->
   
   <div id="nexmoe-background">
     <div class="nexmoe-bg" style="background-image: url(https://img.xjh.me/random_img.php?type=bg&amp;ctype=nature&amp;return=302)"></div>
@@ -383,63 +421,6 @@ $(window).load(function(){
 </div><!-- .nexmoe-drawer -->
   </div>
 
-<!-- 搜索按钮 -->
-<!-- partial:index.partial.html -->
-<div id="searchFigure">
-  <div id="searchHover">
-    <span>本站搜索~</span>
-    <span>可各种浏览器搜索！</span>
-  </div>
-</div>
-
-
-<!-- 消息框 -->
-<script src="/js/layouts/jQueryMessage.js"></script>
-<!-- 搜索框 -->
-<div id="search-main" style="display: none;">
-	<form id="searchform" action="#" target="_blank">
-<div class="container">
-    <div class="logo" style="background-image: url(/img/search/favicon.png)"></div>
-    <div class="input">
-        <input type="text" placeholder="请输入要搜索的内容" autocomplete="off" id="local-search-input">
-        <div class="picker">本站</div>
-        <ul class="picker-list">
-            <li class="picker-list1" style="background-image: url(/img/search/favicon.png)" data-logo="favicon.png">本站</li>
-            <li class="picker-list2" style="background-image: url(/img/search/ico_baidu.png)" data-logo="baidu.png">百度</li>
-            <li class="picker-list3" style="background-image: url(/img/search/ico_sogou.png)" data-logo="sogou.png">搜狗</li>
-            <li class="picker-list4" style="background-image: url(/img/search/ico_bing.png)" data-logo="bing.png">bing</li>
-            <li class="picker-list5" style="background-image: url(/img/search/ico_google.ico)" data-logo="google.png">Google</li>
-        </ul>
-        <div class="hot-list"></div>
-        <div id="local-search-result"></div>
-    </div>
-<script src="/js/layouts/s.js"></script>
-    <div class="search"></div>
-</div>
-</form>
-<script type="text/javascript" src="/js/layouts/srarch.js"></script>
-<script type="text/javascript">
-    $(function () {
-        helangSearch.init();
-    })
-</script>
-</div>
-<!-- partial -->
-<!--<div id="site_search">
-  <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control"/>
-  <div id="local-search-result"><a>搜索</a></div>
-</div>
-<script src="/js/layouts/s.js"></script>-->
-<script>
- var search_path = "search.xml";
-     if (search_path.length == 0) {
-     	search_path = "/search.xml";
-     }
-     var path = "/" + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-</script>
-<!-- END -->
-
 
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
@@ -493,7 +474,7 @@ $(window).load(function(){
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1578152146072"></script>
+<script src="/js/app.js?v=1578154148573"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
@@ -507,24 +488,5 @@ $(window).load(function(){
 
 
 
-<!-- live2D 娘 -->
-<div class="waifu">
-        <div class="waifu-tips"></div>
-        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
-        <div class="waifu-tool">
-            <span class="fui-home"></span>
-            <span class="fui-top"></span>
-            <span class="fui-chat"></span>
-            <span class="fui-eye"></span>
-            <span class="fui-user"></span>
-            <span class="fui-photo"></span>
-            <span class="fui-info-circle"></span>
-            <span class="fui-cross"></span>
-        </div>
-    </div>
-    <script src="/assets/waifu-tips.js"></script>
-    <script src="/assets/live2d.js"></script>
-    <script type="text/javascript">initModel("/assets/")</script>
-<!-- end -->	
 </body>
 </html>

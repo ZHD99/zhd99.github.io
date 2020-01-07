@@ -42,7 +42,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1578395950471">
+  <link rel="stylesheet" href="/css/style.css?v=1578404011008">
 	
 </head>
 
@@ -138,6 +138,14 @@ $(function() {
 	$('#searchFigure').css("display","none");
 	$('#searchHover span').css("color","#ff6767");
 
+	
+	// 左侧滚动条
+	$('#drawer').scrollTop(280);
+	//页面淡入淡出
+	$('#nexmoe-header').fadeIn(6000);
+	$('#nexmoe-content').fadeIn(3000);
+	$('#searchFigure').fadeIn(500);
+
 	// 离开网页提示
 	var OriginTitile = document.title;
     var titleTime;
@@ -161,15 +169,8 @@ $(window).load(function(){
 	// 代码高亮背景
 	$('.hljs').css("background","rgb(255, 243, 234)");
 	$('.hljs').css("color","#647fb3");
-	//页面淡入淡出
-	$('#nexmoe-header').fadeIn(6000);
-	$('#nexmoe-content').fadeIn(3000);
-	$('#searchFigure').fadeIn(500);
 
 	$('#searchHover span').css("color","rgba(0, 0, 0, 0.59)");
-	
-	// 左侧滚动条
-	$('#drawer').scrollTop(280);
 	
 	
 	
@@ -477,7 +478,7 @@ var index = Math.floor((Math.random()*arr.length));
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1578395950478"></script>
+<script src="/js/app.js?v=1578404011013"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

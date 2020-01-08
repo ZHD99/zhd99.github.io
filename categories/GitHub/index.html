@@ -42,7 +42,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1578493159263">
+  <link rel="stylesheet" href="/css/style.css?v=1578494118159">
 	
 	
 	
@@ -383,7 +383,7 @@ var index = Math.floor((Math.random()*arr.length));
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1578493159267"></script>
+<script src="/js/app.js?v=1578494118165"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
@@ -408,13 +408,26 @@ $(function(){
 	$('#dowebok').fullpage({
 		sectionsColor: ['rgba(27, 188, 155, 0.0)', 'rgba(123, 170, 190, 0.5)', 'rgb(255, 170, 153, 0.5)', 'rgba(75, 191, 195, 0.5)', 'rgba(75, 84, 195, 0.5)', 'rgba(35, 114, 195, 0.5)', 'rgba(195, 35, 35, 0.5)']
 	});
-	
+  /*绑定这些事件*/
+	 var box = document.querySelector('#dowebok');
+
+/* 触摸绑定touchmove*/
+	box.addEventListener('touchmove',function(e){
+	//页面淡入淡出
+	$('#nexmoe-header').fadeIn(6000);
+	$('#nexmoe-content').fadeIn(3000);
+	$('#searchFigure').fadeIn(500);
+});
+
+
+/* 鼠标滑动mousewheel */
 	$(window).mousewheel(function(event) {
 	//页面淡入淡出
 	$('#nexmoe-header').fadeIn(6000);
 	$('#nexmoe-content').fadeIn(3000);
 	$('#searchFigure').fadeIn(500);
 });
+
 });
 </script>
 

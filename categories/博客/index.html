@@ -41,12 +41,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   
   
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1578462601080">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
+  <link rel="stylesheet" href="/css/style.css?v=1578492937899">
 	
+	
+	
+	
+
+
 </head>
 
 <body class="mdui-drawer-body-left">
+	
 	
 <!-- ZHDconfig main -->
 	
@@ -130,8 +136,6 @@
 	<!-- 用户体验特效 -->
 	  <script>
 $(function() {
-
-
 	// 淡入淡出
 	$('#nexmoe-header').css("display","none");
 	$('#nexmoe-content').css("display","none");
@@ -142,16 +146,16 @@ $(function() {
 	// 左侧滚动条
 	$('#drawer').scrollTop(280);
 	//页面淡入淡出
-	$('#nexmoe-header').fadeIn(6000);
-	$('#nexmoe-content').fadeIn(3000);
-	$('#searchFigure').fadeIn(500);
+	//$('#nexmoe-header').fadeIn(6000);
+	//$('#nexmoe-content').fadeIn(3000);
+	//$('#searchFigure').fadeIn(500);
 
 	// 离开网页提示
 	var OriginTitile = document.title;
     var titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '震惊！某女子因为一些不言启齿的(つェ⊂)~ ' + OriginTitile;
+            document.title = '震惊！某妙龄女子因为在深夜被一个黑心老板给加班到凌晨的故事(つェ⊂)~ ' + OriginTitile;
             clearTimeout(titleTime);
         }
         else {
@@ -186,6 +190,7 @@ var index = Math.floor((Math.random()*arr.length));
 </script>
 	
 	
+	
 <!-- ZHDconfig main END -->
   
   <div id="nexmoe-background">
@@ -199,6 +204,10 @@ var index = Math.floor((Math.random()*arr.length));
 	</div>
     </div>
   </div>
+	
+		
+		
+		
   <div id="nexmoe-header">
       <div class="nexmoe-drawer mdui-drawer" id="drawer">
     <div class="nexmoe-avatar mdui-ripple">
@@ -374,7 +383,7 @@ var index = Math.floor((Math.random()*arr.length));
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1578462601085"></script>
+<script src="/js/app.js?v=1578492937906"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
@@ -387,6 +396,55 @@ var index = Math.floor((Math.random()*arr.length));
 
 
 
+
+
+	<!-- 大屏滚动插件和鼠标滚动监测（fullPage、mousewheel-master） -->
+	  	<link rel="stylesheet" type="text/css" href="/css/jqueryfullPage.css"/>
+	<script src="/js/fullpage/jquery.fullPage.min.js"></script>
+	<script src="/js/fullpage/jquery-mousewheel-master/jquery.mousewheel.min.js"></script>
+<script>
+
+$(function(){
+	$('#dowebok').fullpage({
+		sectionsColor: ['rgba(27, 188, 155, 0.0)', 'rgba(123, 170, 190, 0.5)', 'rgb(255, 170, 153, 0.5)', 'rgba(75, 191, 195, 0.5)', 'rgba(75, 84, 195, 0.5)', 'rgba(35, 114, 195, 0.5)', 'rgba(195, 35, 35, 0.5)']
+	});
+	
+	$(window).mousewheel(function(event) {
+	//页面淡入淡出
+	$('#nexmoe-header').fadeIn(6000);
+	$('#nexmoe-content').fadeIn(3000);
+	$('#searchFigure').fadeIn(500);
+});
+});
+</script>
+
+	
+<div id="dowebok">
+	<div class="section option1">
+		666
+	</div>
+	<div class="section option2">
+		555
+	</div>
+	<div class="section option3">
+		444
+	</div>
+	<div class="section option4">
+		333
+	</div>
+	<div class="section option5">
+		222
+	</div>
+	<div class="section option6">
+		111
+	</div>
+	<div class="section option6">
+		000
+	</div>
+</div>
+	
+	
+	
 
 </body>
 </html>

@@ -6,20 +6,24 @@
  */
 
 // 搜索按钮 
-$('#searchHover').click(function(){
+$('#searchFigure').click(function(){
+	$(this).stop();
 	$('#search-main').removeAttr("style");
-	$('#nexmoe-header').css("display","none");
-	$('#searchFigure').css("display","none");
-	$('#nexmoe-content').css("display","none");
+	//$('#nexmoe-header').css("display","none");
+	//$('#nexmoe-content').css("display","none");
+	//$('#searchFigure').css("display","none");
+	$('#drawer').css("opacity","0.1");
+	$('.nexmoe-primary').css("opacity","0.1");
+	$('#searchFigure').css("opacity","0.1");
 showMsg('点击搜索框上的logo 返回','center');
 	
 });
 
 // 隐藏搜索
 $('.container .logo').click(function(){
-	$('#nexmoe-header').removeAttr("style");
+	$('#drawer').removeAttr("style");
+	$('.nexmoe-primary').removeAttr("style");
 	$('#searchFigure').removeAttr("style");
-	$('#nexmoe-content').removeAttr("style");
 	$('#search-main').css("display","none");
 });
 // 搜索颜色设置

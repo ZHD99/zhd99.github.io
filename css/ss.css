@@ -54,12 +54,11 @@ position: relative;
 // 搜索 css
 */
 #search-main{
-    height: 52rem;
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', Arial;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -71,8 +70,8 @@ position: relative;
 .container{
     width: 590px;
     margin: 0 auto;
-    padding-top: 100px;
     position: relative;
+	
 }
 .container:after{
     content: '';
@@ -105,10 +104,9 @@ position: relative;
 .container .input>input{
     outline: none;
     border: none;
-    padding: 12px 0px 10px 10px;
+    padding: 12px 0px 10px 16px;
     margin: 0;
     height: 44px;
-    width: 410px;
     color: #333;
     font-size: 16px;
     border-radius: 4px 0 0 4px;

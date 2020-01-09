@@ -66,6 +66,8 @@ a {
 }
 #nexmoe-header {
   margin-left: -240px;
+  position: relative;
+  z-index: 2001;
 }
 #nexmoe-header .mdui-drawer {
   left: unset;
@@ -268,6 +270,7 @@ a {
   position: relative;
   height: 100%;
   width: 100%;
+  z-index: 1;
 }
 #nexmoe-content .nexmoe-primary {
   box-shadow: 0 0 1rem rgba(161,177,204,0.4);

@@ -9,6 +9,8 @@
 }
 
 #searchFigure div {
+position: relative;
+    z-index: 1;
   height: 50px;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;

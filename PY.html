@@ -23,6 +23,10 @@
 	<!-- 搜索页面 css -->
 	<!-- 消息提示 css -->
 		<link rel="stylesheet" type="text/css" href="/css/jQueryMessage.css"/>
+	<!-- 访问页样式 css -->
+		<link rel="stylesheet" type="text/css" href="/css/index.css"/>
+	<!-- 阿里妈妈矢量库SVG css -->
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1605171_afayoju26bo.css"/>
 <!-- END -->
 	
   <link rel="shortcut icon" href="/favicon.png" type="image/png" />
@@ -45,7 +49,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1578494118081">
+  <link rel="stylesheet" href="/css/style.css?v=1578570837925">
 	
 	
 	
@@ -139,10 +143,13 @@
 	<!-- 用户体验特效 -->
 	  <script>
 $(function() {
+	
+	
+	
 	// 淡入淡出
-	$('#nexmoe-header').css("display","none");
-	$('#nexmoe-content').css("display","none");
-	$('#searchFigure').css("display","none");
+	//$('#nexmoe-header').css("display","none");
+	//$('#nexmoe-content').css("display","none");
+	//$('#searchFigure').css("display","none");
 	$('#searchHover span').css("color","#ff6767");
 
 	
@@ -168,7 +175,6 @@ $(function() {
             }, 2000);
         }
     });
-
 });
 //$(window).load(funtion(){});//页面加载完之后自动加载
 $(window).load(function(){
@@ -562,7 +568,7 @@ $(window).load(function(){
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1578494118088"></script>
+<script src="/js/app.js?v=1578570837932"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
@@ -584,36 +590,51 @@ $(window).load(function(){
 <script>
 
 $(function(){
+	if
+		((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+		
+}else{
+	// 淡入淡出
+	$('#nexmoe-header').css("display","none");
+	$('#nexmoe-content').css("display","none");
+	$('#searchFigure').css("display","none");
+	$('#dowebok').fadeIn(500);
+	
 	$('#dowebok').fullpage({
 		sectionsColor: ['rgba(27, 188, 155, 0.0)', 'rgba(123, 170, 190, 0.5)', 'rgb(255, 170, 153, 0.5)', 'rgba(75, 191, 195, 0.5)', 'rgba(75, 84, 195, 0.5)', 'rgba(35, 114, 195, 0.5)', 'rgba(195, 35, 35, 0.5)']
 	});
-  /*绑定这些事件*/
-	 var box = document.querySelector('#dowebok');
-
-/* 触摸绑定touchmove*/
-	box.addEventListener('touchmove',function(e){
-	//页面淡入淡出
-	$('#nexmoe-header').fadeIn(6000);
-	$('#nexmoe-content').fadeIn(3000);
-	$('#searchFigure').fadeIn(500);
-});
 
 
 /* 鼠标滑动mousewheel */
 	$(window).mousewheel(function(event) {
 	//页面淡入淡出
+		 fade();	
+});
+	
+/* 鼠标点击翻页 */
+	$('i.iconfont.icon-da-xiafanyeicon').click(function(){
+	//页面淡入淡出
+		 fade();
+	});
+}
+	function fade() {
+		//页面淡入淡出
 	$('#nexmoe-header').fadeIn(6000);
 	$('#nexmoe-content').fadeIn(3000);
 	$('#searchFigure').fadeIn(500);
-});
-
+}
 });
 </script>
 
 	
-<div id="dowebok">
+<div id="dowebok" style="display: none;">
 	<div class="section option1">
-		666
+		<div class="home-bg">
+			<video loop="" autoplay="" preload="auto" muted="" src="https://www.tencent.com/video/index-video.mp4" id="home-video"></video>
+		</div>
+		<div class="Updowndemo">
+			<i class="iconfont icon-da-xiafanyeicon"></i>
+		</div>
 	</div>
 	<div class="section option2">
 		555

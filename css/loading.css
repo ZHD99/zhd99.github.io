@@ -1,4 +1,4 @@
-// 网页加载效果 css
+/* 网页加载效果 css*/
 body body.mdui-loaded{
     max-width: 1111px;
     margin: auto!important;
@@ -132,9 +132,9 @@ body body.mdui-loaded{
   
 }
 .loader span h3{
-	color:#FFD400
-	    display: initial;
-	list-style: none;
+  color:#FFD400;
+  display: initial;
+  list-style: none;
   background-image: -webkit-linear-gradient(left,#FF0066,#99FF33 10%,#d71345 20%,#f7acbc 30%,#00CCFF 40%,#FF0066 50%,#99FF33 60%,#d71345 70%,#f7acbc 80%,#00CCFF 90%,#FF0066);
   color: transparent;
   -webkit-background-clip: text;
@@ -142,7 +142,7 @@ body body.mdui-loaded{
   -webkit-animation: slide 2s infinite linear;
   animation: slide 5s infinite linear;
 	}
-	.loader span b{
+ .loader span b{
 	list-style: none;
   background-image: -webkit-linear-gradient(left,#fff 50%,#666 50%);
   color: transparent;

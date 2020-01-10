@@ -12,6 +12,12 @@ $('#searchFigure').click(function(){
 	//$('#nexmoe-header').css("display","none");
 	//$('#nexmoe-content').css("display","none");
 	//$('#searchFigure').css("display","none");
+	// 不可点击
+	$('#drawer').css("pointer-events","none");
+	$('.nexmoe-primary').css("pointer-events","none");
+	$('#searchFigure').css("pointer-events","none");
+	
+	// 透明
 	$('#drawer').css("opacity","0.1");
 	$('.nexmoe-primary').css("opacity","0.1");
 	$('#searchFigure').css("opacity","0.1");

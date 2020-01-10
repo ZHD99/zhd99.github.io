@@ -2,15 +2,16 @@
 //@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 **/		
 .content-resizer {
+	color: #fff;
     position: relative;
-    top: -421px;
+    top: -521px;
     left: 20px;
     text-align: center;
     vertical-align: middle;
 }
 #typed-cursor {
 	color: #fff;
-	font-size: 12px;
+	font-size: 1px;
 }
 #typed-cursor i{
 	margin-top: 225px;
@@ -220,3 +221,6 @@
         opacity: 1;
     }
 }
+
+
+

@@ -54,14 +54,13 @@
 }
 	.home-bg {
     display: block;
-    height: 820px;
+    height: 754px;
     width: 100%;
     position: relative;
     margin-top: -72px;
 }
 	.home-bg video {
-    width: 2560px;
-    height: 820px;
+    width: 2324px;
     position: absolute;
     top: 0;
     left: 50%;

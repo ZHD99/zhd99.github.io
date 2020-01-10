@@ -25,6 +25,7 @@
 		<link rel="stylesheet" type="text/css" href="/css/jQueryMessage.css"/>
 	<!-- 访问页样式 css -->
 		<link rel="stylesheet" type="text/css" href="/css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/lbAIlubanner.css"/>
 	<!-- 阿里妈妈矢量库SVG css -->
 	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1605171_afayoju26bo.css"/>
 <!-- END -->
@@ -46,7 +47,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1578635009990">
+  <link rel="stylesheet" href="/css/style.css?v=1578653871823">
 	
 	
 	
@@ -387,7 +388,7 @@ var index = Math.floor((Math.random()*arr.length));
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1578635009995"></script>
+<script src="/js/app.js?v=1578653871829"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
@@ -411,6 +412,9 @@ var index = Math.floor((Math.random()*arr.length));
 	<link rel="stylesheet" type="text/css" href="/css/jqueryfullPage.css"/>
 	<script src="/js/fullpage/jquery.fullPage.min.js"></script>
 	<script src="/js/fullpage/jquery-mousewheel-master/jquery.mousewheel.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/a632079/browserhappy@0.0.1/browserhappy.min.js"></script>
 
 	
 	
@@ -420,7 +424,7 @@ $(function(){
 	
 	// 打字效果
 	$(".typed-quotes").typed({
-				strings: ["a truly **minimal** markdown editor.", "new way to read &#38; write markdown.", "I think this is the one, <span style='color:#d14836;'>❤</span>IT."],
+				strings: ["Copyright © **炎夏揪蝉记** All Rights Reserved.", "这是一个关于作者的学习经验和一些学术上的分享.", "希望大家能喜欢~(✪ω✪)<span style='color:#d14836;'>❤</span>IT."],
 				typeSpeed: 50,
 				contentType: 'html',
 				loop: true,
@@ -476,10 +480,13 @@ $(function(){
 		</div>
 		
 		<div class="content-resizer" style="">
-			<h2>typora</h2>
+			<script src="/js/hitokoto.js"></script>
+			<h5 class="title__lb" id="titleremark" aria-title="www.zhd99.cn">『emmm...』</h5>
+			<span id="hitokoto_author"></span>
+			
 			<p class="slogon">
 				/* 
-				<span class="typed-quotes">new way to read &amp; write markdown</span>
+				<span class="typed-quotes">炎夏揪蝉记</span>
 				*/
 				<h3 id="contain" style="height: 20px;display: grid;">
 					<label>Loading~</label>
@@ -489,7 +496,7 @@ $(function(){
 					<label>zhd99.top</label>
 					<label>zhd99.cn</label>
 				</h3>
-			<span id="typed-cursor"><i></i><br/>滑动</span>
+			<span id="typed-cursor"><i></i>滑动</span>
 			</p>
 		<!-- 单行切换 -->
 	<script src="/js/layouts/contain.js"></script>

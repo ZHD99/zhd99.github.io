@@ -16,11 +16,13 @@ $('#searchFigure').click(function(){
 	$('#drawer').css("pointer-events","none");
 	$('.nexmoe-primary').css("pointer-events","none");
 	$('#searchFigure').css("pointer-events","none");
+	$('.content-resizer').css("pointer-events","none");
 	
 	// 透明
 	$('#drawer').css("opacity","0.1");
 	$('.nexmoe-primary').css("opacity","0.1");
 	$('#searchFigure').css("opacity","0.1");
+	$('.content-resizer').css("opacity","0.1");
 showMsg('点击搜索框上的logo 返回','center');
 	
 });

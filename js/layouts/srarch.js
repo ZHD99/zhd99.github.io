@@ -26,6 +26,10 @@ $('#searchFigure').click(function(){
 showMsg('点击搜索框上的logo 返回','center');
 	
 });
+// 移动端和pc 宽度问题的解决方法（获取焦点，代替padding
+$('.container .input').click(function(){
+	$('#local-search-input').focus();
+});
 
 // 隐藏搜索
 $('.container .logo').click(function(){

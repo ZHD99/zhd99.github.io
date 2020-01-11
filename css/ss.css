@@ -2,8 +2,8 @@
 //@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 **/		
 #searchFigure {
-    height: 58px;
-	position: relative;
+    height: 50px;
+position: relative;
     z-index: 2001;
 }
 

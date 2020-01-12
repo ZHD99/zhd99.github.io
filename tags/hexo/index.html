@@ -47,7 +47,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1578801219013">
+  <link rel="stylesheet" href="/css/style.css?v=1578801495848">
 	
 	
 	
@@ -61,7 +61,7 @@
 	
 <!-- ZHDconfig main -->
 	<!-- 版本判断ie,firefox,chrome,opera,safari,netscape -->
-	  <script id="brows"></script>
+	  <script id="brows" src="//cdn01.osfipin.com/static/browsehappy.js"></script>
 <link id="judgecs" rel="stylesheet" type="text/css" />
 <script id="judgejs"></script>
 <script>
@@ -83,28 +83,21 @@
         var IEVersionNum = parseFloat(RegExp['$1']);
         if (IEVersionNum === 7) {
           // IE7
-          Tips();
         } else if (IEVersionNum === 8) {
           // IE8
-          Tips();
         } else if (IEVersionNum === 9) {
           // IE9
-          Tips();
         } else if (IEVersionNum === 10) {
           // IE10
-          Tips();
         } else {
           // IE版本<7
-          Tips();
 			
         }
       } else if (isEdge) { 
 		  Tipss();
-          Tips();
       } else if (isIE11) {
         // IE11
         Tipss();
-          Tips();
       } else {
 		Tipss();
         // 不是ie浏览器
@@ -117,14 +110,6 @@
 		
 		var $innerHTML = '';
     	$("body").append($innerHTML);
-    }
-	function Tips() {
-      var $innerHTML = '<div id="MyDiv" class="white_content"><div class= "ie-img" ><img src="__TMPL__/img/ieimg.png"></div><div class="font-content"><div class="font-content-one">尊敬的用户您好！</div><div class="font-content-two">非常抱歉，本站不支持IE及IE内核浏览器，推荐使用谷歌、火狐、QQ浏览器及360浏览器</div><div class="font-content-three">好的，我知道了 </div></div></div ><div id="pop-up-Shadow" class="pop-up-Shadow"></div>';
-      $("body").append($innerHTML);
-      $(".font-content-three").click(function () {
-        $("#MyDiv").css("display", "none");
-        $("#pop-up-Shadow").css("display", "none");
-      });
     }
 </script>
 
@@ -156,7 +141,7 @@ var browsehappy_config = {
 	// https://cdn01.osfipin.com/static/browsehappy.js
 	
 </script>
-
+<script id="brows" src="//cdn01.osfipin.com/static/browsehappy.js"></script>
 
 	<!-- 网页看板娘 -->
 	  
@@ -485,7 +470,7 @@ var index = Math.floor((Math.random()*arr.length));
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1578801219018"></script>
+<script src="/js/app.js?v=1578801495854"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

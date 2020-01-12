@@ -47,7 +47,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1578800075922">
+  <link rel="stylesheet" href="/css/style.css?v=1578801045535">
 	
 	
 	
@@ -84,38 +84,31 @@
         if (IEVersionNum === 7) {
           // IE7
           Tips();
-			Tipss();
         } else if (IEVersionNum === 8) {
           // IE8
           Tips();
-			Tipss();
         } else if (IEVersionNum === 9) {
           // IE9
           Tips();
-			Tipss();
         } else if (IEVersionNum === 10) {
           // IE10
           Tips();
-			Tipss();
         } else {
           // IE版本<7
           Tips();
-			Tipss();
 			
         }
-      } else if (isEdge) {
-        // edge
-        Tips()
+      } else if (isEdge) { 
+		  Tipss();
       } else if (isIE11) {
         // IE11
-        Tips()
+        Tipss();
       } else {
-		Tips()
+		Tipss();
         // 不是ie浏览器
       }
     });
-    function Tips() {
-		alert('ie');
+    function Tipss() {
 		$('#brows').attr("src","//cdn01.osfipin.com/static/browsehappy.js");
 		$('#judgecs').attr("href","/css/judge.css");
 		$('#judgejs').attr("src","/js/judge.js");
@@ -123,9 +116,13 @@
 		var $innerHTML = '';
     	$("body").append($innerHTML);
     }
-    function Tipss() {
-		alert('ie12以下');
-		$('#brows').attr("src","//cdn01.osfipin.com/static/browsehappy.js");
+	function Tips() {
+      var $innerHTML = '<div id="MyDiv" class="white_content"><div class= "ie-img" ><img src="__TMPL__/img/ieimg.png"></div><div class="font-content"><div class="font-content-one">尊敬的用户您好！</div><div class="font-content-two">非常抱歉，本站不支持IE及IE内核浏览器，推荐使用谷歌、火狐、QQ浏览器及360浏览器</div><div class="font-content-three">好的，我知道了 </div></div></div ><div id="pop-up-Shadow" class="pop-up-Shadow"></div>';
+      $("body").append($innerHTML);
+      $(".font-content-three").click(function () {
+        $("#MyDiv").css("display", "none");
+        $("#pop-up-Shadow").css("display", "none");
+      });
     }
 </script>
 
@@ -486,7 +483,7 @@ var index = Math.floor((Math.random()*arr.length));
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1578800075927"></script>
+<script src="/js/app.js?v=1578801045540"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

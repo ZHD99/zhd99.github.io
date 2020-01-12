@@ -47,7 +47,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1578710711147">
+  <link rel="stylesheet" href="/css/style.css?v=1578792874659">
 	
 	
 	
@@ -60,7 +60,93 @@
 	
 	
 <!-- ZHDconfig main -->
-	
+	<!-- 版本判断ie,firefox,chrome,opera,safari,netscape -->
+	  <script id="brows"></script>
+<script>
+ $(document).ready(function () {
+      // 获取IE版本
+      // 取得浏览器的userAgent字符串
+      var userAgent = navigator.userAgent;
+      // 判断是否为小于IE11的浏览器
+      var isLessIE11 = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1;
+      // 判断是否为IE的Edge浏览器
+      var isEdge = userAgent.indexOf('Edge') > -1 && !isLessIE11;
+      // 判断是否为IE11浏览器
+      var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf('rv:11.0') > -1;
+      if (isLessIE11) {
+        var IEReg = new RegExp('MSIE (\\d+\\.\\d+);');
+        // 正则表达式匹配浏览器的userAgent字符串中MSIE后的数字部分，，这一步不可省略！！！
+        IEReg.test(userAgent);
+        // 取正则表达式中第一个小括号里匹配到的值
+        var IEVersionNum = parseFloat(RegExp['$1']);
+        if (IEVersionNum === 7) {
+          // IE7
+          Tips()
+        } else if (IEVersionNum === 8) {
+          // IE8
+          Tips()
+        } else if (IEVersionNum === 9) {
+          // IE9
+          Tips()
+        } else if (IEVersionNum === 10) {
+          // IE10
+          Tips()
+        } else {
+          // IE版本<7
+          Tips()
+        }
+      } else if (isEdge) {
+        // edge
+        Tips()
+      } else if (isIE11) {
+        // IE11
+        Tips()
+      } else {
+		Tips()
+        // 不是ie浏览器
+      }
+    });
+    function Tips() {
+		alert('ie');
+		$('#brows').attr("src","//cdn01.osfipin.com/static/browsehappy.js");
+		$('.browsehappy:nth-of-type(2)');
+		
+		var $innerHTML = '';
+    	$("body").append($innerHTML);
+    }
+</script>
+
+<script>
+/*参数定义示例*/
+var browsehappy_config = {
+    //什么情况下提示
+    //可以为数字:7/8/9/10/11/12 即小于等于该IE版本的提示;12代表所有的ie版本都提示
+    //默认值:666 检测是否为现代浏览器,即ie版本小于等于9或其他低版本浏览器(粗略的说即不支持HTML5);推荐使用默认值,或直接注释掉
+    //ie:666,
+
+    //提示类型 [box|top|jump]
+    //box:弹出窗口 默认值
+    //top:顶部提示
+    //jump:直接跳转 不推荐
+    type:'box',
+
+    //调试模式 [false|true]
+    //false:不启用 默认值
+    //true:启用 即不检测浏览器版本,直接提示
+    debug:true,
+
+    //提示文字
+    tip:'本站可能有部分内容 · ↓ · 不支持您的浏览器 ',
+    //box类型下,直接显示浏览器下载链接
+    //可选：360 chrome firefox ie11 opera qq
+    show:['chrome','firefox','360','qq','opera','ie11']
+};
+	// https://cdn01.osfipin.com/static/browsehappy.js
+</script>
+
+
+
+
 	<!-- 网页看板娘 -->
 	  
 <!-- live2D 娘 -->
@@ -326,7 +412,7 @@ var index = Math.floor((Math.random()*arr.length));
   
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2020 Hxx</br>
+        &copy; 2020 Hxx<br/>
         Powered by <a href="/about.html">Hxx</a>
 	 基于 Hexo &amp; nexmoe
     </div>
@@ -372,7 +458,7 @@ var index = Math.floor((Math.random()*arr.length));
         prev_text: '<i class="nexmoefont icon-left"></i>',
         next_text: '<i class="nexmoefont icon-right"></i>'
 -->
-<p></br></p><p></br></p><p></br></p>
+<p><br/></p><p><br/></p><p><br/></p>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
@@ -388,7 +474,7 @@ var index = Math.floor((Math.random()*arr.length));
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1578710711151"></script>
+<script src="/js/app.js?v=1578792874664"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
@@ -414,7 +500,6 @@ var index = Math.floor((Math.random()*arr.length));
 	<script src="/js/fullpage/jquery-mousewheel-master/jquery.mousewheel.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/a632079/browserhappy@0.0.1/browserhappy.min.js"></script>
 
 	
 	
@@ -424,7 +509,7 @@ $(function(){
 	
 	// 打字效果
 	$(".typed-quotes").typed({
-				strings: ["Copyright © **炎夏揪蝉记** All Rights Reserved.", "这是一个关于作者的学习经验和一些学术上的分享.", "希望大家能喜欢~(✪ω✪)<span style='color:#d14836;'>❤</span>IT."],
+				strings: ["Copyright © **揪蝉的日常** All Rights Reserved.", "这是一个关于作者的学习经验和一些学术上的分享.", "希望大家能喜欢~(✪ω✪)<span style='color:#d14836;'>❤</span>IT."],
 				typeSpeed: 50,
 				contentType: 'html',
 				loop: true,
@@ -443,7 +528,7 @@ $(function(){
 	$('#dowebok').fadeIn(500);
 	
 	$('#dowebok').fullpage({
-		sectionsColor: ['rgba(27, 188, 155, 0.0)', 'rgba(123, 170, 190, 0.5)', 'rgb(255, 170, 153, 0.5)', 'rgba(75, 191, 195, 0.5)', 'rgba(75, 84, 195, 0.5)', 'rgba(35, 114, 195, 0.5)', 'rgba(195, 35, 35, 0.5)']
+		sectionsColor: ['rgba(27, 188, 155, 0.6)', 'rgba(123, 170, 190, 0.5)', 'rgb(255, 170, 153, 0.5)', 'rgba(75, 191, 195, 0.5)', 'rgba(75, 84, 195, 0.5)', 'rgba(35, 114, 195, 0.5)', 'rgba(195, 35, 35, 0.5)']
 	});
 
 
@@ -474,7 +559,7 @@ $(function(){
 	<div class="section option1">
 		<div class="home-bg">
 			<!--<video loop autoplay preload muted x-webkit-airplay="true" airplay="allow" webkit-playsinline="true" playsinline="true" src="https://www.tencent.com/video/index-video.mp4" id="home-video"></video>--><video loop autoplay preload muted x-webkit-airplay="true" airplay="allow" webkit-playsinline="true" playsinline="true" id="home-video">
-			<source src="https://tiger.cdnja.co/v/bq/bqpd.mp4?secure=myfJM2bE3k38tbNULKIwqw&expires=1578717000" />
+			<source src="/Pexels.mp4" />
 				<source src="https://www.tencent.com/video/index-video.mp4" />
 				<source src="https://flv.cndns.com/cn/webnew/images/cndns-banner-video-3.mp4" />
 				<source src="https://flv.cndns.com/cn/webnew/images/cndns-banner-video-3.mp4" />
@@ -490,7 +575,7 @@ $(function(){
 			<span id="hitokoto_author"></span>
 			
 			<p class="slogon">
-				/* 
+			    /* 
 				<span class="typed-quotes">炎夏揪蝉记</span>
 				*/
 				<h3 id="contain" style="height: 20px;display: grid;">
@@ -501,15 +586,29 @@ $(function(){
 					<label>zhd99.top</label>
 					<label>zhd99.cn</label>
 				</h3>
-			<span id="typed-cursor"><i></i>滑动</span>
+				<span id="typed-cursor"><i></i>滑动</span>
 			</p>
 		<!-- 单行切换 -->
 	<script src="/js/layouts/contain.js"></script>
 		</div>
+			<header>
+				<div class="nav-auto-hide-header">
+					<div class="logo">
+						<img src="https://ae01.alicdn.com/kf/H9920f7fee4e742018d315f2d634f2fcaJ.png"/>
+						<span><a href="">揪蝉的日常</a></span>
+					</div>
+					<nav>
+						<ul class="nav-menu">
+							<li><a href="#">模块1</a></li>
+							<li><a href="#">测试2</a></li>
+							<li><a href="#">查看3</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
 	</div>
 	<div class="section option2">
 		
-			<video loop autoplay preload muted x-webkit-airplay="true" airplay="allow" webkit-playsinline="true" playsinline="true" src="D:\systems\桌面\Pexels.mp4" id="home-video"></video>
 	</div>
 	<div class="section option3">
 		444

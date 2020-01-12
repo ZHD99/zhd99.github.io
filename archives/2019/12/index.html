@@ -47,7 +47,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1578801495788">
+  <link rel="stylesheet" href="/css/style.css?v=1578802986963">
 	
 	
 	
@@ -99,7 +99,7 @@
         // IE11
         Tipss();
       } else {
-		Tipss();
+		Tips();
         // 不是ie浏览器
       }
     });
@@ -110,6 +110,9 @@
 		
 		var $innerHTML = '';
     	$("body").append($innerHTML);
+    }
+    function Tips() {
+		$('#brows').attr("type","application/ecmascript");
     }
 </script>
 
@@ -136,12 +139,38 @@ var browsehappy_config = {
     tip:'本站可能有部分内容 · ↓ · 不支持您的浏览器 ',
     //box类型下,直接显示浏览器下载链接
     //可选：360 chrome firefox ie11 opera qq
-    show:['chrome','firefox','360','qq','opera','ie11']
+    show:['chrome','firefox','360','qq','opera']
 };
 	// https://cdn01.osfipin.com/static/browsehappy.js
 	
 </script>
 <script id="brows" src="//cdn01.osfipin.com/static/browsehappy.js"></script>
+<script>
+
+$(function() {
+      var userAgent = navigator.userAgent;
+      var isLessIE11 = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1;
+      var isEdge = userAgent.indexOf('Edge') > -1 && !isLessIE11;
+      var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf('rv:11.0') > -1;
+      if (isLessIE11) {
+        var IEReg = new RegExp('MSIE (\\d+\\.\\d+);');
+        IEReg.test(userAgent);
+        var IEVersionNum = parseFloat(RegExp['$1']);
+        if (IEVersionNum === 7) {
+        } else if (IEVersionNum === 8) {
+        } else if (IEVersionNum === 9) {
+        } else if (IEVersionNum === 10) {
+        } else {
+        }
+      } else if (isEdge) { 
+      } else if (isIE11) {
+      } else {
+		  
+		$('.browsehappy').css('display','none');
+      }
+});
+</script>
+
 
 	<!-- 网页看板娘 -->
 	  
@@ -547,7 +576,7 @@ var index = Math.floor((Math.random()*arr.length));
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1578801495794"></script>
+<script src="/js/app.js?v=1578802986968"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

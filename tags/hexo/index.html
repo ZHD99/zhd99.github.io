@@ -47,7 +47,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1578802987018">
+  <link rel="stylesheet" href="/css/style.css?v=1578806680892">
 	
 	
 	
@@ -59,119 +59,6 @@
 <body class="mdui-drawer-body-left">
 	
 	
-<!-- ZHDconfig main -->
-	<!-- 版本判断ie,firefox,chrome,opera,safari,netscape -->
-	  <script id="brows" src="//cdn01.osfipin.com/static/browsehappy.js"></script>
-<link id="judgecs" rel="stylesheet" type="text/css" />
-<script id="judgejs"></script>
-<script>
- $(document).ready(function () {
-      // 获取IE版本
-      // 取得浏览器的userAgent字符串
-      var userAgent = navigator.userAgent;
-      // 判断是否为小于IE11的浏览器
-      var isLessIE11 = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1;
-      // 判断是否为IE的Edge浏览器
-      var isEdge = userAgent.indexOf('Edge') > -1 && !isLessIE11;
-      // 判断是否为IE11浏览器
-      var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf('rv:11.0') > -1;
-      if (isLessIE11) {
-        var IEReg = new RegExp('MSIE (\\d+\\.\\d+);');
-        // 正则表达式匹配浏览器的userAgent字符串中MSIE后的数字部分，，这一步不可省略！！！
-        IEReg.test(userAgent);
-        // 取正则表达式中第一个小括号里匹配到的值
-        var IEVersionNum = parseFloat(RegExp['$1']);
-        if (IEVersionNum === 7) {
-          // IE7
-        } else if (IEVersionNum === 8) {
-          // IE8
-        } else if (IEVersionNum === 9) {
-          // IE9
-        } else if (IEVersionNum === 10) {
-          // IE10
-        } else {
-          // IE版本<7
-			
-        }
-      } else if (isEdge) { 
-		  Tipss();
-      } else if (isIE11) {
-        // IE11
-        Tipss();
-      } else {
-		Tips();
-        // 不是ie浏览器
-      }
-    });
-    function Tipss() {
-		$('#brows').attr("src","//cdn01.osfipin.com/static/browsehappy.js");
-		$('#judgecs').attr("href","/css/judge.css");
-		$('#judgejs').attr("src","/js/judge.js");
-		
-		var $innerHTML = '';
-    	$("body").append($innerHTML);
-    }
-    function Tips() {
-		$('#brows').attr("type","application/ecmascript");
-    }
-</script>
-
-<script>
-/*参数定义示例*/
-var browsehappy_config = {
-    //什么情况下提示
-    //可以为数字:7/8/9/10/11/12 即小于等于该IE版本的提示;12代表所有的ie版本都提示
-    //默认值:666 检测是否为现代浏览器,即ie版本小于等于9或其他低版本浏览器(粗略的说即不支持HTML5);推荐使用默认值,或直接注释掉
-    //ie:666,
-
-    //提示类型 [box|top|jump]
-    //box:弹出窗口 默认值
-    //top:顶部提示
-    //jump:直接跳转 不推荐
-    type:'box',
-
-    //调试模式 [false|true]
-    //false:不启用 默认值
-    //true:启用 即不检测浏览器版本,直接提示
-    debug:true,
-
-    //提示文字
-    tip:'本站可能有部分内容 · ↓ · 不支持您的浏览器 ',
-    //box类型下,直接显示浏览器下载链接
-    //可选：360 chrome firefox ie11 opera qq
-    show:['chrome','firefox','360','qq','opera']
-};
-	// https://cdn01.osfipin.com/static/browsehappy.js
-	
-</script>
-<script id="brows" src="//cdn01.osfipin.com/static/browsehappy.js"></script>
-<script>
-
-$(function() {
-      var userAgent = navigator.userAgent;
-      var isLessIE11 = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1;
-      var isEdge = userAgent.indexOf('Edge') > -1 && !isLessIE11;
-      var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf('rv:11.0') > -1;
-      if (isLessIE11) {
-        var IEReg = new RegExp('MSIE (\\d+\\.\\d+);');
-        IEReg.test(userAgent);
-        var IEVersionNum = parseFloat(RegExp['$1']);
-        if (IEVersionNum === 7) {
-        } else if (IEVersionNum === 8) {
-        } else if (IEVersionNum === 9) {
-        } else if (IEVersionNum === 10) {
-        } else {
-        }
-      } else if (isEdge) { 
-      } else if (isIE11) {
-      } else {
-		  
-		$('.browsehappy').css('display','none');
-      }
-});
-</script>
-
-
 	<!-- 网页看板娘 -->
 	  
 <!-- live2D 娘 -->
@@ -499,7 +386,7 @@ var index = Math.floor((Math.random()*arr.length));
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1578802987023"></script>
+<script src="/js/app.js?v=1578806680897"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
@@ -584,7 +471,7 @@ $(function(){
 	<div class="section option1">
 		<div class="home-bg">
 			<!--<video loop autoplay preload muted x-webkit-airplay="true" airplay="allow" webkit-playsinline="true" playsinline="true" src="https://www.tencent.com/video/index-video.mp4" id="home-video"></video>--><video loop autoplay preload muted x-webkit-airplay="true" airplay="allow" webkit-playsinline="true" playsinline="true" id="home-video">
-			<source src="/Pexels.mp4" />
+			<source src="Pexels.mp4" />
 				<source src="https://www.tencent.com/video/index-video.mp4" />
 				<source src="https://flv.cndns.com/cn/webnew/images/cndns-banner-video-3.mp4" />
 				<source src="https://flv.cndns.com/cn/webnew/images/cndns-banner-video-3.mp4" />
@@ -653,6 +540,120 @@ $(function(){
 </div>
 	
 	
+<!-- ZHDconfig main -->
+	<!-- 版本判断ie,firefox,chrome,opera,safari,netscape -->
+	  <script id="brows" src="//cdn01.osfipin.com/static/browsehappy.js"></script>
+<link id="judgecs" rel="stylesheet" type="text/css" />
+<script id="judgejs"></script>
+<script>
+ $(document).ready(function () {
+      // 获取IE版本
+      // 取得浏览器的userAgent字符串
+      var userAgent = navigator.userAgent;
+      // 判断是否为小于IE11的浏览器
+      var isLessIE11 = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1;
+      // 判断是否为IE的Edge浏览器
+      var isEdge = userAgent.indexOf('Edge') > -1 && !isLessIE11;
+      // 判断是否为IE11浏览器
+      var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf('rv:11.0') > -1;
+      if (isLessIE11) {
+        var IEReg = new RegExp('MSIE (\\d+\\.\\d+);');
+        // 正则表达式匹配浏览器的userAgent字符串中MSIE后的数字部分，，这一步不可省略！！！
+        IEReg.test(userAgent);
+        // 取正则表达式中第一个小括号里匹配到的值
+        var IEVersionNum = parseFloat(RegExp['$1']);
+        if (IEVersionNum === 7) {
+          // IE7
+        } else if (IEVersionNum === 8) {
+          // IE8
+        } else if (IEVersionNum === 9) {
+          // IE9
+        } else if (IEVersionNum === 10) {
+          // IE10
+        } else {
+          // IE版本<7
+			
+        }
+      } else if (isEdge) { 
+		  Tipss();
+      } else if (isIE11) {
+        // IE11
+        Tipss();
+      } else {
+		Tips();
+        // 不是ie浏览器
+      }
+    });
+    function Tipss() {
+		$('#brows').attr("src","//cdn01.osfipin.com/static/browsehappy.js");
+		$('#judgecs').attr("href","/css/judge.css");
+		$('#judgejs').attr("src","/js/judge.js");
+		
+		var $innerHTML = '';
+    	$("body").append($innerHTML);
+    }
+    function Tips() {
+		$('#brows').attr("type","application/ecmascript");
+    }
+</script>
+
+<script>
+/*参数定义示例*/
+var browsehappy_config = {
+    //什么情况下提示
+    //可以为数字:7/8/9/10/11/12 即小于等于该IE版本的提示;12代表所有的ie版本都提示
+    //默认值:666 检测是否为现代浏览器,即ie版本小于等于9或其他低版本浏览器(粗略的说即不支持HTML5);推荐使用默认值,或直接注释掉
+    ie: 12,
+
+    //提示类型 [box|top|jump]
+    //box:弹出窗口 默认值
+    //top:顶部提示
+    //jump:直接跳转 不推荐
+    type:'box',
+
+    //调试模式 [false|true]
+    //false:不启用 默认值
+    //true:启用 即不检测浏览器版本,直接提示
+    debug:true,
+
+    //提示文字
+    tip:'本站可能有部分内容 · ↓ · 不支持您的浏览器 ',
+    //box类型下,直接显示浏览器下载链接
+    //可选：360 chrome firefox ie11 opera qq
+    show:['chrome','firefox','360','qq','opera']
+};
+	// https://cdn01.osfipin.com/static/browsehappy.js
+	
+</script>
+
+<script>
+
+$(function() {
+      var userAgent = navigator.userAgent;
+      var isLessIE11 = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1;
+      var isEdge = userAgent.indexOf('Edge') > -1 && !isLessIE11;
+      var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf('rv:11.0') > -1;
+      if (isLessIE11) {
+        var IEReg = new RegExp('MSIE (\\d+\\.\\d+);');
+        IEReg.test(userAgent);
+        var IEVersionNum = parseFloat(RegExp['$1']);
+        if (IEVersionNum === 7) {
+        } else if (IEVersionNum === 8) {
+        } else if (IEVersionNum === 9) {
+        } else if (IEVersionNum === 10) {
+        } else {
+        }
+      } else if (isEdge) { 
+      } else if (isIE11) {
+      } else {
+		$('.browsehappy').css('position','absolute');
+		$('.browsehappy').css('z-index','0');
+		$('.browsehappy').css('display','none');
+      }
+});
+</script>
+
+
 	
 
 </body>

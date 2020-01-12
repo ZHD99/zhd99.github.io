@@ -47,7 +47,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1578794132420">
+  <link rel="stylesheet" href="/css/style.css?v=1578799240298">
 	
 	
 	
@@ -62,6 +62,8 @@
 <!-- ZHDconfig main -->
 	<!-- 版本判断ie,firefox,chrome,opera,safari,netscape -->
 	  <script id="brows"></script>
+<link id="judgecs" rel="stylesheet" type="text/css" />
+<script id="judgejs"></script>
 <script>
  $(document).ready(function () {
       // 获取IE版本
@@ -109,7 +111,8 @@
     function Tips() {
 		alert('ie');
 		$('#brows').attr("src","//cdn01.osfipin.com/static/browsehappy.js");
-		$('.browsehappy:nth-of-type(2)');
+		$('#judgecs').attr("href","/css/judge.css");
+		$('#judgejs').attr("src","/js/judge.js");
 		
 		var $innerHTML = '';
     	$("body").append($innerHTML);
@@ -142,9 +145,8 @@ var browsehappy_config = {
     show:['chrome','firefox','360','qq','opera','ie11']
 };
 	// https://cdn01.osfipin.com/static/browsehappy.js
+	
 </script>
-
-
 
 
 	<!-- 网页看板娘 -->
@@ -474,7 +476,7 @@ var index = Math.floor((Math.random()*arr.length));
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1578794132427"></script>
+<script src="/js/app.js?v=1578799240304"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

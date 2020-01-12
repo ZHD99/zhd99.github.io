@@ -7,7 +7,17 @@
     transform: scale3d(1, 1, 1);
     padding: 6px 24px;
     margin-bottom: 16px;
-    overflow: hidden;
+    overflow: hidden;   
+	text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+}
+/* Animate Background Image */
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 .Hero__title::after {
     left: 3px;

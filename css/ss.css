@@ -189,7 +189,7 @@ z-index: 1;
     width: 40px;
 }
 .container .search{
-    width: 89px;
+    width: 70px;
     height: 46px;
     background-color: #08f;
     background-image: url("/img/search/search.png");
@@ -215,7 +215,7 @@ z-index: 1;
 }
 @media all and (max-width: 595px) {
     #search-main .container{
-	width: 390px;
+	width: 375.2px;
 }
     #search-main .input{
 	width: 300px;

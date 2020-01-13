@@ -14,12 +14,13 @@ input {
 /* 设置淡出的css */
 /* 鼠标选中的颜色webkit, opera, IE9 */
 ::selection {
-  background: #add8e6;
-  color: rgba(255,8,8,0.502);
+  background: rgba(148,229,255,0.42);
+  color: rgba(255,0,82,0.85);
 }
 /* mozilla firefox */,
 ::-moz-selection {
-  background: #add8e6;
+  background: rgba(148,229,255,0.42);
+  color: rgba(255,0,82,0.85);
 }
 /* 设置滚动条的样式 */
 #nexmoe-content .nexmoe-primary::-webkit-scrollbar {

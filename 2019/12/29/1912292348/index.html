@@ -48,7 +48,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1578880052614">
+  <link rel="stylesheet" href="/css/style.css?v=1579843840852">
 	
 	
 	
@@ -407,9 +407,17 @@ var index = Math.floor((Math.random()*arr.length));
   
 </aside>
     <div class="nexmoe-copyright">
-        &copy; 2020 Hxx<br/>
-        Powered by <a href="/about.html">Hxx</a>  <a href="https://zhd99.gitee.io/zhdhexo/" target="_blank" rel="noopener">精简版</a>
-	 感谢 Hexo &amp; nexmoe
+        &copy; 2020 zhd99.cn  版权所有 
+		<br/>
+        Powered by <a href="/about.html">Hxx</a>
+
+<br/>	 感谢 Hexo &amp; nexmoe
+<br/>
+ <a href="http://hn.beian.miit.gov.cn" target="_blank">
+     <img width="16px" src="https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png" />
+     湘ICP备20001824号
+     </a>
+
     </div>
 </div><!-- .nexmoe-drawer -->
   </div>
@@ -563,7 +571,7 @@ $(window).load(function(){
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1578880052619"></script>
+<script src="/js/app.js?v=1579843840857"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
@@ -608,6 +616,12 @@ $(function(){
 	
 	if
 		((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+		Simplified();
+
+
+  
+
+
 		
 }else{
 	// 淡入淡出
@@ -639,10 +653,23 @@ $(function(){
 	$('#nexmoe-content').fadeIn(3000);
 	$('#searchFigure').fadeIn(500);
 }
+	function Simplified() {
+	
+		$('body').css("display","none");
+			document.write('<frameset rows="100%">');
+			document.write('<frame src="https://zhd99.gitee.io/zhdhexo/">');
+			document.write('</frameset>');
+}
+	$(".Simplified").click(function(){
+		Simplified();
+		
+	});
+	
+	
+	
 });
 	
 </script>
-
 	
 <div id="dowebok" style="display: none;">
 	<div class="section option1">
@@ -688,7 +715,7 @@ $(function(){
 					</div>
 					<nav>
 						<ul class="nav-menu">
-							<li><a href="https://zhd99.gitee.io/zhdhexo/" target="_blank" rel="noopener">网页简化版</a></li>
+							<li><a class="Simplified">网页简化版</a></li>
 						</ul>
 					</nav>
 				</div>

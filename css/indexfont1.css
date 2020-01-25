@@ -95,10 +95,10 @@
 .nav-auto-hide-header .logo{
 	float: left;
 }
-nav{
+#dowebok nav{
 	float: right;
 }
-nav ul li {
+#dowebok nav ul li {
     float: left;
     padding: 0px 10px;
 }
@@ -175,7 +175,7 @@ nav ul li {
   left: 0;
   width: 100%;
 }
-nav ul,li {
+#dowebok nav ul,li {
     list-style: none;
 }
 

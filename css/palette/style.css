@@ -119,6 +119,7 @@
 }
 
 .palette-wrapper .palette .palette_color {
+	overflow: hidden;
     width: 50px;
     height: 50px;
     display: block;
@@ -131,8 +132,16 @@
     border-width: 3px;
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
-    left: 12px;
+    left: 18px;
     top: 0;
     bottom: 0;
     margin: auto
+}
+.palette_item_wrapper div span{
+	color: aliceblue;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    height: 50px;
+    padding: 12px 0px 0px;
 }

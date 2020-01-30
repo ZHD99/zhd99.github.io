@@ -137,7 +137,7 @@ var helangSearch={
             }
         });
         /* 搜索 输入框 点击*/
-        $(".container .input").click(function () {
+        $(".container .input").not('.container .picker').click(function () {
             if(!$(this).val()){
                 setTimeout(function () {
                     _this.els.hotList.show();

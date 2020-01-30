@@ -33,10 +33,19 @@ $('.container .input').click(function(){
 
 // 隐藏搜索
 $('.container .logo').click(function(){
-	$('#drawer').removeAttr("style");
-	$('.nexmoe-primary').removeAttr("style");
-	$('#searchFigure').removeAttr("style");
 	$('#search-main').css("display","none");
+	
+	// 不可点击
+	$('#drawer').css("pointer-events","auto");
+	$('.nexmoe-primary').css("pointer-events","auto");
+	$('#searchFigure').css("pointer-events","auto");
+	$('.content-resizer').css("pointer-events","auto");
+	
+	// 透明
+	$('#drawer').css("opacity","1");
+	$('.nexmoe-primary').css("opacity","1");
+	$('#searchFigure').css("opacity","1");
+	$('.content-resizer').css("opacity","1");
 });
 // 搜索颜色设置
 $('.picker-list1').click(function(){

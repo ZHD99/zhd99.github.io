@@ -5,7 +5,6 @@
   
   <title>py - 揪蝉的日常</title>
   <meta charset="UTF-8">
-	<meta http-equiv ="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta name="description" content="最好的收藏,不过是分享">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
@@ -17,16 +16,16 @@
 	<script src="https://cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 	<link href="https://cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
 	<!-- 网页看板娘 css -->
-		<link rel="stylesheet" type="text/css" href="http://cdn.zhd99.cn/assets/waifu.css"/>
+		<link rel="stylesheet" type="text/css" href="/assets/waifu.css"/>
 
 	<!-- 搜索按钮 css -->
-		<link rel="stylesheet" type="text/css" href="http://cdn.zhd99.cn/css/ss.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/ss.css"/>
 	<!-- 搜索页面 css -->
 	<!-- 消息提示 css -->
-		<link rel="stylesheet" type="text/css" href="http://cdn.zhd99.cn/css/jQueryMessage.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/jQueryMessage.css"/>
 	<!-- 访问页样式 css -->
-		<link rel="stylesheet" type="text/css" href="http://cdn.zhd99.cn/css/index.css"/>
-		<link rel="stylesheet" type="text/css" href="http://cdn.zhd99.cn/css/lbAIlubanner.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/lbAIlubanner.css"/>
 	<!-- 阿里妈妈矢量库SVG css -->
 	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1605171_afayoju26bo.css"/>
 	<!-- #nexmoe-content .nexmoe-post .nexmoe-post-meta css -->
@@ -56,7 +55,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1580388479956">
+  <link rel="stylesheet" href="/css/style.css?v=1580389323612">
 	
 	
 	
@@ -198,8 +197,8 @@ var browsehappy_config = {
     });
     function Tipss() {
 		$('#brows').attr("src","//cdn01.osfipin.com/static/browsehappy.js");
-		$('#judgecs').attr("href","http://cdn.zhd99.cn/css/judge.css");
-		$('#judgejs').attr("src","http://cdn.zhd99.cn/js/judge.js");
+		$('#judgecs').attr("href","/css/judge.css");
+		$('#judgejs').attr("src","/js/judge.js");
 		
     }
 </script>
@@ -223,7 +222,7 @@ var browsehappy_config = {
     </div>
     <script src="/assets/waifu-tips.js"></script>
     <script src="/assets/live2d.js"></script>
-    <script type="text/javascript">initModel("http://cdn.zhd99.cn/assets/")</script>
+    <script type="text/javascript">initModel("/assets/")</script>
 	<!-- 搜索 -->
 	  <!-- 搜索按钮 -->
 <!-- partial:index.partial.html -->
@@ -236,30 +235,30 @@ var browsehappy_config = {
 
 
 <!-- 消息框 -->
-<script src="http://cdn.zhd99.cn/js/layouts/jQueryMessage.js"></script>
+<script src="/js/layouts/jQueryMessage.js"></script>
 <!-- 搜索框 -->
 <div id="search-main" style="display: none;">
 	<form id="searchform" action="#" target="_blank">
 <div class="container">
-    <div class="logo" style="background-image: url(http://cdn.zhd99.cn/img/search/favicon.png)"></div>
+    <div class="logo" style="background-image: url(/img/search/favicon.png)"></div>
     <div class="input">
         <input type="text" placeholder="请输入要搜索的内容" autocomplete="off" id="local-search-input">
         <div class="picker">本站</div>
         <ul class="picker-list">
-            <li class="picker-list1" style="background-image: url(http://cdn.zhd99.cn/img/search/favicon.png)" data-logo="favicon.png">本站</li>
-            <li class="picker-list2" style="background-image: url(http://cdn.zhd99.cn/img/search/ico_baidu.png)" data-logo="baidu.png">百度</li>
-            <li class="picker-list3" style="background-image: url(http://cdn.zhd99.cn/img/search/ico_sogou.png)" data-logo="sogou.png">搜狗</li>
-            <li class="picker-list4" style="background-image: url(http://cdn.zhd99.cn/img/search/ico_bing.png)" data-logo="bing.png">bing</li>
-            <li class="picker-list5" style="background-image: url(http://cdn.zhd99.cn/img/search/ico_google.ico)" data-logo="google.png">Google</li>
+            <li class="picker-list1" style="background-image: url(/img/search/favicon.png)" data-logo="favicon.png">本站</li>
+            <li class="picker-list2" style="background-image: url(/img/search/ico_baidu.png)" data-logo="baidu.png">百度</li>
+            <li class="picker-list3" style="background-image: url(/img/search/ico_sogou.png)" data-logo="sogou.png">搜狗</li>
+            <li class="picker-list4" style="background-image: url(/img/search/ico_bing.png)" data-logo="bing.png">bing</li>
+            <li class="picker-list5" style="background-image: url(/img/search/ico_google.ico)" data-logo="google.png">Google</li>
         </ul>
         <div class="hot-list"></div>
         <div id="local-search-result"></div>
     </div>
-<script src="http://cdn.zhd99.cn/js/layouts/s.js"></script>
+<script src="/js/layouts/s.js"></script>
     <div class="search"></div>
 </div>
 </form>
-<script type="text/javascript" src="http://cdn.zhd99.cn/js/layouts/srarch.js"></script>
+<script type="text/javascript" src="/js/layouts/srarch.js"></script>
 <script type="text/javascript">
     $(function () {
         helangSearch.init();
@@ -661,7 +660,7 @@ $(window).load(function(){
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1580388479963"></script>
+<script src="/js/app.js?v=1580389323629"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
@@ -683,9 +682,9 @@ $(window).load(function(){
 	<script src="https://typora.io/lib/typed.js-master/js/typed.js"></script>
 	<link rel="stylesheet" type="text/css" href="/css/indexfont1.css"/>
 
-	<link rel="stylesheet" type="text/css" href="http://cdn.zhd99.cn/css/jqueryfullPage.css"/>
-	<script src="http://cdn.zhd99.cn/js/fullpage/jquery.fullPage.min.js"></script>
-	<script src="http://cdn.zhd99.cn/js/fullpage/jquery-mousewheel-master/jquery.mousewheel.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/jqueryfullPage.css"/>
+	<script src="/js/fullpage/jquery.fullPage.min.js"></script>
+	<script src="/js/fullpage/jquery-mousewheel-master/jquery.mousewheel.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
 
@@ -781,7 +780,7 @@ $(function(){
 		</div>
 		
 		<div class="content-resizer">
-			<script src="http://cdn.zhd99.cn/js/hitokoto.js"></script>
+			<script src="/js/hitokoto.js"></script>
 			<h5 class="title__lb" id="titleremark" aria-title="www.zhd99.cn">『emmm...』</h5>
 			<span id="hitokoto_author"></span>
 			
@@ -800,7 +799,7 @@ $(function(){
 				<span id="typed-cursor"><i></i>滑动</span>
 			</p>
 		<!-- 单行切换 -->
-	<script src="http://cdn.zhd99.cn/js/layouts/contain.js"></script>
+	<script src="/js/layouts/contain.js"></script>
 		</div>
 			<header>
 				<div class="nav-auto-hide-header">
@@ -819,12 +818,12 @@ $(function(){
 	<!-- 调色板 -->
 	  
 		<!-- 调色板 css -->
-		<link rel="stylesheet" type="text/css" href="http://cdn.zhd99.cn/css/palette/normalize.min.css"/>
-		<link rel="stylesheet" type="text/css" href="http://cdn.zhd99.cn/css/palette/style.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/palette/normalize.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/palette/style.css"/>
 <div class="palette-wrapper" style="display: none;">
 <div class="palette">
 <div class="palette_item_wrapper">
-<div data-id="9" data-color="#e169c3" class="palette_color">
+<div data-id="9" data-color=css/"#e169c3" class="palette_color">
 	<span>9</span>	
 </div>
 <div data-id="8" data-color="#b569e1" class="palette_color">

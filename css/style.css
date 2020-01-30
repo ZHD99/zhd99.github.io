@@ -902,10 +902,10 @@ font.douyin {
   animation: shake-it 0.5s reverse infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 * {
-  cursor: url("/a.png"), auto !important;
+  cursor: url("http://cdn.zhd99.cn/a.png"), auto !important;
 }
 :active {
-  cursor: url("/link.png"), auto !important;
+  cursor: url("http://cdn.zhd99.cn/link.png"), auto !important;
 }
 .cell {
   color: #4b0001;

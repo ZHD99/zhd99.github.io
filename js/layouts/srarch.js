@@ -124,12 +124,20 @@ var helangSearch={
         });
         /* 搜索类别选择列表 */
         this.els.pickerList.on("click",">li",function () {
-            _this.els.logo.css("background-image",('url(/img/search/'+$(this).data("logo")+')'));
+            _this.els.logo.css("background-image",('url(http://cdn.zhd99.cn/img/search/'+$(this).data("logo")+')'));
             _this.searchIndex=$(this).index();
             _this.els.pickerBtn.html($(this).html())
         });
         /* 搜索 输入框 点击*/
         this.els.input.click(function () {
+            if(!$(this).val()){
+                setTimeout(function () {
+                    _this.els.hotList.show();
+                },100);
+            }
+        });
+        /* 搜索 输入框 点击*/
+        $(".container .input").click(function () {
             if(!$(this).val()){
                 setTimeout(function () {
                     _this.els.hotList.show();

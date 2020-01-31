@@ -158,13 +158,24 @@ nexmoe-content
 	  }
 }
 
+
 $(function() {
+	
 	var color_id = Cookies.get('id_Cookie');
 	var color = Cookies.get('color_Cookie');
 	setwwColor(color_id,color);
 	
 	/* 外链保护http://link.zhd99.cn */
-	$("article a").not(".toc a,article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a").attr("href", function(){ return 'http://cdn.zhd99.cn/link.html' + '?target=' + this.href });
+	$("article a").not(".toc a,article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a").attr("href",
+																													function(){
+		// 不是本站链接检测  article
+		var str = this.href;
+		var pattern = /http.+zhd99.cn/;
+		var falg = pattern.test(str).toString();
+		if('true' != falg){
+			return 'http://cdn.zhd99.cn/link.html' + '?target=' + str;
+		   }
+	});
 });
 
 

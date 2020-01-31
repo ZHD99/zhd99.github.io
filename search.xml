@@ -29,25 +29,6 @@
     
     
     <entry>
-      <title>java环境变量配置</title>
-      <link href="/2019/12/30/1912300034/"/>
-      <url>/2019/12/30/1912300034/</url>
-      
-        <content type="html"><![CDATA[<p>java环境变量配置 <a href="https://www.runoob.com/w3cnote/windows10-java-setup.html" target="_blank" rel="noopener">相关链接</a></p><a id="more"></a><div class="toc"><!-- toc --><ul><li><a href="#xin-jian-2-ge-bian-liang-java-home-classpath-xiu-gai-pach"><strong>新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH：</strong></a></li></ul><!-- tocstop --></div><p>修改环境变量需要先安装jdk ,打开环境变量</p><p><strong>此电脑  -&gt;    属性 -&gt; 高级系统设置 -&gt; 环境变量</strong></p><h2><span id="xin-jian-2-ge-bian-liang-java-home-classpath-xiu-gai-pach"><strong>新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH：</strong></span><a href="#xin-jian-2-ge-bian-liang-java-home-classpath-xiu-gai-pach" class="header-anchor">#</a></h2><p>1、新建JAVA_HOME 变量</p><pre><code class="md">变量名：JAVA_HOME变量值：电脑上JDK安装的绝对路径(D:\back_end\java\jdk1.8.0_131)</code></pre><p>2、新建/修改 CLASSPATH 变量</p><pre><code class="md">变量名：CLASSPATH变量值：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code></pre><p>3、添加Path 变量</p><pre><code class="md">%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</code></pre><p>JAVA_HOME 需要统一大小写    </p><p>path（%JAVA_HOME%）和 变量名 JAVA_HOME 一样</p><p>4、检查是否配置好</p><p>在命令行输入 java  、javac</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> JAVA </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>windows My sql 解压版安装方法</title>
       <link href="/2019/12/30/1912301045/"/>
       <url>/2019/12/30/1912301045/</url>
@@ -59,6 +40,25 @@
         <tags>
             
             <tag> MySql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java环境变量配置</title>
+      <link href="/2019/12/30/1912300034/"/>
+      <url>/2019/12/30/1912300034/</url>
+      
+        <content type="html"><![CDATA[<p>java环境变量配置 <a href="https://www.runoob.com/w3cnote/windows10-java-setup.html" target="_blank" rel="noopener">相关链接</a></p><a id="more"></a><div class="toc"><!-- toc --><ul><li><a href="#xin-jian-2-ge-bian-liang-java-home-classpath-xiu-gai-pach"><strong>新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH：</strong></a></li></ul><!-- tocstop --></div><p>修改环境变量需要先安装jdk ,打开环境变量</p><p><strong>此电脑  -&gt;    属性 -&gt; 高级系统设置 -&gt; 环境变量</strong></p><h2><span id="xin-jian-2-ge-bian-liang-java-home-classpath-xiu-gai-pach"><strong>新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH：</strong></span><a href="#xin-jian-2-ge-bian-liang-java-home-classpath-xiu-gai-pach" class="header-anchor">#</a></h2><p>1、新建JAVA_HOME 变量</p><pre><code class="md">变量名：JAVA_HOME变量值：电脑上JDK安装的绝对路径(D:\back_end\java\jdk1.8.0_131)</code></pre><p>2、新建/修改 CLASSPATH 变量</p><pre><code class="md">变量名：CLASSPATH变量值：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</code></pre><p>3、添加Path 变量</p><pre><code class="md">%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</code></pre><p>JAVA_HOME 需要统一大小写    </p><p>path（%JAVA_HOME%）和 变量名 JAVA_HOME 一样</p><p>4、检查是否配置好</p><p>在命令行输入 java  、javac</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> JAVA </tag>
             
         </tags>
       

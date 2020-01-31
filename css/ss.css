@@ -55,10 +55,10 @@ position: fixed;
 // 搜索 css
 */
 #search-main{
+    position: fixed;
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', Arial;
-    position: absolute;
     top: 30%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);

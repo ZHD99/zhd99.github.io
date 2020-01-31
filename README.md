@@ -1,9 +1,12 @@
-> <center><a href="https://www.zhd99.top"></a>揪蝉的日常 blog   </center>
+> <center><a href="https://www.zhd99.cn"></a>揪蝉的日常 blog   </center>
+##### 10:25 2020/1/31
+网站发布 www.zhd99.cn
 
-##### 10:25 2020/1/3
+##### 10:25 2020/1/9
 
  更新内容：
  	Git 访问速度过慢，hexo 迁至coding
+
 ##### 10:25 2020/1/3
 
  更新内容：

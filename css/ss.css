@@ -8,8 +8,9 @@ position: relative;
 }
 
 #searchFigure div {
-position: relative;
+position: fixed;
     z-index: 1;
+    width: 870px;
   height: 50px;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;

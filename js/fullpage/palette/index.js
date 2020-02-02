@@ -163,23 +163,68 @@ nexmoe-content
 
 
 $(function() {
-	
+	// 网页diy 存入
 	var color_id = Cookies.get('id_Cookie');
 	var color = Cookies.get('color_Cookie');
 	setwwColor(color_id,color);
 	
 	/* 外链保护http://link.zhd99.cn */
-	$("article a").not(".toc a,article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a").attr("href",
+	$("article a").not(".toc a,article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a,article .gallerys").attr("href",
 																													function(){
 		// 不是本站链接检测  article
 		var str = this.href;
 		var pattern = /http.+zhd99.cn/;
-		var falg = pattern.test(str).toString();
+		var falg = pattern.test(str).toString().trim();
 		if('true' != falg){
 			return 'http://cdn.zhd99.cn/link.html' + '?target=' + str;
 		   }
-	});
 });
+	
+	
+	// 统一 图片资源 http 或者 https 
+    	$("article img,article iframe").attr("src",
+function(){
+			var str = this.src;
+			var tls = str.substring(0,5).toLowerCase().trim();
+			
+			
+			var imgobj = new Image(); /* 判断是否存在 */
+			imgobj.src = str;
+			/* 没有该图片返回-1 */
+			if(imgobj.fileSize > 0 || (imgobj.width > 0 && imgobj.height > 0) ){
+				/*alert("无错误");*/
+			}else{
+				if('https' == tls){
+				   return 'http' + str.substring(5);
+				}else{
+					return 'https' + str.substring(4);
+				}
+			}
+		});	
+		
+		$("article .gallerys").attr("href",
+function(){
+			var str = this.href;
+			var tls = str.substring(0,5).toString().toLowerCase().trim();
+			var imgobj = new Image(); /* 判断是否存在 */
+			imgobj.src = str;
+			if(imgobj.fileSize > 0 || (imgobj.width > 0 && imgobj.height > 0) ){
+				
+			}else{
+				if('https' == tls){
+				   return 'http' + str.substring(5);
+				}else{
+					//$("article .gallerys").attr("href",'https' + str.substring(4));
+					return 'https' + str.substring(4);
+				}
+			}
+		});
+	/* 设置iframe */
+	
+	
+	
+});
+	
 
 
 // 关闭

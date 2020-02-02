@@ -31,19 +31,60 @@ for (let link of links) {
 $("table")
   .has("img")
   .addClass("nexmoe-album");
-
-$("#nexmoe-content img").each(function() {
+/*懒加载*/
+/*$("#nexmoe-content img").each(function() {
   $(this).attr("data-src", $(this).attr("src"));
   $(this).attr("src", "");
   $(this).addClass("lazyload");
   $(this).attr("referrerPolicy", "no-referrer");
 });
+*/
+/*懒加载end*/
 
+
+/* 图片放大 */
 $("article:not(.nexmoe-py) img").each(function() {
   var element = document.createElement("a");
   $(element).attr("data-fancybox", "gallery");
-  $(element).attr("href", $(this).attr("data-src"));
+  /*图片样式*/
+  $(element).attr("class", "gallerys");
+  $(element).attr("href", $(this).attr("src"));
   $(this).wrap(element);
+	
+  /* iframe */
+  var element2 = document.createElement("iframe");
+  $(element2).attr("src", $(this).attr("src"));
+  $(element2).attr("align", "middle");
+  $(element2).attr("frameborder", "0");
+  $(element2).attr("scrolling", "no");
+  $(element2).attr("width", "800px");
+  $(element2).attr("height", "300px");
+  $(this).wrap(element2);
+	
+	
+});
+$("article:not(.nexmoe-py) iframe").each(function() {
+/*  var element = document.createElement("a");
+  $(element).attr("data-fancybox", "gallery");
+  图片样式
+  $(element).attr("class", "gallerys");
+  $(element).attr("href", $(this).attr("src"));
+  $(this).wrap(element);*/
+
+	
+	 $("article iframe").mouseover(function(){
+		 var flag = $('.articlefull').val();
+		 if(flag == null){
+			$("article iframe").before("<span style='position: absolute;top: 20px;left: 40%;' class='articlefull'>查看全屏</span>");
+			}
+		 
+	 });
+	 $("article iframe").mouseout(function(){
+		 $(".articlefull").fadeOut(5000, function(){
+		 		$(this).remove();
+		 });
+	 });
+	
 });
 
 $("#nexmoe-sidebar a").addClass("mdui-ripple");

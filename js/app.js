@@ -75,7 +75,7 @@ $("article:not(.nexmoe-py) iframe").each(function() {
 	 $("article iframe").mouseover(function(){
 		 var flag = $('.articlefull').val();
 		 if(flag == null){
-			$("article iframe").before("<span style='position: absolute;top: 20px;left: 40%;' class='articlefull'>查看全屏</span>");
+			$("article iframe").before("<span style='position: absolute;top: 20px;left: 40%; font-weight: bold;' class='articlefull'>点击放大</span>");
 			}
 		 
 	 });

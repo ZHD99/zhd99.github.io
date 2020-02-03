@@ -176,9 +176,40 @@ $(function() {
 		var pattern = /http.+zhd99.cn/;
 		var falg = pattern.test(str).toString().trim();
 		if('true' != falg){
-			return 'http://cdn.zhd99.cn/link.html' + '?target=' + str;
+			return 'http://an.zhd99.cn/link.html' + '?target=' + str;
 		   }
 });
+	
+	// token 防盗链
+	function dearmsdanToken(url,p){
+		var time = new Date();
+		var etime = parseInt(time.getTime() / 1000) + 600; // 授权10分钟后过期
+		var key = 'dearmsdan';   // token防盗链密钥
+		var path = p;  // 文件相对路径
+		var str = md5(key + '&' + etime + '&' + path);
+		sign = str.substr(12, 8) + etime;
+		return url + '?_upt=' + sign;
+		
+	}
+	$("article img,article iframe").attr("src",
+function(){
+		var dearsrc = this.src;
+		var url = window.location.origin.length-1;
+		var pach = this.src.substring(url);
+		
+		return dearmsdanToken(dearsrc,pach);
+		
+});
+	$("article .gallerys").attr("href",
+function(){
+		var dearhref = this.href;
+		var url = window.location.origin.length-1;
+		var pach = this.href.substring(url);
+		
+		return dearmsdanToken(dearhref,pach);
+		
+});
+
 	
 	
 	// 统一 图片资源 http 或者 https 

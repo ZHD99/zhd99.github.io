@@ -29,7 +29,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1580796550396">
+  <link rel="stylesheet" href="/css/style.css?v=1580823279419">
 	
 	
 	
@@ -72,6 +72,74 @@
 	
 	
 <!-- ZHDconfig main -->
+	<!-- debug -->
+	  <script>
+        // 鍙嶈皟璇曞嚱锟?鍙傛暟锛氬紑鍏筹紝鎵ц浠ｇ爜
+        function endebug(off, code) {
+            if (!off) {
+                !function (e) {
+                    function n(e) {
+                        function n() {
+                            return u
+                        }
+                        function o() {
+                            window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized ? t("on") : (a = "off", console.log(d), console.clear(), t(a))
+                        }
+                        function t(e) {
+                            u !== e && (u = e, "function" == typeof c.onchange && c.onchange(e))
+                        }
+                        function r() {
+                            l || (l = !0, window.removeEventListener("resize", o), clearInterval(f))
+                        }
+                        "function" == typeof e && (e = {
+                            onchange: e
+                        });
+                        var i = (e = e || {}).delay || 500,
+                            c = {};
+                        c.onchange = e.onchange;
+                        var a, d = new Image;
+                        d.__defineGetter__("id", function () {
+                            a = "on"
+                        });
+                        var u = "unknown";
+                        c.getStatus = n;
+                        var f = setInterval(o, i);
+                        window.addEventListener("resize", o);
+                        var l;
+                        return c.free = r, c
+                    }
+                    var o = o || {};
+                    o.create = n, "function" == typeof define ? (define.amd || define.cmd) && define(function () {
+                        return o
+                    }) : "undefined" != typeof module && module.exports ? module.exports = o : window.jdetects = o
+                }(), jdetects.create(function (e) {
+                    var a = 0;
+                    var n = setInterval(function () {
+                        if ("on" == e) {
+                            setTimeout(function () {
+                                if (a == 0) {
+                                    a = 1;
+                                    setTimeout(code);
+                                }
+                            }, 200)
+                        }
+                    }, 100)
+                })
+            }
+        }
+    </script>
+
+
+
+    <script type="text/javascript">
+        endebug(false, function () {
+            // 闈炴硶璋冭瘯鎵ц鐨勪唬锟?涓嶈浣跨敤鎺у埗鍙拌緭鍑虹殑鎻愰啋)
+            document.write("<p>糟糕 网页 ??了<br/>HTTP status code   405 not allowed  <br/>请刷新重试？</p>");
+            document.write("<img src='https://errorpage.b0.upaiyun.com/zhd99ooc-403'/>");
+        });
+    </script>
+
+<script src="/js/debug.js"></script>
 	<!-- 用户体验特效 -->
 	  <script>
 $(function() {
@@ -569,7 +637,7 @@ var browsehappy_config = {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1580796550410"></script>
+<script src="/js/app.js?v=1580823279424"></script>
 
 
 <script src=""></script>
@@ -734,10 +802,10 @@ $(function(){
 	<div class="section option1">
 		<div class="home-bg">
 			<!--<video loop autoplay preload muted x-webkit-airplay="true" airplay="allow" webkit-playsinline="true" playsinline="true" src="https://www.tencent.com/video/index-video.mp4" id="home-video"></video>--><video loop autoplay preload muted x-webkit-airplay="true" airplay="allow" webkit-playsinline="true" playsinline="true" id="home-video">
-			<source src="/Pexels.mp4" />
+			<source src="https://cdn.zhd99.cn/Pexels.mp4" />
 				<source src="/Pexels.mp4" />
 				<source src="https://flv.cndns.com/cn/webnew/images/cndns-banner-video-3.mp4" />
-				<source src="https://flv.cndns.com/cn/webnew/images/cndns-banner-video-3.mp4" />
+				<source src="https://www.tencent.com/video/index-video.mp4" />
 			</video>
 		</div>
 		<div class="Updowndemo">

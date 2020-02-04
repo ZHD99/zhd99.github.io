@@ -176,17 +176,17 @@ $(function() {
 		var pattern = /http.+zhd99.cn/;
 		var falg = pattern.test(str).toString().trim();
 		if('true' != falg){
-			return 'http://an.zhd99.cn/link.html' + '?target=' + str;
+			return 'http://link.zhd99.cn/link.html' + '?target=' + str;
 		   }
 });
 	
 	// token 防盗链
 	function dearmsdanToken(url,p){
-		var time = new Date();
-		var etime = parseInt(time.getTime() / 1000) + 600; // 授权10分钟后过期
-		var key = 'dearmsdan';   // token防盗链密钥
-		var path = p;  // 文件相对路径
-		var str = md5(key + '&' + etime + '&' + path);
+		time = new Date();
+		etime = parseInt(time.getTime() / 1000) + 600; // 授权10分钟后过期
+		key = 'dearmsdan';   // token防盗链密钥
+		path = p;  // 文件相对路径
+		str = md5(key + '&' + etime + '&' + path);
 		sign = str.substr(12, 8) + etime;
 		return url + '?_upt=' + sign;
 		

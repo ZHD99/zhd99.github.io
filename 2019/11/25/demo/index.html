@@ -22,7 +22,7 @@
 <meta property="og:description" content="Markdown 的使用和快捷键方法.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;cdn.zhd99.cn&#x2F;img&#x2F;demo&#x2F;Typora.jpg">
-<meta property="og:updated_time" content="2020-02-05T01:03:50.205Z">
+<meta property="og:updated_time" content="2020-02-05T04:59:55.669Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;cdn.zhd99.cn&#x2F;img&#x2F;demo&#x2F;Typora.jpg">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
@@ -32,7 +32,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1580864770882">
+  <link rel="stylesheet" href="/css/style.css?v=1580968818752">
 	
 	
 	
@@ -77,7 +77,7 @@
 <!-- ZHDconfig main -->
 	<!-- debug -->
 	  <script>
-        // 鍙嶈皟璇曞嚱锟?鍙傛暟锛氬紑鍏筹紝鎵ц浠ｇ爜
+        // 閸欏秷鐨熺拠鏇炲毐閿?閸欏倹鏆熼敍姘磻閸忕绱濋幍褑顢戞禒锝囩垳
         function endebug(off, code) {
             if (!off) {
                 !function (e) {
@@ -134,15 +134,19 @@
 
 
 
+<script src="//js/debug.js"></script>
+
+
     <script type="text/javascript">
-        endebug(false, function () {
-            // 闈炴硶璋冭瘯鎵ц鐨勪唬锟?涓嶈浣跨敤鎺у埗鍙拌緭鍑虹殑鎻愰啋)
-            document.write("<p>糟糕 网页 🦌了<br/>HTTP status code   405 not allowed  <br/>请刷新重试？</p>");
+        endebug(true, function () {
+            // 闂堢偞纭剁拫鍐槸閹笛嗩攽閻ㄥ嫪鍞�?娑撳秷顩︽担璺ㄦ暏閹貉冨煑閸欐媽绶崙铏规畱閹绘劙鍟?
+            document.write("<p>糟糕 网页 🦌�?<br/> HTTP status code   405 not allowed  <br/>请刷新重试？</p>");
             document.write("<img src='https://errorpage.b0.upaiyun.com/zhd99ooc-403'/>");
+			
+			$('#jsdebug').attr("src",);
         });
     </script>
 
-<script src="/js/debug.js"></script>
 	<!-- 用户体验特效 -->
 	  <script>
 $(function() {
@@ -436,10 +440,6 @@ var browsehappy_config = {
 
 <br/>	 感谢 Hexo &amp; nexmoe
 <br/>
- <a href="http://hn.beian.miit.gov.cn/" target="_blank">
-     <img width="16px" src="https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png" />
-     湘ICP备20001824号
-     </a>
 
     </div>
 </div><!-- .nexmoe-drawer -->
@@ -871,7 +871,6 @@ $H_{2SO_4}$</code></pre>
 <p><a href="https://link.jianshu.com?t=https%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3DvUfE2amYdxd0-eyzqayeMFOVKkDRJrtkb1dV1MxyoCEke31DbXM_rb8fy1qDh1o0tqcq9u_fKQG1RRqPKTB_YK%26wd%3D%26eqid%3D8a6c88e90000a679000000035aa6444d" target="_blank" rel="noopener">HTML特殊字符编码对照表</a></p>
 <style>
     .nexmoe-copyright{-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%)}
-
 #grayscale{
        background-image: url(http://cdn.zhd99.cn/saying.gif);
     /* background-image: url(https://imgsa.baidu.com/%B2%DD%C3%B1%C0%EF%B5%C4%E9%D9%D7%D3/pic/item/d97ca63….jpg?v=tbs?v=tbs); */
@@ -882,7 +881,12 @@ $H_{2SO_4}$</code></pre>
 }
 
 </style>
-
+<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+$(window).load(function(){
+    $('.nexmoe-comment').css('background-color','#fff');
+});
+</script>
 
 
   </article>
@@ -929,7 +933,63 @@ $(window).load(function(){
 </script>
 </section>
 </div>
-<p><br/></p><p><br/></p><p><br/></p>
+	<!-- urserfooter -->
+	  <style>
+	.upyun a{
+		text-decoration: none;
+    	color: #7d7dff;
+		font-family: initial;
+	}
+	.upyun a:hover{
+		text-decoration: underline;
+    color: aliceblue!important;
+	}
+	.upyun{    
+    	padding: 20px;
+		margin-top: 50px;
+    	text-align: center;
+    	border-radius: 50px;
+    	background: rgba(84, 76, 76, 0.08);
+}
+	}
+	.upyun .upyun-logo{
+		color: #2c97e8;
+	}
+	.upyun .upyun-logo img{   
+		margin-left: 20px;
+	}
+</style>
+
+<div class="upyun">
+	<div class="upyun-logo">
+		<a style="color: #00bbff;font-weight: bolder;" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="noopener">
+			<img style="vertical-align: middle;" src="https://cdn.zhd99.cn/upyun/upyun_logo5.png" width="50px" /> 
+		</a>
+		
+		<a style="color: #00bbff;font-weight: bolder;" href="https://www.aliyun.com/" target="_blank" rel="noopener">
+			<img style="vertical-align: middle;" src="https://cdn.zhd99.cn/upyun/ali.png" width="50px" /> 
+		</a>
+			<img style="vertical-align: middle;" src="https://cdn.zhd99.cn/upyun/valine.png" width="15px" /> 
+		<a href="https://valine.js.org" target="_blank" rel="noopener" class="upyun-logo">valine
+		
+		</a>
+	</div>
+	<div class="upyun-content">
+		感谢<a style="color: #00bbff;font-weight: bolder;" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="noopener">又拍云</a> 提供强力云存储服务 | 
+		<a style="color:#f66464;font-weight: bolder;" href="https://www.aliyun.com/" target="_blank" rel="noopener">阿里云 </a>提供 DNS 解析服务| 
+		<a style="color:#ea9000;font-weight: bolder;" href="https://valine.js.org/" target="_blank" rel="noopener"> Valine</a> 提供 简洁且高效 评论系统
+		</br>
+	© 2020 揪禅的日常.  
+	<a style="color:#bf7bff;" href="/baidusitemap.xml">
+		站点地图</a>.
+	<a href="http://hn.beian.miit.gov.cn/" target="_blank">
+     <img width="16px" src="https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png" />
+     湘ICP备20001824号
+     </a>
+	</div>
+</div>
+
+<p><br/></p><p><br/></p>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
@@ -945,7 +1005,7 @@ $(window).load(function(){
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1580864770888"></script>
+<script src="/js/app.js?v=1580968818757"></script>
 
 
 <script src=""></script>

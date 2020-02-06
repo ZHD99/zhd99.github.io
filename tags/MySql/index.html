@@ -29,7 +29,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css"> 	
-  <link rel="stylesheet" href="/css/style.css?v=1580864770966">
+  <link rel="stylesheet" href="/css/style.css?v=1580968818804">
 	
 	
 	
@@ -74,7 +74,7 @@
 <!-- ZHDconfig main -->
 	<!-- debug -->
 	  <script>
-        // 鍙嶈皟璇曞嚱锟?鍙傛暟锛氬紑鍏筹紝鎵ц浠ｇ爜
+        // 閸欏秷鐨熺拠鏇炲毐閿?閸欏倹鏆熼敍姘磻閸忕绱濋幍褑顢戞禒锝囩垳
         function endebug(off, code) {
             if (!off) {
                 !function (e) {
@@ -131,15 +131,19 @@
 
 
 
+<script src="//js/debug.js"></script>
+
+
     <script type="text/javascript">
-        endebug(false, function () {
-            // 闈炴硶璋冭瘯鎵ц鐨勪唬锟?涓嶈浣跨敤鎺у埗鍙拌緭鍑虹殑鎻愰啋)
-            document.write("<p>糟糕 网页 🦌了<br/>HTTP status code   405 not allowed  <br/>请刷新重试？</p>");
+        endebug(true, function () {
+            // 闂堢偞纭剁拫鍐槸閹笛嗩攽閻ㄥ嫪鍞�?娑撳秷顩︽担璺ㄦ暏閹貉冨煑閸欐媽绶崙铏规畱閹绘劙鍟?
+            document.write("<p>糟糕 网页 🦌�?<br/> HTTP status code   405 not allowed  <br/>请刷新重试？</p>");
             document.write("<img src='https://errorpage.b0.upaiyun.com/zhd99ooc-403'/>");
+			
+			$('#jsdebug').attr("src",);
         });
     </script>
 
-<script src="/js/debug.js"></script>
 	<!-- 用户体验特效 -->
 	  <script>
 $(function() {
@@ -433,10 +437,6 @@ var browsehappy_config = {
 
 <br/>	 感谢 Hexo &amp; nexmoe
 <br/>
- <a href="http://hn.beian.miit.gov.cn/" target="_blank">
-     <img width="16px" src="https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png" />
-     湘ICP备20001824号
-     </a>
 
     </div>
 </div><!-- .nexmoe-drawer -->
@@ -495,7 +495,63 @@ var browsehappy_config = {
         prev_text: '<i class="nexmoefont icon-left"></i>',
         next_text: '<i class="nexmoefont icon-right"></i>'
 -->
-<p><br/></p><p><br/></p><p><br/></p>
+	<!-- urserfooter -->
+	  <style>
+	.upyun a{
+		text-decoration: none;
+    	color: #7d7dff;
+		font-family: initial;
+	}
+	.upyun a:hover{
+		text-decoration: underline;
+    color: aliceblue!important;
+	}
+	.upyun{    
+    	padding: 20px;
+		margin-top: 50px;
+    	text-align: center;
+    	border-radius: 50px;
+    	background: rgba(84, 76, 76, 0.08);
+}
+	}
+	.upyun .upyun-logo{
+		color: #2c97e8;
+	}
+	.upyun .upyun-logo img{   
+		margin-left: 20px;
+	}
+</style>
+
+<div class="upyun">
+	<div class="upyun-logo">
+		<a style="color: #00bbff;font-weight: bolder;" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="noopener">
+			<img style="vertical-align: middle;" src="https://cdn.zhd99.cn/upyun/upyun_logo5.png" width="50px" /> 
+		</a>
+		
+		<a style="color: #00bbff;font-weight: bolder;" href="https://www.aliyun.com/" target="_blank" rel="noopener">
+			<img style="vertical-align: middle;" src="https://cdn.zhd99.cn/upyun/ali.png" width="50px" /> 
+		</a>
+			<img style="vertical-align: middle;" src="https://cdn.zhd99.cn/upyun/valine.png" width="15px" /> 
+		<a href="https://valine.js.org" target="_blank" rel="noopener" class="upyun-logo">valine
+		
+		</a>
+	</div>
+	<div class="upyun-content">
+		感谢<a style="color: #00bbff;font-weight: bolder;" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="noopener">又拍云</a> 提供强力云存储服务 | 
+		<a style="color:#f66464;font-weight: bolder;" href="https://www.aliyun.com/" target="_blank" rel="noopener">阿里云 </a>提供 DNS 解析服务| 
+		<a style="color:#ea9000;font-weight: bolder;" href="https://valine.js.org/" target="_blank" rel="noopener"> Valine</a> 提供 简洁且高效 评论系统
+		</br>
+	© 2020 揪禅的日常.  
+	<a style="color:#bf7bff;" href="/baidusitemap.xml">
+		站点地图</a>.
+	<a href="http://hn.beian.miit.gov.cn/" target="_blank">
+     <img width="16px" src="https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png" />
+     湘ICP备20001824号
+     </a>
+	</div>
+</div>
+
+<p><br/></p><p><br/></p>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
@@ -511,7 +567,7 @@ var browsehappy_config = {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1580864770971"></script>
+<script src="/js/app.js?v=1580968818811"></script>
 
 
 <script src=""></script>

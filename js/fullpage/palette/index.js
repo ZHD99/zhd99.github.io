@@ -66,6 +66,7 @@ function setwwColor(id,color) {
 		  $("#nexmoe-content .nexmoe-posts .nexmoe-post article").removeAttr("style");
 		  $("article").removeAttr("style");
 		  $("article h1, article h2, article h3, article h4, article h5, article h6").removeAttr("style");
+		  $('.upyun').removeAttr("style");
 		  
 	}
 	
@@ -143,6 +144,9 @@ nexmoe-content
 		  $("article h1, article h2, article h3, article h4, article h5, article h6").css('color','#ffffff');
 		  
 		  $("#nexmoe-background .nexmoe-bg").css('opacity','0.8');
+		  
+		  $('.upyun').css('color','aliceblue');
+		  $('.upyun').css('background','rgba(0, 0, 0, 0.41)');
 		  
 	  }else if(3 == id){
 	  	alert("3");

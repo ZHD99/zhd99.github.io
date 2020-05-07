@@ -297,9 +297,9 @@ html.fullscreen-bg,html.fullscreen-bg body,html.fullscreen-bg #dearmsdan {
     -ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
-    -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0 15px #777;
+    -webkit-box-shadow: 0 0 15px #777;
+    box-shadow: 0 0 15px #777;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -583,10 +583,7 @@ background:#FF0BEE;
 	padding: 0;
 	margin: 0;
 	border: 0;
-	background-color: #c6d6f4de;    
-    -moz-box-shadow: 0 0 15px #777;;
-	-webkit-box-shadow: 0 0 15px #777;
-    box-shadow: 0 0 15px #777;
+	background-color: #c6d6f4de;
 }
 .btn-toggle-mx {
 	-webkit-transform: rotateY(0deg);
@@ -1159,6 +1156,11 @@ figure td:nth-child(2) pre{
 	}
 	.mobile{
 		display: block;
+	}
+	.navbar-default{    
+		-moz-box-shadow: 0 0 15px #7770;
+		-webkit-box-shadow: 0 0 15px #7770;
+		box-shadow: 0 0 15px #7770;
 	}
 }
 

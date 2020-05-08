@@ -501,9 +501,9 @@ background:#FF0BEE;
 
 /*.main{ background: #252c35!important }*/
 #dearmsdan {
-	position: -webkit-sticky;
+	/*position: -webkit-sticky;
 	position: sticky;
-	opacity: 0
+	opacity: 0*/
 }
 .wrapShow {
 	-webkit-animation: 1.3s saani forwards;

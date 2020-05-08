@@ -201,6 +201,13 @@ footer {
     position: fixed;
     z-index: -1;
 }
+.dearmsdan-bg .div_bg{    
+	background-color: rgba(215, 237, 255, 0.5);
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    z-index: -1;
+}
 #dearmsdan .sidebar {
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -257,9 +264,6 @@ footer {
     width: 100%;
     position: relative;
     left: 260px
-}
-.main-content {
-    padding: 0;
 }
 
 .navbar+.main-content {
@@ -655,12 +659,8 @@ background:#FF0BEE;
 ****  
 ***********
 */
-.main-content{        
-	/*box-shadow: rgba(161, 177, 204, 0.4) 0px 0px 1rem;  */  
-	background-color: rgba(215, 237, 255, 0.5);
-    min-height: 100vh;
+.main-content{
     overflow-x: hidden;
-    overflow-y: auto;
     padding: 30px 20px 20px;
 }
 .dearmsdan-post{    

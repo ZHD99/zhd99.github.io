@@ -1157,10 +1157,8 @@ figure td:nth-child(2) pre{
 	.mobile{
 		display: block;
 	}
-	.navbar-default{    
-		-moz-box-shadow: 0 0 15px #7770;
-		-webkit-box-shadow: 0 0 15px #7770;
-		box-shadow: 0 0 15px #7770;
+	#jp_container_N{
+		display:none;
 	}
 }
 

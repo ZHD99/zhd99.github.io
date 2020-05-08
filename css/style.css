@@ -658,7 +658,6 @@ background:#FF0BEE;
 .main-content{        
 	box-shadow: rgba(161, 177, 204, 0.4) 0px 0px 1rem;    
 	background-color: #d7edff75;
-    min-height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
     padding: 30px 20px 20px;

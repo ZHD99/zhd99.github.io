@@ -192,6 +192,11 @@ footer {
     text-align: right;
     font-size: 13px
 }
+.dearmsdan{
+	overflow-x: hidden;
+	overflow-y: auto;
+    padding: 30px 20px 20px;
+}
 .dearmsdan-bg{
 	background-color: #252c35;
 	background-image: url('https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302');	

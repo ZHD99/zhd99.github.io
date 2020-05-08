@@ -7,7 +7,6 @@ $(document).pjax('a[target!=_blank]', '.main', {fragment: '.main',timeout: 8000}
 		tocs();
 		pagegun();
 		dearzoom();
-		
 });
 
 
@@ -45,12 +44,10 @@ $(document).on('ready pjax:end', function(event) {
 	copycodes();
 	pagegun();
 	dearzoom();
-		$(".main-content").delay(300).addClass("wrapShow");
-	
-	
+	// 淡入
+	$(".dearmsdan").delay(300).addClass("wrapShow");
 	
 })
-
 
 
 

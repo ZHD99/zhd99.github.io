@@ -1,8 +1,8 @@
 "use strict"
 $(window).on("load", function () {
 	
-	//加载中...................
-	$("#dearmsdan").delay(400).addClass("wrapShow");
+	//加载中延迟...................
+	$("#dearmsdan").delay(10000).addClass("wrapShow");
 
 	
 	

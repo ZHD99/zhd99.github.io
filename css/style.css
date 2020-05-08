@@ -267,7 +267,7 @@ footer {
 }
 
 .navbar+.main-content {
-    padding: 105px 0 28px 5px
+    /*padding: 105px 0 28px 5px;*/
 }
 
 
@@ -1099,9 +1099,9 @@ figure td:nth-child(2) pre{
 	
 }
 @media screen and (max-width: 767px) {
-    .navbar+.main-content {
+   /* .navbar+.main-content {
         padding-top:155px
-    }
+    }*/
 }
 @media screen and (max-width: 1024px) {
     .navbar-default .brand {

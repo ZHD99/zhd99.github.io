@@ -10,6 +10,7 @@ body{
     color: #676a6d!important;
 	margin: 0px;
   	font-family: "Century Gothic", "Lato", sans-serif;
+	background: #ececfa!important
 }
 body {
 	margin: 0 auto;
@@ -305,7 +306,7 @@ html.fullscreen-bg,html.fullscreen-bg body,html.fullscreen-bg #dearmsdan {
     padding: 0;
     margin: 0;
     border: 0;
-	background-color: #c6d6f4de!important;
+	background-color: #c6d6f4;
 }
 
 .navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:hover,.navbar-default .navbar-nav>.open>a:focus {
@@ -582,7 +583,7 @@ background:#FF0BEE;
 	padding: 0;
 	margin: 0;
 	border: 0;
-	background-color: #c6d6f4de!important;
+	background-color: #c6d6f4;
 }
 .btn-toggle-mx {
 	-webkit-transform: rotateY(0deg);

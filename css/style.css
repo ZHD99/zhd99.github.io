@@ -848,7 +848,7 @@ transform:translateY(4px) rotate(0deg)
 }
 }
 .mobile-inner-nav {    
-	background-color: #6ca4a9de;
+	background-color: rgba(108, 164, 169, 0.8);
     width: 100%;
     position: absolute;
     top: 80px;

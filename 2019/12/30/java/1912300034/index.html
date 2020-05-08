@@ -408,6 +408,111 @@
 			<div class="main">
 				<div class="dearmsdan-bg"></div>
 				<div class="main-content">
+					
+<div class="dearmsdan">
+	<div class="dearmsdan-post" id="dearmsdanPost">
+		<div class="dearmsdan-title">
+			<h1>java环境变量配置</h1>
+		</div>
+	  <div id="post" class="dearmsdan-post-Statistics">
+            <a>2019年12月30日</a>
+		
+		
+		  <a class=" -link" href="/tags/JAVA/" rel="tag">JAVA</a>
+		
+	  </div>
+		
+		
+<div id="modal" style="display:none">
+
+<aside id="article-toc" class="fixed-toc">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH："><span class="toc-text">新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH：</span></a></li></ol>
+    </div>
+</aside>
+</div>
+
+
+		
+			<a href="#modal" class="second">
+				<div class="i">
+						<i style="font-size:20px" class="DearMsDanIconFont icon-sousuo">
+						<span style="font-size:0px"><br/>目<br/>录</span>
+						</i>
+				</div>
+			</a>
+
+
+
+
+<script>
+	$(".second .i").mouseover(function(){
+  $(".second .i span").css("font-size","18px");
+});
+	$(".second .i").mouseleave(function(){
+  $(".second .i span").css("font-size","0px");
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+	<script src="/resources/toc/jquery.pageslide.js"></script>
+		<div>
+			  <article>
+				<p>java环境变量配置 <a href="https://www.runoob.com/w3cnote/windows10-java-setup.html" target="_blank" rel="noopener">相关链接</a></p>
+<a id="more"></a>
+
+<!-- toc -->
+
+<p>修改环境变量需要先安装jdk ,打开环境变量</p>
+<p><strong>此电脑  -&gt;    属性 -&gt; 高级系统设置 -&gt; 环境变量</strong></p>
+<h2 id="新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH："><a href="#新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH：" class="headerlink" title="新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH："></a><strong>新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH：</strong></h2><p>1、新建JAVA_HOME 变量</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：电脑上JDK安装的绝对路径(D:\back<span class="emphasis">_end\java\jdk1.8.0_</span>131)</span><br></pre></td></tr></table></figure>
+
+<p>2、新建/修改 CLASSPATH 变量</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">变量名：CLASSPATH</span><br><span class="line">变量值：.;%JAVA<span class="emphasis">_HOME%\lib\dt.jar;%JAVA_</span>HOME%\lib\tools.jar;</span><br></pre></td></tr></table></figure>
+
+<p>3、添加Path 变量</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">%JAVA_HOME%\bin;</span><br><span class="line">%JAVA_HOME%\jre\bin;</span><br></pre></td></tr></table></figure>
+
+<p>JAVA_HOME 需要统一大小写    </p>
+<p>path（%JAVA_HOME%）和 变量名 JAVA_HOME 一样</p>
+<p>4、检查是否配置好</p>
+<p>在命令行输入 java  、javac </p>
+
+			  </article>
+		</div>
+		
+		
+	  
+	
+		
+
+
+<div class="copy">
+<i></i>
+<strong>本文作者：</strong>
+	
+	 
+			dearmsdan<br>
+        
+	
+<strong>本文链接：</strong>
+	<a href="http://yoursite.com/2019/12/30/java/1912300034/" title="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;30&#x2F;java&#x2F;1912300034&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;30&#x2F;java&#x2F;1912300034&#x2F;</a><br>
+</div>
+
+	  
+	</div>
+</div>
     				
 					<!--<iframe src="a/index.html" class="iframe_mx uicss-cn"></iframe>-->
 					<!-- footer -->
@@ -563,111 +668,6 @@ function timeElapse(date){
 
 
 				</div>
-					
-<div class="dearmsdan">
-	<div class="dearmsdan-post" id="dearmsdanPost">
-		<div class="dearmsdan-title">
-			<h1>java环境变量配置</h1>
-		</div>
-	  <div id="post" class="dearmsdan-post-Statistics">
-            <a>2019年12月30日</a>
-		
-		
-		  <a class=" -link" href="/tags/JAVA/" rel="tag">JAVA</a>
-		
-	  </div>
-		
-		
-<div id="modal" style="display:none">
-
-<aside id="article-toc" class="fixed-toc">
-    <div id="article-toc-inner">
-        <strong class="sidebar-title">目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH："><span class="toc-text">新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH：</span></a></li></ol>
-    </div>
-</aside>
-</div>
-
-
-		
-			<a href="#modal" class="second">
-				<div class="i">
-						<i style="font-size:20px" class="DearMsDanIconFont icon-sousuo">
-						<span style="font-size:0px"><br/>目<br/>录</span>
-						</i>
-				</div>
-			</a>
-
-
-
-
-<script>
-	$(".second .i").mouseover(function(){
-  $(".second .i span").css("font-size","18px");
-});
-	$(".second .i").mouseleave(function(){
-  $(".second .i span").css("font-size","0px");
-});
-</script>
-
-
-
-
-
-
-
-
-
-
-
-	<script src="/resources/toc/jquery.pageslide.js"></script>
-		<div>
-			  <article>
-				<p>java环境变量配置 <a href="https://www.runoob.com/w3cnote/windows10-java-setup.html" target="_blank" rel="noopener">相关链接</a></p>
-<a id="more"></a>
-
-<!-- toc -->
-
-<p>修改环境变量需要先安装jdk ,打开环境变量</p>
-<p><strong>此电脑  -&gt;    属性 -&gt; 高级系统设置 -&gt; 环境变量</strong></p>
-<h2 id="新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH："><a href="#新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH：" class="headerlink" title="新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH："></a><strong>新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH：</strong></h2><p>1、新建JAVA_HOME 变量</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：电脑上JDK安装的绝对路径(D:\back<span class="emphasis">_end\java\jdk1.8.0_</span>131)</span><br></pre></td></tr></table></figure>
-
-<p>2、新建/修改 CLASSPATH 变量</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">变量名：CLASSPATH</span><br><span class="line">变量值：.;%JAVA<span class="emphasis">_HOME%\lib\dt.jar;%JAVA_</span>HOME%\lib\tools.jar;</span><br></pre></td></tr></table></figure>
-
-<p>3、添加Path 变量</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">%JAVA_HOME%\bin;</span><br><span class="line">%JAVA_HOME%\jre\bin;</span><br></pre></td></tr></table></figure>
-
-<p>JAVA_HOME 需要统一大小写    </p>
-<p>path（%JAVA_HOME%）和 变量名 JAVA_HOME 一样</p>
-<p>4、检查是否配置好</p>
-<p>在命令行输入 java  、javac </p>
-
-			  </article>
-		</div>
-		
-		
-	  
-	
-		
-
-
-<div class="copy">
-<i></i>
-<strong>本文作者：</strong>
-	
-	 
-			dearmsdan<br>
-        
-	
-<strong>本文链接：</strong>
-	<a href="http://yoursite.com/2019/12/30/java/1912300034/" title="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;30&#x2F;java&#x2F;1912300034&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;30&#x2F;java&#x2F;1912300034&#x2F;</a><br>
-</div>
-
-	  
-	</div>
-</div>
 			</div>
 		</div>
 		

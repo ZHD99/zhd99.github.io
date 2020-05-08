@@ -656,8 +656,8 @@ background:#FF0BEE;
 ***********
 */
 .main-content{        
-	box-shadow: rgba(161, 177, 204, 0.4) 0px 0px 1rem;    
-	background-color: #d7edff75;
+	/*box-shadow: rgba(161, 177, 204, 0.4) 0px 0px 1rem;  */  
+	background-color: rgba(215, 237, 255, 0.5);
     min-height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;

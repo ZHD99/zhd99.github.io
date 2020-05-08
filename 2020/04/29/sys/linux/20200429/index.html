@@ -408,6 +408,157 @@
 			<div class="main">
 				<div class="dearmsdan-bg"></div>
 				<div class="main-content">
+					
+<div class="dearmsdan">
+	<div class="dearmsdan-post" id="dearmsdanPost">
+		<div class="dearmsdan-title">
+			<h1>Linux中查看jdk安装目录、卸载jdk、rpm命令、rm命令参数</h1>
+		</div>
+	  <div id="post" class="dearmsdan-post-Statistics">
+            <a>2020年04月29日</a>
+		
+		  <a class=" -link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
+		
+		
+		  <a class=" -link" href="/tags/linux/" rel="tag">linux</a>
+		
+	  </div>
+		
+		
+<div id="modal" style="display:none">
+
+<aside id="article-toc" class="fixed-toc">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、Linux中查看jdk安装目录"><span class="toc-text">一、Linux中查看jdk安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、卸载JDK-分情况卸载"><span class="toc-text">二、卸载JDK(分情况卸载)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、-卸载系统自带的jdk版本："><span class="toc-text">1、**卸载系统自带的jdk版本：**</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、卸载rpm安装的jkd版本"><span class="toc-text">2、卸载rpm安装的jkd版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、自解压文件卸载（很暴力的做法，直接删安装文件夹）"><span class="toc-text">3、自解压文件卸载（很暴力的做法，直接删安装文件夹）</span></a></li></ol></li></ol>
+    </div>
+</aside>
+</div>
+
+
+		
+			<a href="#modal" class="second">
+				<div class="i">
+						<i style="font-size:20px" class="DearMsDanIconFont icon-sousuo">
+						<span style="font-size:0px"><br/>目<br/>录</span>
+						</i>
+				</div>
+			</a>
+
+
+
+
+<script>
+	$(".second .i").mouseover(function(){
+  $(".second .i span").css("font-size","18px");
+});
+	$(".second .i").mouseleave(function(){
+  $(".second .i span").css("font-size","0px");
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+	<script src="/resources/toc/jquery.pageslide.js"></script>
+		<div>
+			  <article>
+				<p>rpm -qa|grep gcj </p>
+<p>   可能看到如下类似的信息： </p>
+<p>  libgcj-4.1.2-44.el5 </p>
+<p>  java-1.4.2-gcj-compat-1.4.2.0-40jpp.115 </p>
+<p>  使用rpm -e –nodeps 命令删除上面查找的内容：</p>
+<p>来源于：Linux社区  作者：Linux(防止走丢~)：<a href="https://www.linuxidc.com/Linux/2018-11/155295.htm" target="_blank" rel="noopener">https://www.linuxidc.com/Linux/2018-11/155295.htm</a></p>
+<p>………</p>
+<a id="more"></a>
+
+<!-- toc -->
+
+<h3 id="一、Linux中查看jdk安装目录"><a href="#一、Linux中查看jdk安装目录" class="headerlink" title="一、Linux中查看jdk安装目录"></a>一、Linux中查看jdk安装目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxidc ~]# whereis Java</span><br><span class="line">java: /usr/bin/java /usr/local/java#java执行路径</span><br><span class="line">[root@linuxidc ~]# which java</span><br><span class="line">/usr/bin/java#查看JDK安装路径</span><br><span class="line">[root@linuxidc ~]# echo $JAVA_HOME</span><br><span class="line">/usr/local/java/jdk1.7.0_80</span><br><span class="line"></span><br><span class="line">[root@linuxidc ~]# echo $PATH</span><br><span class="line">/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:JAVA_HOME/bin:/usr/local/java/jdk1.7.0_80/bin:/</span><br><span class="line">usr/local/erlang/bin:/root/bin</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://www.linuxidc.com/upload/2018_11/18111210486269.png" alt="Linux中查看jdk安装目录、卸载jdk、rpm命令、rm命令参数"></p>
+<p>备注：如果是windows中，可以使用:</p>
+<p>set java_home:查看JDK安装路径<br>java -version:查看JDK版本</p>
+<h3 id="二、卸载JDK-分情况卸载"><a href="#二、卸载JDK-分情况卸载" class="headerlink" title="二、卸载JDK(分情况卸载)"></a>二、卸载JDK(分情况卸载)</h3><h4 id="1、-卸载系统自带的jdk版本："><a href="#1、-卸载系统自带的jdk版本：" class="headerlink" title="1、**卸载系统自带的jdk版本：**"></a><strong>1、**</strong>卸载系统自带的jdk版本：**</h4><p>  查看自带的jdk： </p>
+<p>  rpm -qa|grep gcj </p>
+<p>   可能看到如下类似的信息： </p>
+<p>  libgcj-4.1.2-44.el5 </p>
+<p>  java-1.4.2-gcj-compat-1.4.2.0-40jpp.115 </p>
+<p>  使用rpm -e –nodeps 命令删除上面查找的内容： </p>
+<p>   rpm -e –nodeps java-1.4.2-gcj-compat-1.4.2.0-40jpp.115 </p>
+<h4 id="2、卸载rpm安装的jkd版本"><a href="#2、卸载rpm安装的jkd版本" class="headerlink" title="2、卸载rpm安装的jkd版本"></a>2、<strong>卸载rpm安装的jkd版本</strong></h4><p>  查看安装的jdk： </p>
+<p>   rpm -qa|grep jdk </p>
+<p>   可能看到如下类似的信息： </p>
+<p>  jdk-1.6.0_22-fcs </p>
+<p>  卸载： </p>
+<p>   rpm -e –nodeps jdk-1.6.0_22-fcs  </p>
+<p><strong>备注：*</strong>如果您的 Linux 盒中具有 RPM，则应首先确定 Java 是否是使用 RPM 安装的。如果 Java 不是使用 RPM 安装的，则请跳过本节内容。*</p>
+<ol>
+<li><ol>
+<li><p>打开<strong>终端窗口</strong></p>
+</li>
+<li><p>以<strong>超级用户root</strong>身份登录</p>
+</li>
+<li><p>键入以下命令，尝试查找 JRE 软件包： <code>**rpm -qa**</code></p>
+</li>
+<li><p>如果 RPM 报告一个类似于 <strong>jre–fcs</strong> 的软件包，则说明 Java 是使用 RPM 安装的。</p>
+<p><strong>注：*</strong>通常，您不必使用 RPM 卸载 Java，因为 RPM 可以在安装新版本时自动卸载旧版本的 Java！除非您准备永久删除 Java，否则请跳过本节内容。*</p>
+</li>
+<li><p>要卸载 Java，请键入： <code>**rpm -e jre --fcs**</code></p>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="3、自解压文件卸载（很暴力的做法，直接删安装文件夹）"><a href="#3、自解压文件卸载（很暴力的做法，直接删安装文件夹）" class="headerlink" title="3、自解压文件卸载（很暴力的做法，直接删安装文件夹）"></a>3、自解压文件卸载（很暴力的做法，直接删安装文件夹）</h4><p>  　 （1） 确定 Java 是否安装在某些文件夹中。常用位置包括 <code>**/usr/java/jre_**</code> 或 <code>**/opt/jre_nb/jre_/bin/java/**</code></p>
+<p>　　（2）如果找到了安装 Java 的文件夹，可以删除此文件夹。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxidc ~]# cd /usr/local/</span><br><span class="line"></span><br><span class="line">[root@linuxidc local]# ls</span><br><span class="line">bin  etc  games  include  java  lib  lib64  libexec  nginx  sbin  share  solr  solrCloud  src</span><br><span class="line"></span><br><span class="line">[root@linuxidc local]# rm -rf java</span><br><span class="line"></span><br><span class="line">[root@linuxidc local]# ls</span><br><span class="line">bin  etc  games  include  lib  lib64  libexec  nginx  sbin  share  solr  solrCloud  src</span><br><span class="line"></span><br><span class="line">[root@linuxidc local]# java -verison</span><br><span class="line">bash: /usr/local/java/jdk1.8.0_111/bin/java: 没有那个文件或目录</span><br></pre></td></tr></table></figure>
+
+<p>　　<strong>警告：</strong>删除文件夹之前，应确保 Java 以前不是使用 RPM 安装的。</p>
+<p>　   （3）键入： <code>**rm -r jre**</code><br>　　例如： <code>**rm -r jre1.7.0**</code></p>
+<p>rpm命令集：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">查询所有已安装的rpm包</span><br><span class="line">rpm   -qa</span><br><span class="line"></span><br><span class="line">查询指定安装包是否安装</span><br><span class="line">rpm  -qa  |  grep  PACKAGE_NAME</span><br><span class="line"></span><br><span class="line">查看某个已安装包的详细信息</span><br><span class="line">rpm  -qi  PACKAGE_ANME</span><br><span class="line"></span><br><span class="line">查看某个安装包的配置文件</span><br><span class="line">rpm -qc  PACKAGE_NAME</span><br><span class="line"></span><br><span class="line">查看某个安装包生成的文件列表</span><br><span class="line">rpm  -ql  PACKAGE_NAME</span><br><span class="line"></span><br><span class="line">安装某个安装包</span><br><span class="line">rpm   -i  </span><br><span class="line">rpm  -ivh  PACKAGE_NAME    -V显示详细过程   -h 以#显示进度；</span><br></pre></td></tr></table></figure>
+
+<p>rm命令参数：</p>
+<ul>
+<li>-d：直接把欲删除的目录的硬连接数据删除成0，删除该目录；</li>
+<li>-f：强制删除文件或目录；</li>
+<li>-i：删除已有文件或目录之前先询问用户；</li>
+<li>-r或-R：递归处理，将指定目录下的所有文件与子目录一并处理；</li>
+<li>–preserve-root：不对根目录进行递归操作；</li>
+<li>-v：显示指令的详细执行过程。</li>
+</ul>
+
+			  </article>
+		</div>
+		
+		
+	  
+	
+		
+
+
+<div class="copy">
+<i></i>
+<strong>本文作者：</strong>
+	
+	 
+        Linux | 来源：Linux社区<br>
+        
+	
+<strong>本文链接：</strong>
+	<a href="http://yoursite.com/2020/04/29/sys/linux/20200429/" title="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;04&#x2F;29&#x2F;sys&#x2F;linux&#x2F;20200429&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;04&#x2F;29&#x2F;sys&#x2F;linux&#x2F;20200429&#x2F;</a><br>
+</div>
+
+	  
+	</div>
+</div>
     				
 					<!--<iframe src="a/index.html" class="iframe_mx uicss-cn"></iframe>-->
 					<!-- footer -->
@@ -563,157 +714,6 @@ function timeElapse(date){
 
 
 				</div>
-					
-<div class="dearmsdan">
-	<div class="dearmsdan-post" id="dearmsdanPost">
-		<div class="dearmsdan-title">
-			<h1>Linux中查看jdk安装目录、卸载jdk、rpm命令、rm命令参数</h1>
-		</div>
-	  <div id="post" class="dearmsdan-post-Statistics">
-            <a>2020年04月29日</a>
-		
-		  <a class=" -link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
-		
-		
-		  <a class=" -link" href="/tags/linux/" rel="tag">linux</a>
-		
-	  </div>
-		
-		
-<div id="modal" style="display:none">
-
-<aside id="article-toc" class="fixed-toc">
-    <div id="article-toc-inner">
-        <strong class="sidebar-title">目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、Linux中查看jdk安装目录"><span class="toc-text">一、Linux中查看jdk安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、卸载JDK-分情况卸载"><span class="toc-text">二、卸载JDK(分情况卸载)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、-卸载系统自带的jdk版本："><span class="toc-text">1、**卸载系统自带的jdk版本：**</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、卸载rpm安装的jkd版本"><span class="toc-text">2、卸载rpm安装的jkd版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、自解压文件卸载（很暴力的做法，直接删安装文件夹）"><span class="toc-text">3、自解压文件卸载（很暴力的做法，直接删安装文件夹）</span></a></li></ol></li></ol>
-    </div>
-</aside>
-</div>
-
-
-		
-			<a href="#modal" class="second">
-				<div class="i">
-						<i style="font-size:20px" class="DearMsDanIconFont icon-sousuo">
-						<span style="font-size:0px"><br/>目<br/>录</span>
-						</i>
-				</div>
-			</a>
-
-
-
-
-<script>
-	$(".second .i").mouseover(function(){
-  $(".second .i span").css("font-size","18px");
-});
-	$(".second .i").mouseleave(function(){
-  $(".second .i span").css("font-size","0px");
-});
-</script>
-
-
-
-
-
-
-
-
-
-
-
-	<script src="/resources/toc/jquery.pageslide.js"></script>
-		<div>
-			  <article>
-				<p>rpm -qa|grep gcj </p>
-<p>   可能看到如下类似的信息： </p>
-<p>  libgcj-4.1.2-44.el5 </p>
-<p>  java-1.4.2-gcj-compat-1.4.2.0-40jpp.115 </p>
-<p>  使用rpm -e –nodeps 命令删除上面查找的内容：</p>
-<p>来源于：Linux社区  作者：Linux(防止走丢~)：<a href="https://www.linuxidc.com/Linux/2018-11/155295.htm" target="_blank" rel="noopener">https://www.linuxidc.com/Linux/2018-11/155295.htm</a></p>
-<p>………</p>
-<a id="more"></a>
-
-<!-- toc -->
-
-<h3 id="一、Linux中查看jdk安装目录"><a href="#一、Linux中查看jdk安装目录" class="headerlink" title="一、Linux中查看jdk安装目录"></a>一、Linux中查看jdk安装目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxidc ~]# whereis Java</span><br><span class="line">java: /usr/bin/java /usr/local/java#java执行路径</span><br><span class="line">[root@linuxidc ~]# which java</span><br><span class="line">/usr/bin/java#查看JDK安装路径</span><br><span class="line">[root@linuxidc ~]# echo $JAVA_HOME</span><br><span class="line">/usr/local/java/jdk1.7.0_80</span><br><span class="line"></span><br><span class="line">[root@linuxidc ~]# echo $PATH</span><br><span class="line">/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:JAVA_HOME/bin:/usr/local/java/jdk1.7.0_80/bin:/</span><br><span class="line">usr/local/erlang/bin:/root/bin</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://www.linuxidc.com/upload/2018_11/18111210486269.png" alt="Linux中查看jdk安装目录、卸载jdk、rpm命令、rm命令参数"></p>
-<p>备注：如果是windows中，可以使用:</p>
-<p>set java_home:查看JDK安装路径<br>java -version:查看JDK版本</p>
-<h3 id="二、卸载JDK-分情况卸载"><a href="#二、卸载JDK-分情况卸载" class="headerlink" title="二、卸载JDK(分情况卸载)"></a>二、卸载JDK(分情况卸载)</h3><h4 id="1、-卸载系统自带的jdk版本："><a href="#1、-卸载系统自带的jdk版本：" class="headerlink" title="1、**卸载系统自带的jdk版本：**"></a><strong>1、**</strong>卸载系统自带的jdk版本：**</h4><p>  查看自带的jdk： </p>
-<p>  rpm -qa|grep gcj </p>
-<p>   可能看到如下类似的信息： </p>
-<p>  libgcj-4.1.2-44.el5 </p>
-<p>  java-1.4.2-gcj-compat-1.4.2.0-40jpp.115 </p>
-<p>  使用rpm -e –nodeps 命令删除上面查找的内容： </p>
-<p>   rpm -e –nodeps java-1.4.2-gcj-compat-1.4.2.0-40jpp.115 </p>
-<h4 id="2、卸载rpm安装的jkd版本"><a href="#2、卸载rpm安装的jkd版本" class="headerlink" title="2、卸载rpm安装的jkd版本"></a>2、<strong>卸载rpm安装的jkd版本</strong></h4><p>  查看安装的jdk： </p>
-<p>   rpm -qa|grep jdk </p>
-<p>   可能看到如下类似的信息： </p>
-<p>  jdk-1.6.0_22-fcs </p>
-<p>  卸载： </p>
-<p>   rpm -e –nodeps jdk-1.6.0_22-fcs  </p>
-<p><strong>备注：*</strong>如果您的 Linux 盒中具有 RPM，则应首先确定 Java 是否是使用 RPM 安装的。如果 Java 不是使用 RPM 安装的，则请跳过本节内容。*</p>
-<ol>
-<li><ol>
-<li><p>打开<strong>终端窗口</strong></p>
-</li>
-<li><p>以<strong>超级用户root</strong>身份登录</p>
-</li>
-<li><p>键入以下命令，尝试查找 JRE 软件包： <code>**rpm -qa**</code></p>
-</li>
-<li><p>如果 RPM 报告一个类似于 <strong>jre–fcs</strong> 的软件包，则说明 Java 是使用 RPM 安装的。</p>
-<p><strong>注：*</strong>通常，您不必使用 RPM 卸载 Java，因为 RPM 可以在安装新版本时自动卸载旧版本的 Java！除非您准备永久删除 Java，否则请跳过本节内容。*</p>
-</li>
-<li><p>要卸载 Java，请键入： <code>**rpm -e jre --fcs**</code></p>
-</li>
-</ol>
-</li>
-</ol>
-<h4 id="3、自解压文件卸载（很暴力的做法，直接删安装文件夹）"><a href="#3、自解压文件卸载（很暴力的做法，直接删安装文件夹）" class="headerlink" title="3、自解压文件卸载（很暴力的做法，直接删安装文件夹）"></a>3、自解压文件卸载（很暴力的做法，直接删安装文件夹）</h4><p>  　 （1） 确定 Java 是否安装在某些文件夹中。常用位置包括 <code>**/usr/java/jre_**</code> 或 <code>**/opt/jre_nb/jre_/bin/java/**</code></p>
-<p>　　（2）如果找到了安装 Java 的文件夹，可以删除此文件夹。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@linuxidc ~]# cd /usr/local/</span><br><span class="line"></span><br><span class="line">[root@linuxidc local]# ls</span><br><span class="line">bin  etc  games  include  java  lib  lib64  libexec  nginx  sbin  share  solr  solrCloud  src</span><br><span class="line"></span><br><span class="line">[root@linuxidc local]# rm -rf java</span><br><span class="line"></span><br><span class="line">[root@linuxidc local]# ls</span><br><span class="line">bin  etc  games  include  lib  lib64  libexec  nginx  sbin  share  solr  solrCloud  src</span><br><span class="line"></span><br><span class="line">[root@linuxidc local]# java -verison</span><br><span class="line">bash: /usr/local/java/jdk1.8.0_111/bin/java: 没有那个文件或目录</span><br></pre></td></tr></table></figure>
-
-<p>　　<strong>警告：</strong>删除文件夹之前，应确保 Java 以前不是使用 RPM 安装的。</p>
-<p>　   （3）键入： <code>**rm -r jre**</code><br>　　例如： <code>**rm -r jre1.7.0**</code></p>
-<p>rpm命令集：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">查询所有已安装的rpm包</span><br><span class="line">rpm   -qa</span><br><span class="line"></span><br><span class="line">查询指定安装包是否安装</span><br><span class="line">rpm  -qa  |  grep  PACKAGE_NAME</span><br><span class="line"></span><br><span class="line">查看某个已安装包的详细信息</span><br><span class="line">rpm  -qi  PACKAGE_ANME</span><br><span class="line"></span><br><span class="line">查看某个安装包的配置文件</span><br><span class="line">rpm -qc  PACKAGE_NAME</span><br><span class="line"></span><br><span class="line">查看某个安装包生成的文件列表</span><br><span class="line">rpm  -ql  PACKAGE_NAME</span><br><span class="line"></span><br><span class="line">安装某个安装包</span><br><span class="line">rpm   -i  </span><br><span class="line">rpm  -ivh  PACKAGE_NAME    -V显示详细过程   -h 以#显示进度；</span><br></pre></td></tr></table></figure>
-
-<p>rm命令参数：</p>
-<ul>
-<li>-d：直接把欲删除的目录的硬连接数据删除成0，删除该目录；</li>
-<li>-f：强制删除文件或目录；</li>
-<li>-i：删除已有文件或目录之前先询问用户；</li>
-<li>-r或-R：递归处理，将指定目录下的所有文件与子目录一并处理；</li>
-<li>–preserve-root：不对根目录进行递归操作；</li>
-<li>-v：显示指令的详细执行过程。</li>
-</ul>
-
-			  </article>
-		</div>
-		
-		
-	  
-	
-		
-
-
-<div class="copy">
-<i></i>
-<strong>本文作者：</strong>
-	
-	 
-        Linux | 来源：Linux社区<br>
-        
-	
-<strong>本文链接：</strong>
-	<a href="http://yoursite.com/2020/04/29/sys/linux/20200429/" title="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;04&#x2F;29&#x2F;sys&#x2F;linux&#x2F;20200429&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;04&#x2F;29&#x2F;sys&#x2F;linux&#x2F;20200429&#x2F;</a><br>
-</div>
-
-	  
-	</div>
-</div>
 			</div>
 		</div>
 		

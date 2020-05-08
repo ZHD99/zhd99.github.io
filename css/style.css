@@ -656,6 +656,9 @@ background:#FF0BEE;
 ***********
 */
 .main-content{        
+	position: relative;
+    top: 0;    
+	z-index: 9999;
 	box-shadow: rgba(161, 177, 204, 0.4) 0px 0px 1rem;    
 	background-color: #d7edff75;
     overflow-x: hidden;

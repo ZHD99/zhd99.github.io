@@ -1,4 +1,4 @@
-$(document).pjax('a[target!=_blank]', '.main-content', {fragment: '.main-content',timeout: 8000}); 
+$(document).pjax('a[target!=_blank]', '.main', {fragment: '.main',timeout: 8000}); 
     	/* .main为刷新的id */
     $(document).on('pjax:send', function() {
 		/* 预加载函数 */
@@ -45,7 +45,7 @@ $(document).on('ready pjax:end', function(event) {
 	copycodes();
 	pagegun();
 	dearzoom();
-		$(".dearmsdan").delay(300).addClass("wrapShow");
+		$(".main-content").delay(300).addClass("wrapShow");
 	
 	
 	

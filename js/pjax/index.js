@@ -44,9 +44,14 @@ $(document).on('ready pjax:end', function(event) {
 	copycodes();
 	pagegun();
 	dearzoom();
-	// 淡入
-	$(".dearmsdan").delay(300).addClass("wrapShow");
-	
+	  var windowWidth = $(window).width();
+    if(windowWidth < 714){
+		// 淡入
+    }
+    if(windowWidth >= 714){
+        // do something
+		$(".dearmsdan").delay(300).addClass("wrapShow");
+    }
 })
 
 

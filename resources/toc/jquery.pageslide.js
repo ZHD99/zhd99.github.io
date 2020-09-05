@@ -1,1 +1,207 @@
-"use strict";!function(s){var d,l=s("body"),n=s("#pageslide"),o=!1;function t(e,i){if(0===e.indexOf("#"))s(e).clone(!0).appendTo(n.empty()).show();else{if(i){var t=s("<iframe />").attr({src:e,frameborder:0,hspace:0}).css({width:"100%",height:"100%"});n.html(t)}else n.load(e);n.data("localEl",!1)}}function a(e,i){var t=n.outerWidth(!0),a={},d={};if(!n.is(":visible")&&!o){switch(o=!0,e){case"left":n.css({left:"auto",right:"-"+t+"px"}),a["margin-left"]="-="+t,d.right="+="+t;break;default:n.css({left:"-"+t+"px",right:"auto"}),a["margin-left"]="+="+t,d.left="+="+t}l.animate(a,i),n.show().animate(d,i,function(){o=!1})}}0==n.length&&(n=s("<div />").attr("id","pageslide").css("display","none").appendTo(s("body"))),s.fn.pageslide=function(a){this.click(function(e){var i=s(this),t=s.extend({href:i.attr("href")},a);e.preventDefault(),e.stopPropagation(),n.is(":visible")&&i[0]==d?s.pageslide.close():(s.pageslide(t),d=i[0])})},s.fn.pageslide.defaults={speed:200,direction:"right",modal:!1,iframe:!0,href:null},s.pageslide=function(e){var i=s.extend({},s.fn.pageslide.defaults,e);n.is(":visible")&&n.data("direction")!=i.direction?s.pageslide.close(function(){t(i.href,i.iframe),a(i.direction,i.speed)}):(t(i.href,i.iframe),n.is(":hidden")&&a(i.direction,i.speed)),n.data(i)},s.pageslide.close=function(e){var i=s("#pageslide"),t=i.outerWidth(!0),a=i.data("speed"),d={},n={};if(!i.is(":hidden")&&!o){switch(o=!0,i.data("direction")){case"left":d["margin-left"]="+="+t,n.right="-="+t;break;default:d["margin-left"]="-="+t,n.left="-="+t}i.animate(n,a),l.animate(d,a,function(){i.hide(),o=!1,void 0!==e&&e()})}},n.click(function(e){e.stopPropagation()}),s(document).bind("click keyup",function(e){"keyup"==e.type&&27!=e.keyCode||n.is(":visible")&&!n.data("modal")&&(s.pageslide.close(),s("body").removeClass("pace-done layout-fullwidth"))})}(jQuery);
+/*
+ * jQuery pageSlide
+ * Version 2.0
+ * http://srobbin.com/jquery-pageslide/
+ *
+ * jQuery Javascript plugin which slides a webpage over to reveal an additional interaction pane.
+ *
+ * Copyright (c) 2011 Scott Robbin (srobbin.com)
+ * Dual licensed under the MIT and GPL licenses.
+*/
+
+;(function($){
+    // Convenience vars for accessing elements
+    var $body = $('body'),
+        $pageslide = $('#pageslide');
+    
+    var _sliding = false,   // Mutex to assist closing only once
+        _lastCaller;        // Used to keep track of last element to trigger pageslide
+    
+	// If the pageslide element doesn't exist, create it
+    if( $pageslide.length == 0 ) {
+         $pageslide = $('<div />').attr( 'id', 'pageslide' )
+                                  .css( 'display', 'none' )
+                                  .appendTo( $('body') );
+    }
+    
+    /*
+     * Private methods 
+     */
+    function _load( url, useIframe ) {
+        // Are we loading an element from the page or a URL?
+        if ( url.indexOf("#") === 0 ) {                
+            // Load a page element                
+            $(url).clone(true).appendTo( $pageslide.empty() ).show();
+        } else {
+            // Load a URL. Into an iframe?
+            if( useIframe ) {
+                var iframe = $("<iframe />").attr({
+                                                src: url,
+                                                frameborder: 0,
+                                                hspace: 0
+                                            })
+                                            .css({
+                                                width: "100%",
+                                                height: "100%"
+                                            });
+                
+                $pageslide.html( iframe );
+            } else {
+                $pageslide.load( url );
+            }
+            
+            $pageslide.data( 'localEl', false );
+            
+        }
+    }
+    
+    // Function that controls opening of the pageslide
+    function _start( direction, speed ) {
+        var slideWidth = $pageslide.outerWidth( true ),
+            bodyAnimateIn = {},
+            slideAnimateIn = {};
+        
+        // 打开位置
+        if( $pageslide.is(':visible') || _sliding ) return;	        
+        _sliding = true;
+                                                                    
+        switch( direction ) {
+            case 'left':
+                $pageslide.css({ left: 'auto', right: '-' + slideWidth + 'px' });
+                bodyAnimateIn['margin-left'] = '-=' + slideWidth;
+                slideAnimateIn['right'] = '+=' + slideWidth;
+                break;
+            default:
+                $pageslide.css({ left: '-' + slideWidth + 'px', right: 'auto' });
+                bodyAnimateIn['margin-left'] = '+=' + slideWidth;
+                //slideAnimateIn['left'] = '260';
+                slideAnimateIn['left'] = '+=' + slideWidth;
+                break;
+        }
+                    
+        // Animate the slide, and attach this slide's settings to the element
+        $body.animate(bodyAnimateIn, speed);
+        $pageslide.show()
+                  .animate(slideAnimateIn, speed, function() {
+                      _sliding = false;
+                  });
+    }
+      
+    /*
+     * Declaration 
+     */
+    $.fn.pageslide = function(options) {
+        var $elements = this;
+        
+        // On click
+        $elements.click( function(e) {
+            var $self = $(this),
+                settings = $.extend({ href: $self.attr('href') }, options);
+            
+            // Prevent the default behavior and stop propagation
+            e.preventDefault();
+            e.stopPropagation();
+            
+            if ( $pageslide.is(':visible') && $self[0] == _lastCaller ) {
+                // If we clicked the same element twice, toggle closed
+                $.pageslide.close();
+            } else {                 
+                // Open
+                $.pageslide( settings );
+
+                // Record the last element to trigger pageslide
+                _lastCaller = $self[0];
+            }       
+        });                   
+	};
+	
+	/*
+     * Default settings 
+     */
+    $.fn.pageslide.defaults = {
+        speed:      200,        // Accepts standard jQuery effects speeds (i.e. fast, normal or milliseconds)
+        direction:  'right',    // Accepts 'left' or 'right'
+        modal:      false,      // If set to true, you must explicitly close pageslide using $.pageslide.close();
+        iframe:     true,       // By default, linked pages are loaded into an iframe. Set this to false if you don't want an iframe.
+        href:       null        // Override the source of the content. Optional in most cases, but required when opening pageslide programmatically.
+    };
+	
+	/*
+     * Public methods 
+     */
+	
+	// Open the pageslide
+	$.pageslide = function( options ) {	    
+	    // Extend the settings with those the user has provided
+        var settings = $.extend({}, $.fn.pageslide.defaults, options);
+	    
+	    // Are we trying to open in different direction?
+        if( $pageslide.is(':visible') && $pageslide.data( 'direction' ) != settings.direction) {
+            $.pageslide.close(function(){
+                _load( settings.href, settings.iframe );
+                _start( settings.direction, settings.speed );
+            });
+        } else {                
+            _load( settings.href, settings.iframe );
+            if( $pageslide.is(':hidden') ) {
+                _start( settings.direction, settings.speed );
+            }
+        }
+        
+        $pageslide.data( settings );
+	}
+	
+	// Close the pageslide
+	$.pageslide.close = function( callback ) {
+        var $pageslide = $('#pageslide'),
+            slideWidth = $pageslide.outerWidth( true ),
+            speed = $pageslide.data( 'speed' ),
+            bodyAnimateIn = {},
+            slideAnimateIn = {}
+            	        
+        // 关闭 消失位移位置
+        if( $pageslide.is(':hidden') || _sliding ) return;	        
+        _sliding = true;
+        
+        switch( $pageslide.data( 'direction' ) ) {
+            case 'left':
+                bodyAnimateIn['margin-left'] = '+=' + slideWidth;
+                slideAnimateIn['right'] = '-=' + slideWidth;
+                break;
+            default:
+                bodyAnimateIn['margin-left'] = '-=' + slideWidth;
+               // slideAnimateIn['left'] = '260';
+                slideAnimateIn['left'] = '-=' + slideWidth;
+                break;
+        }
+        
+        $pageslide.animate(slideAnimateIn, speed);
+        $body.animate(bodyAnimateIn, speed, function() {
+            $pageslide.hide();
+            _sliding = false;
+            if( typeof callback != 'undefined' ) callback();
+        });
+    }
+	
+	/* Events */
+	
+	// Don't let clicks to the pageslide close the window 目录面板
+    $pageslide.click(function(e) {
+        e.stopPropagation();
+    });
+
+	// Close the pageslide if the document is clicked or the users presses the ESC key, unless the pageslide is modal
+	$(document).bind('click keyup', function(e) {
+	    // If this is a keyup event, let's see if it's an ESC key
+		
+			
+        if( e.type == "keyup" && e.keyCode != 27) return;
+	    
+	    // Make sure it's visible, and we're not modal	 点击 文档关闭幻灯片 
+	    if( $pageslide.is( ':visible' ) && !$pageslide.data( 'modal' ) ) {	        
+	        $.pageslide.close();
+			$('body').removeClass("pace-done layout-fullwidth");
+	    }
+	});
+	
+})(jQuery);

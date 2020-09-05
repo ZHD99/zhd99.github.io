@@ -969,73 +969,6 @@ return arr;}
       </tags>
   </entry>
   <entry>
-    <title>2020 抗击新冠肺炎疫情斗争牺牲烈士和逝世同胞的深切哀悼</title>
-    <url>/2020/04/04/course/20200404/</url>
-    <content><![CDATA[<h4 id="缅怀英雄-深切悼念"><a href="#缅怀英雄-深切悼念" class="headerlink" title="缅怀英雄 深切悼念"></a>缅怀英雄 深切悼念</h4><p></p>
-<a id="more"></a>
-
-<!-- toc -->
-
-<center style="display: inline-block;
-    float: left;">
-<img src="https://cdn.dearmsdan.com/festival/0404.jpg" alt=' '/>
-</br>
-</center>
-
-<blockquote>
-<p>（4月3日）发布公告，决定2020年4月4日举行全国性哀悼活动。<br>在此期间，全国和驻外使领馆下半旗志哀，全国停止公共娱乐活动。<br>4月4日10时起，全国人民默哀3分钟，汽车、火车、舰船鸣笛，防空警报鸣响。</p>
-</blockquote>
-<p>今日10点是全国哀悼日，沉痛悼念在这次新冠疫情中抗疫的英雄们。</p>
-<p>在这次抗疫中医务工作人员、警察安保人员、公务人员在前线为我们抵挡这病毒的侵害，但是很多工作人员因为在抗疫过程中感染病毒或者工作过劳不幸离开了我们，我们并没有忘记他们。</p>
-<p>他们是我们的亲人也是我们的英雄，为了表示对他们的尊重和纪念国务院把今年的清明节定位全国哀悼日，今天全国下降半旗，北京时间10点全国默哀三分钟，来致敬英雄们。</p>
-<p>各省、自治区、直辖市人民政府，国务院各部委、各直属机构：</p>
-<p>为表达全国各族人民对抗击新冠肺炎疫情斗争牺牲烈士和逝世同胞的深切哀悼，国务院决定，2020年4月4日举行全国性哀悼活动。</p>
-<p>在此期间，全国和驻外使领馆下半旗志哀，全国停止公共娱乐活动。4月4日10时起，全国人民默哀3分钟，汽车、火车、舰船鸣笛，防空警报鸣响。</p>
-<script>
-    $('html').css({
-            'filter':'grayscale(100%)',
-        });
-    $('a').click(function(){
-          $('html').css({
-            'filter':'grayscale(0%)',
-        });
-    });
-</script>
-
-
-
-
-]]></content>
-  </entry>
-  <entry>
-    <title>java环境变量配置</title>
-    <url>/2019/12/30/java/1912300034/</url>
-    <content><![CDATA[<p>java环境变量配置 <a href="https://www.runoob.com/w3cnote/windows10-java-setup.html" target="_blank" rel="noopener">相关链接</a></p>
-<a id="more"></a>
-
-<!-- toc -->
-
-<p>修改环境变量需要先安装jdk ,打开环境变量</p>
-<p><strong>此电脑  -&gt;    属性 -&gt; 高级系统设置 -&gt; 环境变量</strong></p>
-<h2 id="新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH："><a href="#新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH：" class="headerlink" title="新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH："></a><strong>新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH：</strong></h2><p>1、新建JAVA_HOME 变量</p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：电脑上JDK安装的绝对路径(D:\back<span class="emphasis">_end\java\jdk1.8.0_</span>131)</span><br></pre></td></tr></table></figure>
-
-<p>2、新建/修改 CLASSPATH 变量</p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">变量名：CLASSPATH</span><br><span class="line">变量值：.;%JAVA<span class="emphasis">_HOME%\lib\dt.jar;%JAVA_</span>HOME%\lib\tools.jar;</span><br></pre></td></tr></table></figure>
-
-<p>3、添加Path 变量</p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">%JAVA_HOME%\bin;</span><br><span class="line">%JAVA_HOME%\jre\bin;</span><br></pre></td></tr></table></figure>
-
-<p>JAVA_HOME 需要统一大小写    </p>
-<p>path（%JAVA_HOME%）和 变量名 JAVA_HOME 一样</p>
-<p>4、检查是否配置好</p>
-<p>在命令行输入 java  、javac </p>
-]]></content>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>windows My sql 解压版安装方法</title>
     <url>/2019/12/30/sql/1912301045/</url>
     <content><![CDATA[<p>My sql 解压版安装方法 <a href="https://www.cnblogs.com/shenliang123/p/3203546.html" target="_blank" rel="noopener">相关链接</a>  <a href="https://www.cnblogs.com/ayyl/p/5978418.html" target="_blank" rel="noopener">相关链接</a>  </p>
@@ -1092,6 +1025,73 @@ return arr;}
       </tags>
   </entry>
   <entry>
+    <title>java环境变量配置</title>
+    <url>/2019/12/30/java/1912300034/</url>
+    <content><![CDATA[<p>java环境变量配置 <a href="https://www.runoob.com/w3cnote/windows10-java-setup.html" target="_blank" rel="noopener">相关链接</a></p>
+<a id="more"></a>
+
+<!-- toc -->
+
+<p>修改环境变量需要先安装jdk ,打开环境变量</p>
+<p><strong>此电脑  -&gt;    属性 -&gt; 高级系统设置 -&gt; 环境变量</strong></p>
+<h2 id="新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH："><a href="#新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH：" class="headerlink" title="新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH："></a><strong>新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH：</strong></h2><p>1、新建JAVA_HOME 变量</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：电脑上JDK安装的绝对路径(D:\back<span class="emphasis">_end\java\jdk1.8.0_</span>131)</span><br></pre></td></tr></table></figure>
+
+<p>2、新建/修改 CLASSPATH 变量</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">变量名：CLASSPATH</span><br><span class="line">变量值：.;%JAVA<span class="emphasis">_HOME%\lib\dt.jar;%JAVA_</span>HOME%\lib\tools.jar;</span><br></pre></td></tr></table></figure>
+
+<p>3、添加Path 变量</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">%JAVA_HOME%\bin;</span><br><span class="line">%JAVA_HOME%\jre\bin;</span><br></pre></td></tr></table></figure>
+
+<p>JAVA_HOME 需要统一大小写    </p>
+<p>path（%JAVA_HOME%）和 变量名 JAVA_HOME 一样</p>
+<p>4、检查是否配置好</p>
+<p>在命令行输入 java  、javac </p>
+]]></content>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2020 抗击新冠肺炎疫情斗争牺牲烈士和逝世同胞的深切哀悼</title>
+    <url>/2020/04/04/course/20200404/</url>
+    <content><![CDATA[<h4 id="缅怀英雄-深切悼念"><a href="#缅怀英雄-深切悼念" class="headerlink" title="缅怀英雄 深切悼念"></a>缅怀英雄 深切悼念</h4><p></p>
+<a id="more"></a>
+
+<!-- toc -->
+
+<center style="display: inline-block;
+    float: left;">
+<img src="https://cdn.dearmsdan.com/festival/0404.jpg" alt=' '/>
+</br>
+</center>
+
+<blockquote>
+<p>（4月3日）发布公告，决定2020年4月4日举行全国性哀悼活动。<br>在此期间，全国和驻外使领馆下半旗志哀，全国停止公共娱乐活动。<br>4月4日10时起，全国人民默哀3分钟，汽车、火车、舰船鸣笛，防空警报鸣响。</p>
+</blockquote>
+<p>今日10点是全国哀悼日，沉痛悼念在这次新冠疫情中抗疫的英雄们。</p>
+<p>在这次抗疫中医务工作人员、警察安保人员、公务人员在前线为我们抵挡这病毒的侵害，但是很多工作人员因为在抗疫过程中感染病毒或者工作过劳不幸离开了我们，我们并没有忘记他们。</p>
+<p>他们是我们的亲人也是我们的英雄，为了表示对他们的尊重和纪念国务院把今年的清明节定位全国哀悼日，今天全国下降半旗，北京时间10点全国默哀三分钟，来致敬英雄们。</p>
+<p>各省、自治区、直辖市人民政府，国务院各部委、各直属机构：</p>
+<p>为表达全国各族人民对抗击新冠肺炎疫情斗争牺牲烈士和逝世同胞的深切哀悼，国务院决定，2020年4月4日举行全国性哀悼活动。</p>
+<p>在此期间，全国和驻外使领馆下半旗志哀，全国停止公共娱乐活动。4月4日10时起，全国人民默哀3分钟，汽车、火车、舰船鸣笛，防空警报鸣响。</p>
+<script>
+    $('html').css({
+            'filter':'grayscale(100%)',
+        });
+    $('a').click(function(){
+          $('html').css({
+            'filter':'grayscale(0%)',
+        });
+    });
+</script>
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>git Please tell me who you are.</title>
     <url>/2019/12/29/git/1912292348/</url>
     <content><![CDATA[<p>git 上传代码出现的问题!Please tell me who you are.</p>
@@ -1144,33 +1144,6 @@ Branch 'master' set up to track remote branch 'master' from 'https://github.com/
       </categories>
       <tags>
         <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>windows 禁止更新的问题</title>
-    <url>/2019/12/31/sys/win/1912311726/</url>
-    <content><![CDATA[<p>windows 禁止更新的问题</p>
-<a id="more"></a>
-
-<!-- toc -->
-
-
-
-<h2 id="禁止windows-10-更新-下载"><a href="#禁止windows-10-更新-下载" class="headerlink" title="禁止windows 10 更新 下载."></a><strong>禁止windows 10 更新 下载.</strong></h2><p>系统的自动更新并没有什么影响，</p>
-<p>但是可能会出现经常弹出提醒更新的窗口，<br>如果不希望总是被更新提醒所打扰，所以选择关闭自动更新</p>
-<p>禁止Windows更新软件：</p>
-<p>链接: <a href="https://pan.baidu.com/s/1t2Y-4eI6UN4Xm5aYSuE1-g" target="_blank" rel="noopener">https://pan.baidu.com/s/1t2Y-4eI6UN4Xm5aYSuE1-g</a> 提取码: mbmw</p>
-<h2 id="禁止windows-10-更新-下载问题！！！"><a href="#禁止windows-10-更新-下载问题！！！" class="headerlink" title="禁止windows 10 更新 下载问题！！！"></a><strong>禁止windows 10 更新 下载问题！！！</strong></h2><p>那么问题来了，主要禁止了什么呢？</p>
-<p>在我们需要使用 【windows 功能】的时候</p>
-<p><img src="https://cdn.dearmsdan.com/1912311726/1.png" alt="net"> <img src="https://cdn.dearmsdan.com/1912311726/2.png" alt="net2"></p>
-<p>主要 会影响使用【windows 功能】 </p>
-<p>在我们使用完了再使用软件禁止Windows 10更新就好了</p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -1240,6 +1213,33 @@ Branch 'master' set up to track remote branch 'master' from 'https://github.com/
       </categories>
       <tags>
         <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>windows 禁止更新的问题</title>
+    <url>/2019/12/31/sys/win/1912311726/</url>
+    <content><![CDATA[<p>windows 禁止更新的问题</p>
+<a id="more"></a>
+
+<!-- toc -->
+
+
+
+<h2 id="禁止windows-10-更新-下载"><a href="#禁止windows-10-更新-下载" class="headerlink" title="禁止windows 10 更新 下载."></a><strong>禁止windows 10 更新 下载.</strong></h2><p>系统的自动更新并没有什么影响，</p>
+<p>但是可能会出现经常弹出提醒更新的窗口，<br>如果不希望总是被更新提醒所打扰，所以选择关闭自动更新</p>
+<p>禁止Windows更新软件：</p>
+<p>链接: <a href="https://pan.baidu.com/s/1t2Y-4eI6UN4Xm5aYSuE1-g" target="_blank" rel="noopener">https://pan.baidu.com/s/1t2Y-4eI6UN4Xm5aYSuE1-g</a> 提取码: mbmw</p>
+<h2 id="禁止windows-10-更新-下载问题！！！"><a href="#禁止windows-10-更新-下载问题！！！" class="headerlink" title="禁止windows 10 更新 下载问题！！！"></a><strong>禁止windows 10 更新 下载问题！！！</strong></h2><p>那么问题来了，主要禁止了什么呢？</p>
+<p>在我们需要使用 【windows 功能】的时候</p>
+<p><img src="http://link.dearmsdan.com/dearmsdan/img/post/1912311726/1.png" alt="net"> <img src="http://link.dearmsdan.com/dearmsdan/img/post/1912311726/2.png" alt="net2"></p>
+<p>主要 会影响使用【windows 功能】 </p>
+<p>在我们使用完了再使用软件禁止Windows 10更新就好了</p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
       </tags>
   </entry>
 </search>

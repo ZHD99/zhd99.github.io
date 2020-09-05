@@ -969,61 +969,6 @@ return arr;}
       </tags>
   </entry>
   <entry>
-    <title>git Please tell me who you are.</title>
-    <url>/2019/12/29/git/1912292348/</url>
-    <content><![CDATA[<p>git 上传代码出现的问题!Please tell me who you are.</p>
-<a id="more"></a>
-
-<!-- toc -->
-
-<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a><strong>问题：</strong></h2><p>git上传包提交时出现：Please tell me who you are.如下代码：</p>
-<pre>
-<code>
-    *** Please tell me who you are.
-Run
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
-
-to set your account's default identity.
-Omit --global to set the identity only in this repository.
-
-fatal: unable to auto-detect email address (got 'Hxx@Hxx.(none)')
-Everything up-to-date
-Branch 'master' set up to track remote branch 'master' from 'https://github.com/Z***.git'.
-    </code></pre>
-
-
-<h3 id="是因为在创建git文件夹的时候信息不完善导致的"><a href="#是因为在创建git文件夹的时候信息不完善导致的" class="headerlink" title="是因为在创建git文件夹的时候信息不完善导致的"></a>是因为在创建git文件夹的时候信息不完善导致的</h3><h2 id="解决方法（一）："><a href="#解决方法（一）：" class="headerlink" title="解决方法（一）："></a><strong>解决方法（一）：</strong></h2><p>通过命令行修改git 上传的配置信息<br>在命令行中执行：<br><code>git config --global user.email "你的邮箱"</code><br><code>git config --global user.name "你的名字"</code></p>
-<h2 id="解决方法（二）："><a href="#解决方法（二）：" class="headerlink" title="解决方法（二）："></a><strong>解决方法（二）：</strong></h2><p>通过手动修改git 上传提交的配置信息<br>在需要上传的文件夹下找到隐藏的 .git 文件夹<br>打开里面的config文件</p>
-<pre>
-    <code>
-[core]
-    repositoryformatversion = 0
-    filemode = false
-    bare = false
-    logallrefupdates = true
-    symlinks = false
-    ignorecase = true
-# ↑是默认
-
-# 设置以下
-[user]
-    name = 你的名称
-    email = 你的邮箱
-    </code>
-</pre>
-
-<p>添加<br>[user]<br>    name = 你的名称<br>    email = 你的邮箱</p>
-<p>就能解决git Please tell me who you are. 上传代码出现的问题</p>
-]]></content>
-      <categories>
-        <category>GitHub</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2020 抗击新冠肺炎疫情斗争牺牲烈士和逝世同胞的深切哀悼</title>
     <url>/2020/04/04/course/20200404/</url>
     <content><![CDATA[<h4 id="缅怀英雄-深切悼念"><a href="#缅怀英雄-深切悼念" class="headerlink" title="缅怀英雄 深切悼念"></a>缅怀英雄 深切悼念</h4><p></p>
@@ -1144,6 +1089,61 @@ Branch 'master' set up to track remote branch 'master' from 'https://github.com/
 ]]></content>
       <tags>
         <tag>MySql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git Please tell me who you are.</title>
+    <url>/2019/12/29/git/1912292348/</url>
+    <content><![CDATA[<p>git 上传代码出现的问题!Please tell me who you are.</p>
+<a id="more"></a>
+
+<!-- toc -->
+
+<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a><strong>问题：</strong></h2><p>git上传包提交时出现：Please tell me who you are.如下代码：</p>
+<pre>
+<code>
+    *** Please tell me who you are.
+Run
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Hxx@Hxx.(none)')
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'https://github.com/Z***.git'.
+    </code></pre>
+
+
+<h3 id="是因为在创建git文件夹的时候信息不完善导致的"><a href="#是因为在创建git文件夹的时候信息不完善导致的" class="headerlink" title="是因为在创建git文件夹的时候信息不完善导致的"></a>是因为在创建git文件夹的时候信息不完善导致的</h3><h2 id="解决方法（一）："><a href="#解决方法（一）：" class="headerlink" title="解决方法（一）："></a><strong>解决方法（一）：</strong></h2><p>通过命令行修改git 上传的配置信息<br>在命令行中执行：<br><code>git config --global user.email "你的邮箱"</code><br><code>git config --global user.name "你的名字"</code></p>
+<h2 id="解决方法（二）："><a href="#解决方法（二）：" class="headerlink" title="解决方法（二）："></a><strong>解决方法（二）：</strong></h2><p>通过手动修改git 上传提交的配置信息<br>在需要上传的文件夹下找到隐藏的 .git 文件夹<br>打开里面的config文件</p>
+<pre>
+    <code>
+[core]
+    repositoryformatversion = 0
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    symlinks = false
+    ignorecase = true
+# ↑是默认
+
+# 设置以下
+[user]
+    name = 你的名称
+    email = 你的邮箱
+    </code>
+</pre>
+
+<p>添加<br>[user]<br>    name = 你的名称<br>    email = 你的邮箱</p>
+<p>就能解决git Please tell me who you are. 上传代码出现的问题</p>
+]]></content>
+      <categories>
+        <category>GitHub</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>

@@ -969,34 +969,6 @@ return arr;}
       </tags>
   </entry>
   <entry>
-    <title>java环境变量配置</title>
-    <url>/2019/12/30/java/1912300034/</url>
-    <content><![CDATA[<p>java环境变量配置 <a href="https://www.runoob.com/w3cnote/windows10-java-setup.html" target="_blank" rel="noopener">相关链接</a></p>
-<a id="more"></a>
-
-<!-- toc -->
-
-<p>修改环境变量需要先安装jdk ,打开环境变量</p>
-<p><strong>此电脑  -&gt;    属性 -&gt; 高级系统设置 -&gt; 环境变量</strong></p>
-<h2 id="新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH："><a href="#新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH：" class="headerlink" title="新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH："></a><strong>新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH：</strong></h2><p>1、新建JAVA_HOME 变量</p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：电脑上JDK安装的绝对路径(D:\back<span class="emphasis">_end\java\jdk1.8.0_</span>131)</span><br></pre></td></tr></table></figure>
-
-<p>2、新建/修改 CLASSPATH 变量</p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">变量名：CLASSPATH</span><br><span class="line">变量值：.;%JAVA<span class="emphasis">_HOME%\lib\dt.jar;%JAVA_</span>HOME%\lib\tools.jar;</span><br></pre></td></tr></table></figure>
-
-<p>3、添加Path 变量</p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">%JAVA_HOME%\bin;</span><br><span class="line">%JAVA_HOME%\jre\bin;</span><br></pre></td></tr></table></figure>
-
-<p>JAVA_HOME 需要统一大小写    </p>
-<p>path（%JAVA_HOME%）和 变量名 JAVA_HOME 一样</p>
-<p>4、检查是否配置好</p>
-<p>在命令行输入 java  、javac </p>
-]]></content>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git Please tell me who you are.</title>
     <url>/2019/12/29/git/1912292348/</url>
     <content><![CDATA[<p>git 上传代码出现的问题!Please tell me who you are.</p>
@@ -1089,6 +1061,34 @@ Branch 'master' set up to track remote branch 'master' from 'https://github.com/
 
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>java环境变量配置</title>
+    <url>/2019/12/30/java/1912300034/</url>
+    <content><![CDATA[<p>java环境变量配置 <a href="https://www.runoob.com/w3cnote/windows10-java-setup.html" target="_blank" rel="noopener">相关链接</a></p>
+<a id="more"></a>
+
+<!-- toc -->
+
+<p>修改环境变量需要先安装jdk ,打开环境变量</p>
+<p><strong>此电脑  -&gt;    属性 -&gt; 高级系统设置 -&gt; 环境变量</strong></p>
+<h2 id="新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH："><a href="#新建2个变量-JAVA-HOME-CLASSPATH-，修改PACH：" class="headerlink" title="新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH："></a><strong>新建2个变量(JAVA_HOME,CLASSPATH)，修改PACH：</strong></h2><p>1、新建JAVA_HOME 变量</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">变量名：JAVA_HOME</span><br><span class="line">变量值：电脑上JDK安装的绝对路径(D:\back<span class="emphasis">_end\java\jdk1.8.0_</span>131)</span><br></pre></td></tr></table></figure>
+
+<p>2、新建/修改 CLASSPATH 变量</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">变量名：CLASSPATH</span><br><span class="line">变量值：.;%JAVA<span class="emphasis">_HOME%\lib\dt.jar;%JAVA_</span>HOME%\lib\tools.jar;</span><br></pre></td></tr></table></figure>
+
+<p>3、添加Path 变量</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">%JAVA_HOME%\bin;</span><br><span class="line">%JAVA_HOME%\jre\bin;</span><br></pre></td></tr></table></figure>
+
+<p>JAVA_HOME 需要统一大小写    </p>
+<p>path（%JAVA_HOME%）和 变量名 JAVA_HOME 一样</p>
+<p>4、检查是否配置好</p>
+<p>在命令行输入 java  、javac </p>
+]]></content>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
   </entry>
   <entry>
     <title>windows My sql 解压版安装方法</title>

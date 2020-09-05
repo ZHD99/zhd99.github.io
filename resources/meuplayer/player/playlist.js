@@ -1,1 +1,193 @@
-"use strict";!function(o,i){jPlayerPlaylist=function(s,t,e){var i=this;this.current=0,this.loop=!1,this.shuffled=!1,this.removing=!1,this.cssSelector=o.extend({},this._cssSelector,s),this.options=o.extend(!0,{keyBindings:{next:{key:221,fn:function(){i.next()}},previous:{key:219,fn:function(){i.previous()}},shuffle:{key:83,fn:function(){i.shuffle()}}},stateClass:{shuffled:"jp-state-shuffled"}},this._options,e),this.playlist=[],this.original=[],this._initPlaylist(t),this.cssSelector.details=this.cssSelector.cssSelectorAncestor+" .jp-details",this.cssSelector.playlist=this.cssSelector.cssSelectorAncestor+" .jp-playlist",this.cssSelector.next=this.cssSelector.cssSelectorAncestor+" .jp-next",this.cssSelector.previous=this.cssSelector.cssSelectorAncestor+" .jp-previous",this.cssSelector.shuffle=this.cssSelector.cssSelectorAncestor+" .jp-shuffle",this.cssSelector.shuffleOff=this.cssSelector.cssSelectorAncestor+" .jp-shuffle-off",this.options.cssSelectorAncestor=this.cssSelector.cssSelectorAncestor,this.options.repeat=function(s){i.loop=s.jPlayer.options.loop},o(this.cssSelector.jPlayer).bind(o.jPlayer.event.ready,function(){i._init()}),o(this.cssSelector.jPlayer).bind(o.jPlayer.event.ended,function(){i.next()}),o(this.cssSelector.jPlayer).bind(o.jPlayer.event.play,function(){o(this).jPlayer("pauseOthers")}),o(this.cssSelector.jPlayer).bind(o.jPlayer.event.resize,function(s){s.jPlayer.options.fullScreen?o(i.cssSelector.details).show():o(i.cssSelector.details).hide()}),o(this.cssSelector.previous).click(function(s){s.preventDefault(),i.previous(),i.blur(this)}),o(this.cssSelector.next).click(function(s){s.preventDefault(),i.next(),i.blur(this)}),o(this.cssSelector.shuffle).click(function(s){s.preventDefault(),i.shuffle(!i.shuffled||!o(i.cssSelector.jPlayer).jPlayer("option","useStateClassSkin")),i.blur(this)}),o(this.cssSelector.shuffleOff).click(function(s){s.preventDefault(),i.shuffle(!1),i.blur(this)}).hide(),this.options.fullScreen||o(this.cssSelector.details).hide(),o(this.cssSelector.playlist+" ul").empty(),this._createItemHandlers(),o(this.cssSelector.jPlayer).jPlayer(this.options)},jPlayerPlaylist.prototype={_cssSelector:{jPlayer:"#jquery_jplayer_1",cssSelectorAncestor:"#jp_container_1"},_options:{playlistOptions:{autoPlay:!1,loopOnPrevious:!1,shuffleOnLoop:!0,enableRemoveControls:!1,displayTime:"slow",addTime:"fast",removeTime:"fast",shuffleTime:"slow",itemClass:"jp-playlist-item",freeGroupClass:"jp-free-media",freeItemClass:"jp-playlist-item-free",removeItemClass:"jp-playlist-item-remove"}},option:function(s,t){if(t===i)return this.options.playlistOptions[s];switch(this.options.playlistOptions[s]=t,s){case"enableRemoveControls":this._updateControls();break;case"itemClass":case"freeGroupClass":case"freeItemClass":case"removeItemClass":this._refresh(!0),this._createItemHandlers()}return this},_init:function(){var s=this;this._refresh(function(){s.options.playlistOptions.autoPlay?s.play(s.current):s.select(s.current)})},_initPlaylist:function(s){this.current=0,this.shuffled=!1,this.removing=!1,this.original=o.extend(!0,[],s),this._originalPlaylist()},_originalPlaylist:function(){var t=this;this.playlist=[],o.each(this.original,function(s){t.playlist[s]=t.original[s]})},_refresh:function(s){var e=this;if(s&&!o.isFunction(s))o(this.cssSelector.playlist+" ul").empty(),o.each(this.playlist,function(s){o(e.cssSelector.playlist+" ul").append(e._createListItem(e.playlist[s]))}),this._updateControls();else{var t=o(this.cssSelector.playlist+" ul").children().length?this.options.playlistOptions.displayTime:0;o(this.cssSelector.playlist+" ul").slideUp(t,function(){var t=o(this);o(this).empty(),o.each(e.playlist,function(s){t.append(e._createListItem(e.playlist[s]))}),e._updateControls(),o.isFunction(s)&&s(),e.playlist.length?o(this).slideDown(e.options.playlistOptions.displayTime):o(this).show()})}},_createListItem:function(s){var e=this,i="<li><div>";if(i+="<a href='javascript:;' class='"+this.options.playlistOptions.removeItemClass+"'>&times;</a>",s.free){var l=!0;i+="<span class='"+this.options.playlistOptions.freeGroupClass+"'>(",o.each(s,function(s,t){o.jPlayer.prototype.format[s]&&(l?l=!1:i+=" | ",i+="<a class='"+e.options.playlistOptions.freeItemClass+"' href='"+t+"' tabindex='-1'>"+s+"</a>")}),i+=")</span>"}return i+="<a href='javascript:;' class='"+this.options.playlistOptions.itemClass+"' tabindex='0'>"+s.title+(s.artist?" <span class='jp-artist'> - "+s.artist+"</span>":"")+"</a>",i+="</div></li>"},_createItemHandlers:function(){var e=this;o(this.cssSelector.playlist).off("click","a."+this.options.playlistOptions.itemClass).on("click","a."+this.options.playlistOptions.itemClass,function(s){s.preventDefault();var t=o(this).parent().parent().index();e.current!==t?e.play(t):o(e.cssSelector.jPlayer).jPlayer("play"),e.blur(this)}),o(this.cssSelector.playlist).off("click","a."+this.options.playlistOptions.freeItemClass).on("click","a."+this.options.playlistOptions.freeItemClass,function(s){s.preventDefault(),o(this).parent().parent().find("."+e.options.playlistOptions.itemClass).click(),e.blur(this)}),o(this.cssSelector.playlist).off("click","a."+this.options.playlistOptions.removeItemClass).on("click","a."+this.options.playlistOptions.removeItemClass,function(s){s.preventDefault();var t=o(this).parent().parent().index();e.remove(t),e.blur(this)})},_updateControls:function(){this.options.playlistOptions.enableRemoveControls?o(this.cssSelector.playlist+" ."+this.options.playlistOptions.removeItemClass).show():o(this.cssSelector.playlist+" ."+this.options.playlistOptions.removeItemClass).hide(),this.shuffled?o(this.cssSelector.jPlayer).jPlayer("addStateClass","shuffled"):o(this.cssSelector.jPlayer).jPlayer("removeStateClass","shuffled"),o(this.cssSelector.shuffle).length&&o(this.cssSelector.shuffleOff).length&&(this.shuffled?(o(this.cssSelector.shuffleOff).show(),o(this.cssSelector.shuffle).hide()):(o(this.cssSelector.shuffleOff).hide(),o(this.cssSelector.shuffle).show()))},_highlight:function(s){this.playlist.length&&s!==i&&(o(this.cssSelector.playlist+" .jp-playlist-current").removeClass("jp-playlist-current"),o(this.cssSelector.playlist+" li:nth-child("+(s+1)+")").addClass("jp-playlist-current").find(".jp-playlist-item").addClass("jp-playlist-current"))},setPlaylist:function(s){this._initPlaylist(s),this._init()},add:function(s,t){o(this.cssSelector.playlist+" ul").append(this._createListItem(s)).find("li:last-child").hide().slideDown(this.options.playlistOptions.addTime),this._updateControls(),this.original.push(s),this.playlist.push(s),t?this.play(this.playlist.length-1):1===this.original.length&&this.select(0)},remove:function(s){var e=this;return s===i?(this._initPlaylist([]),this._refresh(function(){o(e.cssSelector.jPlayer).jPlayer("clearMedia")}),!0):!this.removing&&(0<=(s=s<0?e.original.length+s:s)&&s<this.playlist.length&&(this.removing=!0,o(this.cssSelector.playlist+" li:nth-child("+(s+1)+")").slideUp(this.options.playlistOptions.removeTime,function(){if(o(this).remove(),e.shuffled){var t=e.playlist[s];o.each(e.original,function(s){return e.original[s]===t?(e.original.splice(s,1),!1):void 0}),e.playlist.splice(s,1)}else e.original.splice(s,1),e.playlist.splice(s,1);e.original.length?s===e.current?(e.current=s<e.original.length?e.current:e.original.length-1,e.select(e.current)):s<e.current&&e.current--:(o(e.cssSelector.jPlayer).jPlayer("clearMedia"),e.current=0,e.shuffled=!1,e._updateControls()),e.removing=!1})),!0)},select:function(s){0<=(s=s<0?this.original.length+s:s)&&s<this.playlist.length?(this.current=s,this._highlight(s),o(this.cssSelector.jPlayer).jPlayer("setMedia",this.playlist[this.current])):this.current=0},play:function(s){0<=(s=s<0?this.original.length+s:s)&&s<this.playlist.length?this.playlist.length&&(this.select(s),o(this.cssSelector.jPlayer).jPlayer("play")):s===i&&o(this.cssSelector.jPlayer).jPlayer("play")},pause:function(){o(this.cssSelector.jPlayer).jPlayer("pause")},next:function(){var s=this.current+1<this.playlist.length?this.current+1:0;this.loop?0===s&&this.shuffled&&this.options.playlistOptions.shuffleOnLoop&&1<this.playlist.length?this.shuffle(!0,!0):this.play(s):0<s&&this.play(s)},previous:function(){var s=0<=this.current-1?this.current-1:this.playlist.length-1;(this.loop&&this.options.playlistOptions.loopOnPrevious||s<this.playlist.length-1)&&this.play(s)},shuffle:function(s,t){var e=this;s===i&&(s=!this.shuffled),(s||s!==this.shuffled)&&o(this.cssSelector.playlist+" ul").slideUp(this.options.playlistOptions.shuffleTime,function(){(e.shuffled=s)?e.playlist.sort(function(){return.5-Math.random()}):e._originalPlaylist(),e._refresh(!0),t||!o(e.cssSelector.jPlayer).data("jPlayer").status.paused?e.play(0):e.select(0),o(this).slideDown(e.options.playlistOptions.shuffleTime)})},blur:function(s){o(this.cssSelector.jPlayer).jPlayer("option","autoBlur")&&o(s).blur()}}}(jQuery);
+/*!jPlayerPlaylist for jPlayer 2.9.2 ~ (c) 2009-2014 Happyworm Ltd ~ MIT License*/
+! function (a, b) {
+  jPlayerPlaylist = function (b, c, d) {
+    var e = this;
+    this.current = 0, this.loop = !1, this.shuffled = !1, this.removing = !1, this.cssSelector = a.extend({}, this._cssSelector, b), this.options = a.extend(!0, {
+      keyBindings: {
+        next: {
+          key: 221,
+          fn: function () {
+            e.next()
+          }
+        },
+        previous: {
+          key: 219,
+          fn: function () {
+            e.previous()
+          }
+        },
+        shuffle: {
+          key: 83,
+          fn: function () {
+            e.shuffle()
+          }
+        }
+      },
+      stateClass: {
+        shuffled: "jp-state-shuffled"
+      }
+    }, this._options, d), this.playlist = [], this.original = [], this._initPlaylist(c), this.cssSelector.details = this.cssSelector.cssSelectorAncestor + " .jp-details", this.cssSelector.playlist = this.cssSelector.cssSelectorAncestor + " .jp-playlist", this.cssSelector.next = this.cssSelector.cssSelectorAncestor + " .jp-next", this.cssSelector.previous = this.cssSelector.cssSelectorAncestor + " .jp-previous", this.cssSelector.shuffle = this.cssSelector.cssSelectorAncestor + " .jp-shuffle", this.cssSelector.shuffleOff = this.cssSelector.cssSelectorAncestor + " .jp-shuffle-off", this.options.cssSelectorAncestor = this.cssSelector.cssSelectorAncestor, this.options.repeat = function (a) {
+      e.loop = a.jPlayer.options.loop
+    }, a(this.cssSelector.jPlayer).bind(a.jPlayer.event.ready, function () {
+      e._init()
+    }), a(this.cssSelector.jPlayer).bind(a.jPlayer.event.ended, function () {
+      e.next()
+    }), a(this.cssSelector.jPlayer).bind(a.jPlayer.event.play, function () {
+      a(this).jPlayer("pauseOthers")
+    }), a(this.cssSelector.jPlayer).bind(a.jPlayer.event.resize, function (b) {
+      b.jPlayer.options.fullScreen ? a(e.cssSelector.details).show() : a(e.cssSelector.details).hide()
+    }), a(this.cssSelector.previous).click(function (a) {
+      a.preventDefault(), e.previous(), e.blur(this)
+    }), a(this.cssSelector.next).click(function (a) {
+      a.preventDefault(), e.next(), e.blur(this)
+    }), a(this.cssSelector.shuffle).click(function (b) {
+      b.preventDefault(), e.shuffle(e.shuffled && a(e.cssSelector.jPlayer).jPlayer("option", "useStateClassSkin") ? !1 : !0), e.blur(this)
+    }), a(this.cssSelector.shuffleOff).click(function (a) {
+      a.preventDefault(), e.shuffle(!1), e.blur(this)
+    }).hide(), this.options.fullScreen || a(this.cssSelector.details).hide(), a(this.cssSelector.playlist + " ul").empty(), this._createItemHandlers(), a(this.cssSelector.jPlayer).jPlayer(this.options)
+  }, jPlayerPlaylist.prototype = {
+    _cssSelector: {
+      jPlayer: "#jquery_jplayer_1",
+      cssSelectorAncestor: "#jp_container_1"
+    },
+    _options: {
+      playlistOptions: {
+        autoPlay: !1,
+        loopOnPrevious: !1,
+        shuffleOnLoop: !0,
+        enableRemoveControls: !1,
+        displayTime: "slow",
+        addTime: "fast",
+        removeTime: "fast",
+        shuffleTime: "slow",
+        itemClass: "jp-playlist-item",
+        freeGroupClass: "jp-free-media",
+        freeItemClass: "jp-playlist-item-free",
+        removeItemClass: "jp-playlist-item-remove"
+      }
+    },
+    option: function (a, c) {
+      if (c === b) return this.options.playlistOptions[a];
+      switch (this.options.playlistOptions[a] = c, a) {
+        case "enableRemoveControls":
+          this._updateControls();
+          break;
+        case "itemClass":
+        case "freeGroupClass":
+        case "freeItemClass":
+        case "removeItemClass":
+          this._refresh(!0), this._createItemHandlers()
+      }
+      return this
+    },
+    _init: function () {
+      var a = this;
+      this._refresh(function () {
+        a.options.playlistOptions.autoPlay ? a.play(a.current) : a.select(a.current)
+      })
+    },
+    _initPlaylist: function (b) {
+      this.current = 0, this.shuffled = !1, this.removing = !1, this.original = a.extend(!0, [], b), this._originalPlaylist()
+    },
+    _originalPlaylist: function () {
+      var b = this;
+      this.playlist = [], a.each(this.original, function (a) {
+        b.playlist[a] = b.original[a]
+      })
+    },
+    _refresh: function (b) {
+      var c = this;
+      if (b && !a.isFunction(b)) a(this.cssSelector.playlist + " ul").empty(), a.each(this.playlist, function (b) {
+        a(c.cssSelector.playlist + " ul").append(c._createListItem(c.playlist[b]))
+      }), this._updateControls();
+      else {
+        var d = a(this.cssSelector.playlist + " ul").children().length ? this.options.playlistOptions.displayTime : 0;
+        a(this.cssSelector.playlist + " ul").slideUp(d, function () {
+          var d = a(this);
+          a(this).empty(), a.each(c.playlist, function (a) {
+            d.append(c._createListItem(c.playlist[a]))
+          }), c._updateControls(), a.isFunction(b) && b(), c.playlist.length ? a(this).slideDown(c.options.playlistOptions.displayTime) : a(this).show()
+        })
+      }
+    },
+    _createListItem: function (b) {
+      var c = this,
+        d = "<li><div>";
+      if (d += "<a href='javascript:;' class='" + this.options.playlistOptions.removeItemClass + "'>&times;</a>", b.free) {
+        var e = !0;
+        d += "<span class='" + this.options.playlistOptions.freeGroupClass + "'>(", a.each(b, function (b, f) {
+          a.jPlayer.prototype.format[b] && (e ? e = !1 : d += " | ", d += "<a class='" + c.options.playlistOptions.freeItemClass + "' href='" + f + "' tabindex='-1'>" + b + "</a>")
+        }), d += ")</span>"
+      }
+      return d += "<a href='javascript:;' class='" + this.options.playlistOptions.itemClass + "' tabindex='0'>" + b.title + (b.artist ? " <span class='jp-artist'> - " + b.artist + "</span>" : "") + "</a>", d += "</div></li>"
+    },
+    _createItemHandlers: function () {
+      var b = this;
+      a(this.cssSelector.playlist).off("click", "a." + this.options.playlistOptions.itemClass).on("click", "a." + this.options.playlistOptions.itemClass, function (c) {
+        c.preventDefault();
+        var d = a(this).parent().parent().index();
+        b.current !== d ? b.play(d) : a(b.cssSelector.jPlayer).jPlayer("play"), b.blur(this)
+      }), a(this.cssSelector.playlist).off("click", "a." + this.options.playlistOptions.freeItemClass).on("click", "a." + this.options.playlistOptions.freeItemClass, function (c) {
+        c.preventDefault(), a(this).parent().parent().find("." + b.options.playlistOptions.itemClass).click(), b.blur(this)
+      }), a(this.cssSelector.playlist).off("click", "a." + this.options.playlistOptions.removeItemClass).on("click", "a." + this.options.playlistOptions.removeItemClass, function (c) {
+        c.preventDefault();
+        var d = a(this).parent().parent().index();
+        b.remove(d), b.blur(this)
+      })
+    },
+    _updateControls: function () {
+      this.options.playlistOptions.enableRemoveControls ? a(this.cssSelector.playlist + " ." + this.options.playlistOptions.removeItemClass).show() : a(this.cssSelector.playlist + " ." + this.options.playlistOptions.removeItemClass).hide(), this.shuffled ? a(this.cssSelector.jPlayer).jPlayer("addStateClass", "shuffled") : a(this.cssSelector.jPlayer).jPlayer("removeStateClass", "shuffled"), a(this.cssSelector.shuffle).length && a(this.cssSelector.shuffleOff).length && (this.shuffled ? (a(this.cssSelector.shuffleOff).show(), a(this.cssSelector.shuffle).hide()) : (a(this.cssSelector.shuffleOff).hide(), a(this.cssSelector.shuffle).show()))
+    },
+    _highlight: function (c) {
+      this.playlist.length && c !== b && (a(this.cssSelector.playlist + " .jp-playlist-current").removeClass("jp-playlist-current"), a(this.cssSelector.playlist + " li:nth-child(" + (c + 1) + ")").addClass("jp-playlist-current").find(".jp-playlist-item").addClass("jp-playlist-current"))
+    },
+    setPlaylist: function (a) {
+      this._initPlaylist(a), this._init()
+    },
+    add: function (b, c) {
+      a(this.cssSelector.playlist + " ul").append(this._createListItem(b)).find("li:last-child").hide().slideDown(this.options.playlistOptions.addTime), this._updateControls(), this.original.push(b), this.playlist.push(b), c ? this.play(this.playlist.length - 1) : 1 === this.original.length && this.select(0)
+    },
+    remove: function (c) {
+      var d = this;
+      return c === b ? (this._initPlaylist([]), this._refresh(function () {
+        a(d.cssSelector.jPlayer).jPlayer("clearMedia")
+      }), !0) : this.removing ? !1 : (c = 0 > c ? d.original.length + c : c, c >= 0 && c < this.playlist.length && (this.removing = !0, a(this.cssSelector.playlist + " li:nth-child(" + (c + 1) + ")").slideUp(this.options.playlistOptions.removeTime, function () {
+        if (a(this).remove(), d.shuffled) {
+          var b = d.playlist[c];
+          a.each(d.original, function (a) {
+            return d.original[a] === b ? (d.original.splice(a, 1), !1) : void 0
+          }), d.playlist.splice(c, 1)
+        } else d.original.splice(c, 1), d.playlist.splice(c, 1);
+        d.original.length ? c === d.current ? (d.current = c < d.original.length ? d.current : d.original.length - 1, d.select(d.current)) : c < d.current && d.current-- : (a(d.cssSelector.jPlayer).jPlayer("clearMedia"), d.current = 0, d.shuffled = !1, d._updateControls()), d.removing = !1
+      })), !0)
+    },
+    select: function (b) {
+      b = 0 > b ? this.original.length + b : b, b >= 0 && b < this.playlist.length ? (this.current = b, this._highlight(b), a(this.cssSelector.jPlayer).jPlayer("setMedia", this.playlist[this.current])) : this.current = 0
+    },
+    play: function (c) {
+      c = 0 > c ? this.original.length + c : c, c >= 0 && c < this.playlist.length ? this.playlist.length && (this.select(c), a(this.cssSelector.jPlayer).jPlayer("play")) : c === b && a(this.cssSelector.jPlayer).jPlayer("play")
+    },
+    pause: function () {
+      a(this.cssSelector.jPlayer).jPlayer("pause")
+    },
+    next: function () {
+      var a = this.current + 1 < this.playlist.length ? this.current + 1 : 0;
+      this.loop ? 0 === a && this.shuffled && this.options.playlistOptions.shuffleOnLoop && this.playlist.length > 1 ? this.shuffle(!0, !0) : this.play(a) : a > 0 && this.play(a)
+    },
+    previous: function () {
+      var a = this.current - 1 >= 0 ? this.current - 1 : this.playlist.length - 1;
+      (this.loop && this.options.playlistOptions.loopOnPrevious || a < this.playlist.length - 1) && this.play(a)
+    },
+    shuffle: function (c, d) {
+      var e = this;
+      c === b && (c = !this.shuffled), (c || c !== this.shuffled) && a(this.cssSelector.playlist + " ul").slideUp(this.options.playlistOptions.shuffleTime, function () {
+        e.shuffled = c, c ? e.playlist.sort(function () {
+          return .5 - Math.random()
+        }) : e._originalPlaylist(), e._refresh(!0), d || !a(e.cssSelector.jPlayer).data("jPlayer").status.paused ? e.play(0) : e.select(0), a(this).slideDown(e.options.playlistOptions.shuffleTime)
+      })
+    },
+    blur: function (b) {
+      a(this.cssSelector.jPlayer).jPlayer("option", "autoBlur") && a(b).blur()
+    }
+  }
+}(jQuery);

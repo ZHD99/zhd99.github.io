@@ -7,8 +7,8 @@
 <head>
 	<title>windows My sql 解压版安装方法 -  hi mogul</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<meta name="keywords" content="hi mogul,hexo-theme-dearmsdan一款Hexo主题宝钻蓝色，给你一种空灵的感觉,hexo简约主题,HEXO,dearmsdan.com" />
-	<meta name="description" content="dearmsdan基于Bootstrap 框架HEXO 强力驱动的一个宝钻蓝 色调给你一种空灵的感觉">
+	<meta name="keywords" content="hi mogul,hexo-theme-dearmsdan一款Hexo主题宝钻蓝色,It gives people a sense of emptiness,hexo简约主题,HEXO,dearmsdan.com" />
+	<meta name="description" content="It gives people a sense of emptiness">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="shortcut icon" href="/logo.png" type="image/png" />
 	
@@ -34,10 +34,6 @@
 	
 	<link rel="stylesheet" type="text/css" href="/css/post_content.css">
 	
-	<link rel="stylesheet" type="text/css" href="/resources/toc/toc.css">  
-	
-  <script type="text/javascript" src="/js/copycode/clipboard.min.js"></script>  
-	
 	
 	<script src="/js/jquery1.10.2.min.js"></script>
 	
@@ -45,9 +41,9 @@
 
 	<script src="/js/bootstrap-3.3.4.js"></script>
 	
-	<script src="/js/jquery.slimscroll.min.js"></script>
-	
 	<script src="/js/s.js"></script>
+	
+	<script src="/js/jquery.slimscroll.min.js"></script>
 	
 	<script src="/js/valine.js"></script>
 	
@@ -57,226 +53,6 @@
 	<link rel="stylesheet" href="/resources/loadingBar/flash.css">
 	
 	
-		 
-			
-<script type="text/javascript">
-$(function(){
-	links();
-	tocs();
-	copycodes();
-	postcolor();
-	styleS();
-	/* 设置 post 样式*/
-	$(".dearmsdan-post").css("animation","1s ease 0s 1 normal forwards running action_translateY");
-
-
-	if(true){
-		dearmsdanpage();
-	}
-
-	
-});
-	
-	
-	
-	
-
-
-
-	
-
-function dearmsdanpage(){
-	if($('.second').length>0) {
-	// 当前刷新目录产生
-    $(".second").pageslide();
-	} else {
-		console.log("欢迎来到首页，本站是一款Hexo主题宝钻蓝色，hexo-theme-dearmsdan");
-
-	}
-}
-
-
-
-		/* 外链保护http://link.zhd99.cn */
-function links(){
-	
-		 
-	$("article a").not(".toc a,article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a,article .gallerys,.ui-artZoom-buttons a").attr("href",
-																													function(){
-		// 不是本站链接检测  article
-		var str = this.href;
-		var pattern = /http.+zhd99.cn/;
-		var falg = pattern.test(str).toString().trim();
-		
-		var pattern2 = /http.+dearmsdan/;
-		var falg2 = pattern2.test(str).toString().trim();
-		if('true' != falg && 'true' != falg2){
-			return 'http://link.dearmsdan.com/links.html' + '?target=' + str;
-		   }
-});
-		
-	
-}
-
-
-	// 目录 被点击
-	
-function tocs(){
-	$('.second').on('click', function () {
-		
-		if (!$('body').hasClass('layout-fullwidth')) {
-			$('body').addClass('layout-fullwidth');    // 初始出现
-
-		} else {
-			$('body').addClass('layout-fullwidth');    // 初始出现
-			
-		}
-		
-		if ($(window).innerWidth() < 1025) {
-			if (!$('body').hasClass('offcanvas-active')) {
-				$('body').removeClass('offcanvas-active');
-			} else {
-				$('body').removeClass('offcanvas-active');
-			}
-		}
-		
-		
-	});
-}
-
-
-/*页面载入完成后，创建复制按钮*/
-function copycodes(){
-	
-	/* 代码高度 判断 */
-	
-	 $("figure td pre").scroll(function(){
-        $("figure td:nth-child(1) pre").scrollTop($(this).scrollTop()); // 纵向滚动条
-        $("figure td:nth-child(2) pre").scrollLeft($(this).scrollLeft()); // 横向滚动条
-    });
-	
-		!function (e, t, a) {
-		  /* code */
-		  var initCopyCode = function(){
-			var copyHtml = '';
-			copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-			copyHtml += '  <i class="fa fa-globe"></i><span>copy</span>';
-			copyHtml += '</button>';
-			  // 设置 放置位置↓
-			$("figure td:nth-child(2) pre").before(copyHtml);
-			  		//$("figure td:nth-child(2) pre").wrap("<div></div>");
-			new ClipboardJS('.btn-copy', {
-				target: function(trigger) {
-					return trigger.nextElementSibling;
-				}
-			});
-		  }
-		  initCopyCode();
-			
-			
-		}(window, document);
-}
-
-	
-		
-	/* .dearmsdan-post悬浮变色 */ 
-
-function postcolor(){
-	
-$(".dearmsdan-post").mouseover(function(){
-		
-	// 随机 变化的淡入
-var arr = ['0 4px 24px rgb(255, 255, 255)','0 4px 24px rgb(163, 163, 163)','0 4px 24px rgb(206, 154, 154)','0 4px 24px rgb(206, 154, 178)','0 4px 24px rgb(193, 154, 206)','0 4px 24px rgb(154, 158, 206)','0 4px 24px rgb(154, 187, 206)','0 4px 24px rgb(154, 206, 170)','0 4px 24px rgb(206, 200, 154)','0 4px 24px rgb(206, 180, 154)','0 4px 24px rgb(206, 154, 154)']; 
-		
-var index = Math.floor((Math.random()*arr.length)); 
-	// 预期不佳
-	$('.dearmsdan-post:hover').css("box-shadow",arr[index]);
-		
-});
-	$(".dearmsdan-post").mouseleave(function(){
-	// 移除
-	$('.dearmsdan-post').css("box-shadow","none");
-		
-});
-	
-}
-
-	
-
-	/*  移动端样式  */
-
-function styleS(){
-if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
-
-    // 背景色
-	/*$("html").css("background-image","url('https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302')");*/
-	
-
-	$('.dearmsdan-post').css('padding','30px');
-		
-	
-	
-    // 底部背景色
-	$('.main').css('background','aliceblue');
-	$('.main').css('max-height','100%');
-	
-		$('.main').css('background-color','rgba(240, 248, 255, 0.5)');
-	
-	
-
-	/* 首页 排版 */
-	$('.dearmsdan-bg').css('box-shadow','none');
-	$('.dearmsdan-bg').css('-webkit-box-shadow','none');
-//	$('.main-content').css('background-color','#ECECEE');
-	$('.dearmsdan-post').css('background-color','rgba(255, 255, 255, 0.52)');
-	$('.dearmsdan-post').css('padding','30px');
-	$('.dearmsdan-post').css('margin-bottom','20px');
-	$('.main-content').addClass('m-content');
-	$('.dearmsdan-title').css('opacity','1');
-	
-	
-	
-	
-	
-	
-	/* 文章内容页 排版 */
-	$('.dearmsdan-bg div').removeClass('div_bg');
-	$('.dearmsdan-bg div').addClass('divbg');
-	$('.dearmsdan-bg div').css("background-color","rgba(255, 255, 255, 1)");
-	
-	$('#dearmsdanPost').addClass('dearmsdanPost');
-
-	}else{					
-		Observer();
-	}
-}
-
-/* 观察者模式 */
-function Observer(){
-	$('#dearmsdan-logo').click( 
-		function () { 
-			alert("你是观察者");
-			$('.nav-list').addClass('dearmsdan-none');
-			$('.dearmsdan-bg').addClass('dearmsdan-none');
-			$('.main-content').addClass('dearmsdan-none');
-			$('.container-fluid').addClass('dearmsdan-none');
-			$('#dearmsdan-vbg').css("opacity","1");
-			$('#dearmsdan-vbg').css("z-index","5201314");
-			$('.navbar').css("background-color","transparent");
-			$('.navbar').css("box-shadow","none");
-			$('#dearmsdan-logo').css("position","relative");
-			$('#dearmsdan-logo').css("left","-100px");
-			console.log("你是观察者null");
-			
-		});
-}
-	
-	
-
-</script>
-		
-	
-	
 <meta name="generator" content="Hexo 4.2.1"></head>
 
 
@@ -284,7 +60,6 @@ function Observer(){
 
 	
     <body>
-<div class="toping"></div>
 		<div id="dearmsdan">
 		<!-- Header -->
 		
@@ -293,7 +68,7 @@ function Observer(){
 			<a>
 				<i id="dearmsdan-logo" style="font-size:50px;vertical-align: middle;"
 			class="DearMsDanIconFont icon-zh"></i>
-				<img width="50px" src="" />
+				
 				
 			</a>
 			<a href="/">
@@ -818,7 +593,7 @@ if(index == 0 || !(index%2 == 0)){
 			<nav>
 				
 				<div class="dearmsdan-count">
-					<span>文章</span>8
+					<span>文章</span>7
 					<span>标签</span>6
 					<span>分类</span>3
 				</div>		
@@ -831,7 +606,7 @@ if(index == 0 || !(index%2 == 0)){
 						
         			</a>
 				
-					<a target="_blank" class="btn email" href="/outlook.html">
+					<a target="_blank" class="btn email" href="mailto:dearmsdan@outlook.com">
 						
             		<i class="DearMsDanIconFont icon-youxiang"></i>
 						
@@ -864,6 +639,16 @@ if(index == 0 || !(index%2 == 0)){
 	<input id="local-search-input" />
 	<button class="DearMsDanIconFont icon-sousuo"></button>
 </div>
+<style>
+	.search-result{
+		display: none;
+	}
+	.search-result-list li {
+    list-style: none;
+    line-height: 32px;
+    margin-bottom: 15px;
+}
+</style>
 <div id="local-search-result"></div>
 <script>
  var search_path = "search.xml";
@@ -979,15 +764,15 @@ if(index == 0 || !(index%2 == 0)){
           </li>
         
           <li>
-            <a href="/2020/04/04/course/20200404/">2020 抗击新冠肺炎疫情斗争牺牲烈士和逝世同胞的深切哀悼</a>
-          </li>
-        
-          <li>
             <a href="/2020/02/10/structure/">记录 hexo-theme-dearmsdan 结构，hexo的基本介绍</a>
           </li>
         
           <li>
             <a href="/2019/12/31/sys/win/1912311726/">windows 禁止更新的问题</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/30/sql/1912301045/">windows My sql 解压版安装方法</a>
           </li>
         
           <li>
@@ -1003,87 +788,27 @@ if(index == 0 || !(index%2 == 0)){
 					
 				
 					<li>
-						<a href="javascript:;" class="nav-togg" target="_self" title="自定义目录1">自定义目录1</a>
+						<a href="javascript:;" class="nav-togg" target="_self" title="目录1">目录1</a>
 						<div>
 							<ul>
 							
 								<li>
 								<div>
-									<a href="/about1.html" class="nav-togg" target="_self" title="没想好1">没想好1</a>
+									<a href="/about3.html" class="nav-togg" target="_self" title="404">404</a>
 								</div>
 								</li>
 									
 							
 								<li>
 								<div>
-									<a href="/about2.html" class="nav-togg" target="_self" title="没想好2">没想好2</a>
+									<a href="https://www.baidu.com/" class="nav-togg" target="_self" title="搜索">搜索</a>
 								</div>
 								</li>
 									
 							
 								<li>
 								<div>
-									<a href="/about3.html" class="nav-togg" target="_self" title="没想好3">没想好3</a>
-								</div>
-								</li>
-									
-								
-							</ul>
-						</div>
-					</li>
-				
-					<li>
-						<a href="javascript:;" class="nav-togg" target="_self" title="没想好目录2">没想好目录2</a>
-						<div>
-							<ul>
-							
-								<li>
-								<div>
-									<a href="/about3.html" class="nav-togg" target="_self" title="地址1">地址1</a>
-								</div>
-								</li>
-									
-							
-								<li>
-								<div>
-									<a href="/about2.html" class="nav-togg" target="_self" title="地址2">地址2</a>
-								</div>
-								</li>
-									
-							
-								<li>
-								<div>
-									<a href="/about1.html" class="nav-togg" target="_self" title="地址3">地址3</a>
-								</div>
-								</li>
-									
-								
-							</ul>
-						</div>
-					</li>
-				
-					<li>
-						<a href="javascript:;" class="nav-togg" target="_self" title="没想好目录3">没想好目录3</a>
-						<div>
-							<ul>
-							
-								<li>
-								<div>
-									<a href="/about3.html" class="nav-togg" target="_self" title="没想好1">没想好1</a>
-								</div>
-								</li>
-									
-							
-								<li>
-								<div>
-									<a href="/about2.html" class="nav-togg" target="_self" title="没想好2">没想好2</a>
-								</div>
-								</li>
-									
-							
-								<li>
-								<div>
-									<a href="/about1.html" class="nav-togg" target="_self" title="没想好3">没想好3</a>
+									<a href="mailto:dearmsdan@outlook.com" class="nav-togg" target="_self" title="email">email</a>
 								</div>
 								</li>
 									
@@ -1109,7 +834,6 @@ if(index == 0 || !(index%2 == 0)){
 
 
 
-			<div class="main">
 				
 	
 	<style>
@@ -1151,8 +875,44 @@ if(index == 0 || !(index%2 == 0)){
 <script>
     //background-image: url(https://img.xjh.me/random_img.php?type=bg&ctype=nature&return=302);
 </script>
+			<div class="main">
 				<div class="main-content">
 					
+
+
+<style>
+@media screen and (min-width: 1024px){
+	.main-content {
+		padding: 0px;
+		width: 94%;
+		height: inherit;
+		position: relative;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		background-color: rgba(255, 255, 255, 0.38)!important;
+	}
+	.dearmsdan-post{
+		margin-bottom: 0px;
+	}
+	.dearmsdan-post:hover{
+		box-shadow: 0 4px 24px rgb(255, 255, 255,0)!important;
+	}
+	#dearmsdanPost:hover {
+    padding: 10px 70px;
+	}	
+}
+</style>
+
+
+
+<style>
+	#dearmsdanPost:hover{
+   		    background-color: rgba(255, 255, 255, 0.5)!important;
+	}	
+</style>
 <div class="dearmsdan">
 	<div class="dearmsdan-post" id="dearmsdanPost">
 		<div class="dearmsdan-title">
@@ -1160,6 +920,7 @@ if(index == 0 || !(index%2 == 0)){
 		</div>
 	  <div id="post" class="dearmsdan-post-Statistics">
             <a>2019年12月30日</a>
+		  	<a class="post-count">99 字</a>
 		
 		
 		  <a class=" -link" href="/tags/MySql/" rel="tag">MySql</a>
@@ -1209,7 +970,6 @@ if(index == 0 || !(index%2 == 0)){
 
 
 
-	<script src="/resources/toc/jquery.pageslide.js"></script>
 		<div>
 			  <article>
 				<p>My sql 解压版安装方法 <a href="https://www.cnblogs.com/shenliang123/p/3203546.html" target="_blank" rel="noopener">相关链接</a>  <a href="https://www.cnblogs.com/ayyl/p/5978418.html" target="_blank" rel="noopener">相关链接</a>  </p>
@@ -1266,18 +1026,41 @@ if(index == 0 || !(index%2 == 0)){
 		
 		
 
-		 
+
 		 	
-				  <div id="vcomments"></div>
+				<style>
+.veditor {
+    background: url('https://www.calamus.xyz/wp-content/themes/lensnews2.2/images/loading/comment.gif') no-repeat #fcfcfc!important;
+    background-size: auto 130px!important;
+    background-position: right bottom!important;
+}
+</style>
+<div id="vcomments" class="comment">
+
+</div>
 <script>
+	window.valine = new Valine({
+		el: '#vcomments',
+		appId: 'jNrzXxvqR3NhebnE7swyQBFp-gzGzoHsz',
+		appKey: 'iqXsTlkThMqeaKdhYcgajztG',
+		avatar: 'robohash',
+		placeholder: '留下你的小脚印吧~',
+		path: window.location.pathname,   //[重点] 记得添加path路径
+	});
+	
     // 使用方法 https://valine.js.org/quickstart.html
+	/*
+		var $vcomments = document.querySelector('.comment');
+		var $div= document.createElement('div');
+		$div.setAttribute("id","#vcomments");
+		$vcomments.appendChild($div);
     new Valine({
         el: '#vcomments',
         appId: 'jNrzXxvqR3NhebnE7swyQBFp-gzGzoHsz',
         appKey: 'iqXsTlkThMqeaKdhYcgajztG',
 		avatar: 'robohash',
         placeholder: '输入前请确认 <昵称> <邮箱> <你的网站> 是否已填写，支持markdown 格式编写 ',
-    })
+    });*/
         //placeholder: '输入前请确认 <昵称> <邮箱> <你的网站> 是否已填写，支持markdown 格式编写 ',
 </script>
 
@@ -1298,10 +1081,6 @@ $(window).load(function(){
 });*/
 </script>
 			
-
-			
-		
-	
 		
 	  
 	
@@ -1323,6 +1102,30 @@ $(window).load(function(){
 	  
 	</div>
 </div>
+<script>
+	(function(){
+		var jmz = {};
+		jmz.GetLength = function(str) {
+			var realLength = 0, len = str.length, charCode = -1;
+			for (var i = 0; i < len; i++) {
+				charCode = str.charCodeAt(i);
+				if (charCode >= 0 && charCode <= 128) 
+					  realLength += 1;
+				else
+					  realLength += 1;
+			}
+			return realLength;
+		};
+		//console.log(str);
+		var article = document.querySelector('.dearmsdan-post article').innerHTML.trim();
+
+		var b = article.replace(/<.*?>/ig,"");
+		
+		$('.post-count').html(jmz.GetLength(b)+"字");
+	})()
+</script>
+
+
     				
 					
 	
@@ -1412,7 +1215,7 @@ $(window).load(function(){
 			 </span>...
 		</div>
 		<div class="foor">
-			<a style='color:#939393;' href='http://hn.beian.miit.gov.cn/' target='_blank'> <img width='16px' src='https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png' />湘ICP备20001824号 </a>·<a target='_blank' href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=43010302001049' style='display:inline-block;text-decoration:none;height:20px;line-height:20px;'><p style='height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;'>湘公网安备 43010302001049号</p></a>
+			<a style='color:#939393;' href='http://hn.beian.miit.gov.cn/' target='_blank'> <img width='16px' src='https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png' />湘ICP备20001824号 </a>·<a target='_blank' href='http://www.beian.gov.cn/portal/registerSystemInfo' style='display:inline-block;text-decoration:none;height:20px;line-height:20px;'><p style='height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;'>湘公网安备 43010302001049号</p></a>
 		</div>
 	</div>
 </footer>
@@ -1422,13 +1225,13 @@ var $win = $(window);
 var clientWidth = $win.width();
 var clientHeight = $win.height();
 
-$(window).resize(function() {
+/* $(window).resize(function() {
     var newWidth = $win.width();
     var newHeight = $win.height();
     if (newWidth != clientWidth && newHeight != clientHeight) {
         location.replace(location);
     }
-});
+}); */
  
 (function($) {
 	$.fn.typewriter = function() {
@@ -1515,6 +1318,8 @@ function timeElapse(date){
 
 
 
+<div class="toping"></div>
+
 
 <script>
       var browsehappy_config = {
@@ -1529,86 +1334,13 @@ function timeElapse(date){
 
 
 
-<script>
-
-        function endebug(off, code) {
-            if (!off) {
-                !function (e) {
-                    function n(e) {
-                        function n() {
-                            return u
-                        }
-                        function o() {
-                            window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized ? t("on") : (a = "off", console.log(d), console.clear(), t(a))
-                        }
-                        function t(e) {
-                            u !== e && (u = e, "function" == typeof c.onchange && c.onchange(e))
-                        }
-                        function r() {
-                            l || (l = !0, window.removeEventListener("resize", o), clearInterval(f))
-                        }
-                        "function" == typeof e && (e = {
-                            onchange: e
-                        });
-                        var i = (e = e || {}).delay || 500,
-                            c = {};
-                        c.onchange = e.onchange;
-                        var a, d = new Image;
-                        d.__defineGetter__("id", function () {
-                            a = "on"
-                        });
-                        var u = "unknown";
-                        c.getStatus = n;
-                        var f = setInterval(o, i);
-                        window.addEventListener("resize", o);
-                        var l;
-                        return c.free = r, c
-                    }
-                    var o = o || {};
-                    o.create = n, "function" == typeof define ? (define.amd || define.cmd) && define(function () {
-                        return o
-                    }) : "undefined" != typeof module && module.exports ? module.exports = o : window.jdetects = o
-                }(), jdetects.create(function (e) {
-                    var a = 0;
-                    var n = setInterval(function () {
-                        if ("on" == e) {
-                            setTimeout(function () {
-                                if (a == 0) {
-                                    a = 1;
-                                    setTimeout(code);
-                                }
-                            }, 200)
-                        }
-                    }, 100)
-                })
-            }
-        }
-    </script>
-
-
-
-<script src="/js/debug.js"></script>
-
-
-    <script type="text/javascript">
-        endebug(true, function () {
-            document.write("<p>��վ ???<br/> HTTP status code   405 not allowed  <br/>��ˢ������</p>");
-            document.write("<img src='https://errorpage.b0.upaiyun.com/zhd99ooc-403'/>");
-			
-        });
-    </script>
-
-
-
-
-
 <link href="/resources/meuplayer/css/player.css" rel="stylesheet" type="text/css" />
 
 
-<div id="jp_container_N" class="jp-video jp-video-270p" role="application" aria-label="media player" style="left: 0px; height: 175px; bottom: 20px;">
+<div id="jp_container_N" class="jp-video jp-video-270p" role="application" aria-label="media player" style="left: 0px; height: 94px; bottom: 20px;">
 	<div class="jp-type-playlist">
-		<div id="jquery_jplayer_N" class="jp-jplayer" style="width: 90px; height: 90px;">	<img id="jp_poster_0" style="width: 90px; height: 90px; display: inline;" src="http://p1.music.126.net/QcWNRX_0uhckImvF2nN1xA==/109951164573973377.jpg?param=130y130">
-			<audio id="jp_audio_0" preload="metadata" src="http://music.163.com/song/media/outer/url?id=31473269.mp3" title="加载中...."></audio>
+		<div id="jquery_jplayer_N" class="jp-jplayer" style="width: 90px; height: 90px;">	<img id="jp_poster_0" style="width: 90px; height: 90px; display: inline;" src="">
+			<audio id="jp_audio_0" preload="metadata" src="" title="加载中...."></audio>
 			<video id="jp_video_0" preload="metadata" title="加载中...." style="width: 0px; height: 0px;"></video>
 		</div>
 		<div class="jp-gui">
@@ -1648,13 +1380,8 @@ function timeElapse(date){
 			</div>
 		</div>
 		<div class="jp-playlist">
-			<div class="jp-playlist-box" style="height: 80px;">
+			<div class="jp-playlist-box" style="height: 0px;">
 				<ul style="height: 1000px; display: block; top: 0px;">
-					
-					
-					
-					
-					
 					
 				</ul>
 			</div>
@@ -1669,16 +1396,13 @@ function timeElapse(date){
 		<div class="bar" style="top: 0px;"></div>
 	</div>
 
-	<button type="button" class="folded_bt" title="点击收缩" id="btnfold" style="top: 52px;">
+	<button type="button" class="folded_bt" title="点击收缩" id="btnfold" style="top: 0px;">
 	<span style="transform: rotate(180deg);"></span>
 	</button>
-	<div id="listRemove" style="display: block;"></div>
 
 	<div id="listClose"></div>
 
 </div>
-
-
 
 
 <script async src="/resources/meuplayer/player/player.js"></script>
@@ -1693,9 +1417,10 @@ function timeElapse(date){
 function dearmsdanPlaylist(){
 	
 var myPlaylist = new jPlayerPlaylist({
-    jPlayer: "#jquery_jplayer_N",
-    cssSelectorAncestor: "#jp_container_N"
-},[
+		jPlayer: "#jquery_jplayer_N",
+		cssSelectorAncestor: "#jp_container_N",
+		error: function(event){ }
+	},[
    
    	{	
     		title: "Right Here Waiting",
@@ -1762,15 +1487,18 @@ var myPlaylist = new jPlayerPlaylist({
    
 ],{
     playlistOptions: {
+        autoPlay: true,
         enableRemoveControls: true
     },
+	loop: true,
     swfPath: "js/",
     supplied: "webmv, ogv, m4v, oga, mp3",
     useStateClassSkin: true,
-    autoBlur: false,
+    autoBlur: true,
     smoothPlayBar: true,
     keyEnabled: true,
-    audioFullScreen: true
+    audioFullScreen: true,
+  	volume: .14
 });
 var latest = [{
     title: "默",
@@ -1784,7 +1512,6 @@ var spirit = [{
     mp3: "http://music.163.com/song/media/outer/url?id=591753.mp3 ",
     poster: "http://p1.music.126.net/lW4YKD6cMgm32nI66CzWVg==/5702067301704441.jpg?param=130y130"
 }];
-	
 	
 }
 	
@@ -1857,6 +1584,7 @@ $("#playlist-remove").click(function() {
     myPlaylist.remove();
 });
 $("#listRemove").click(function() {
+	alert("删除就都没啦");
     myPlaylist.remove();
 });
 $("#playlist-next").click(function() {
@@ -2069,7 +1797,6 @@ $("#listClose").click(function() {
 
 
 
-
 <style>
 
 .containerTop {
@@ -2077,6 +1804,7 @@ $("#listClose").click(function() {
 	right: 15px;
 	bottom: 30px;
 	    opacity: 0.5;
+	    z-index: 9999;
 }
 
 #myPath path {
@@ -2228,7 +1956,7 @@ $("#listClose").click(function() {
 </script>
 
 <script>
-window.onload = function() {
+$(document).ready(function () {
   let pumpLevels = [25, 30, 45, 0];
   let tankLevels = [25, 45, 70, -20];
   let counter = 0;
@@ -2286,20 +2014,11 @@ window.onload = function() {
   
   let heart = document.getElementsByClassName('heart')[0];
   heart.addEventListener("click", pumpHeart);
-}
+});
 </script>
 
 
 
-<script type="text/javascript">
-if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
-	
-
-	
-}else{
-	
-}
-</script>
 
 
 
@@ -2315,6 +2034,7 @@ if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobi
     cursor: pointer;
     color: #b9b9b9;
 	margin-top: 20px;
+	z-index: 9999;
         }
 .vditor-speech--current, .vditor-speech:hover {
             color: #fff
@@ -2334,15 +2054,15 @@ if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobi
     else{ window.onload =dearmsdanread; }
 	
   function dearmsdanread(){
-	        (function(){try{var videos=document.getElementsByTagName('video');if(""!=videos&&videos.length>0){const players=Array.from(videos).map(p=>new Plyr(p));}
-$.getJSON("https://api.heycmm.cn/all/",function(data){const ap=new APlayer({container:document.getElementById("aplayer"),fixed:true,lrcType:3,preload:"auto",order:"random",listFolded:true,listMaxHeight:"165px",theme:"#e9e9e9",audio:data})});var days=parseInt((new Date().getTime()-new Date(document.querySelector(".published").innerText.replace(/ /g,"").replace(/-/g,"/")).getTime())/1000/60/60/24,10);days>90&&document.querySelector("#post-content").insertAdjacentHTML("afterBegin",['<blockquote style="border: 1px solid #6a737d;border-left: 5px solid #6a737d;line-height: 36px;">本文最后更新于 <code style="color: #FF5722;vertical-align: middle;">',days,"</code> 天前，其中的信息可能已经不够准确，请您酌情参考！</blockquote>"].join(""))}catch(e){}})();
+
 function speak(text){if(!isBlank(text)){var src="https://api.heycmm.cn/speak/"+text;if(src.length<=2083){var n=document.querySelector(".Audio-speech");if(!n){(n=document.createElement("AUDIO")).className="Audio-speech";}else{document.getElementById("audios").style.display="block";}
 n.setAttribute("id","audios");n.setAttribute("src",src);n.setAttribute("controls","controls");n.play()}}else{document.getElementById("audios").pause();document.getElementById("audios").style.display="none"}}
 function trim(str){if(str==null){return""}
 return str.toString().replace(/(^\s*)|(\s*$)|\r|\n/g,"")}
 function isBlank(str){if(str==null||trim(str)==""){return true}
 return false}
-var play_svg_1='<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">\n'+'<path d="M6 0v32l20-15.977-20-16.023z"></path>\n'+'</svg>\n';var pause_svg_1='<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">\n'+'<path d="M11 0h-6c-0.553 0-1 0.448-1 1v30c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-30c0-0.552-0.447-1-1-1zM27 0h-6c-0.553 0-1 0.448-1 1v30c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-30c0-0.552-0.447-1-1-1z"></path>\n'+'</svg>\n';var speechDom=document.querySelector(".vditor-speech");if(!speechDom){speechDom=document.createElement("div");speechDom.className="vditor-speech";document.body.insertAdjacentElement("beforeend",speechDom);speechDom.onclick=function(){if(speechDom.className==="vditor-speech"){var utterThis=speechDom.getAttribute("data-text");speak(utterThis);speechDom.className="vditor-speech vditor-speech--current";speechDom.innerHTML=pause_svg_1;}
+var play_svg_1='<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">\n'+'<path d="M6 0v32l20-15.977-20-16.023z"></path>\n'+'</svg>\n';var pause_svg_1='<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">\n'+'<path d="M11 0h-6c-0.553 0-1 0.448-1 1v30c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-30c0-0.552-0.447-1-1-1zM27 0h-6c-0.553 0-1 0.448-1 1v30c0 0.553 0.447 1 1 1h6c0.553 0 1-0.447 1-1v-30c0-0.552-0.447-1-1-1z"></path>\n'+'</svg>\n';var speechDom=document.querySelector(".vditor-speech");if(!speechDom){speechDom=document.createElement("div");speechDom.className="vditor-speech";document.body.insertAdjacentElement("beforeend",speechDom);speechDom.onclick=function(){if(speechDom.className==="vditor-speech"){var utterThis=speechDom.getAttribute("data-text");
+speak(utterThis);speechDom.className="vditor-speech vditor-speech--current";speechDom.innerHTML=pause_svg_1;}
 var selection=window.getSelection();selection.removeAllRanges();selection.addRange(window.vditorSpeechRange);};document.body.addEventListener("click",function(){if(getSelection().toString().trim()===""&&speechDom.style.display==="block"){speechDom.className="vditor-speech";speechSynthesis.cancel();speechDom.style.display="none";}});}
 document.addEventListener("mouseup",function(event){var text=getSelection().toString().trim();speechSynthesis.cancel();if(getSelection().toString().trim()===""){if(speechDom.style.display==="block"){speechDom.className="vditor-speech";speechDom.style.display="none";}
 return;}
@@ -4117,8 +3837,296 @@ $(".dearmsdan-festival").attr("id","childrensDay");
 
 
 
+	
+
+ 
+		<div class="dearmsdan-pjax">
+		<script src="/js/pjax/jquery.pjax.js"></script>
+			<script type="text/javascript">
+$(document).ready(function () {
+	$(document).pjax('a[target!=_blank]', '.main', {fragment: '.main',timeout: 8000});
+
+	$(document).on('pjax:error', function() {
+		alert("慢点吧，等等我~");
+		  history.back();
+	});
+	
+	$(document).on('pjax:start', function() {
+		//加载延迟中...................
+		$(".main-content").removeClass("wrapShow");
+	});
+	$(document).on('pjax:end', function() {
+		//加载中...................
+		$(".main-content").delay(500).addClass("wrapShow");
+	});
+	
+	$(document).on('ready pjax:end', function(event) {
+	linker();
+	tocs();
+	copycodes();
+	postcolor();								 
+	styleS();
+	dearmsdanlazyload();
+	
+	}); /*end ready pjax*/
+
+	
+function linker(){
+/* 外链保护http://link.zhd99.cn */
+	 
+
+		$("article a").not(".toc a,article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a,article .gallerys,.ui-artZoom-buttons a").attr("href",
+																														function(){
+			// 不是本站链接检测  article
+			var str = this.href;
+			var pattern = /http.+zhd99.cn/;
+			var falg = pattern.test(str).toString().trim();
+
+			var pattern2 = /http.+dearmsdan/;
+			var falg2 = pattern2.test(str).toString().trim();
+			if('true' != falg && 'true' != falg2){
+				return 'http://link.dearmsdan.com/links.html' + '?target=' + str;
+			   }
+	});
+
+	
+}
+		
+	
+/* .dearmsdan-post悬浮变色 */ 
+function postcolor(){
+	
+$(".dearmsdan-post").mouseover(function(){
+		
+	// 随机 变化的淡入
+var arr = ['0 4px 24px rgb(255, 255, 255)','0 4px 24px rgb(163, 163, 163)','0 4px 24px rgb(206, 154, 154)','0 4px 24px rgb(206, 154, 178)','0 4px 24px rgb(193, 154, 206)','0 4px 24px rgb(154, 158, 206)','0 4px 24px rgb(154, 187, 206)','0 4px 24px rgb(154, 206, 170)','0 4px 24px rgb(206, 200, 154)','0 4px 24px rgb(206, 180, 154)','0 4px 24px rgb(206, 154, 154)']; 
+		
+var index = Math.floor((Math.random()*arr.length)); 
+	// 预期不佳
+	$('.dearmsdan-post:hover').css("box-shadow",arr[index]);
+		
+});
+	$(".dearmsdan-post").mouseleave(function(){
+	// 移除
+	$('.dearmsdan-post').css("box-shadow","none");
+		
+});
+	
+}/* end hoverColor  */
+		
+	
+/*页面载入完成后，创建复制按钮*/
+function copycodes(){
+	
+	/* 代码高度 判断 */
+	
+	 $("figure td pre").scroll(function(){
+        $("figure td:nth-child(1) pre").scrollTop($(this).scrollTop()); // 纵向滚动条
+        $("figure td:nth-child(2) pre").scrollLeft($(this).scrollLeft()); // 横向滚动条
+    });
+	
+		!function (e, t, a) {
+		  /* code */
+		  var initCopyCode = function(){
+			var copyHtml = '';
+			copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+			copyHtml += '  <i class="fa fa-globe"></i><span>copy</span>';
+			copyHtml += '</button>';
+			  // 设置 放置位置↓
+			$("figure td:nth-child(2) pre").before(copyHtml);
+			  		//$("figure td:nth-child(2) pre").wrap("<div></div>");
+			new ClipboardJS('.btn-copy', {
+				target: function(trigger) {
+					return trigger.nextElementSibling;
+				}
+			});
+		  }
+		  initCopyCode();
+			
+			
+		}(window, document);
+} /* end copycodes  */	
+	
+
+/* 目录  */
+function tocs(){
+	/* 目录图标被点击  */
+	$('.second').on('click', function () {
+
+		if (!$('body').hasClass('layout-fullwidth')) {
+			$('body').addClass('layout-fullwidth');    // 初始出现
+
+		} else {
+			$('body').addClass('layout-fullwidth');    // 初始出现
+
+		}
+
+		if ($(window).innerWidth() < 1025) {
+			if (!$('body').hasClass('offcanvas-active')) {
+				$('body').removeClass('offcanvas-active');
+			} else {
+				$('body').removeClass('offcanvas-active');
+			}
+		}
+	});
+	/* 目录侧边栏 */
+	if($('.second').length>0) {
+	// 当前刷新目录产生
+	$(".second").pageslide();
+	} else {
+		 window.onload = consoleTest;
+function consoleTest(){
+		console.log("\n %c hexo-theme-dearmsdan vbj %c https://github.com/ZHD99/hexo-theme-dearmsdan \n", "color: #FFF; background:#030307; padding:5px 0;", "background: #85adfede; padding:5px 0;");
+		var str = function () {
+/*
+     _                                         _               
+    | | It gives people a sense of emptiness  | |              
+  __| |  ___   __ _  _ __  _ __ ___   ___   __| |  __ _  _ __  
+ / _` | / _ \ / _` || '__|| '_ ` _ \ / __| / _` | / _` || '_ \ 
+| (_| ||  __/| (_| || |   | | | | | |\__ \| (_| || (_| || | | |
+ \__,_| \___| \__,_||_|   |_| |_| |_||___/ \__,_| \__,_||_| |_|
+                                                               
+欢迎您的到来，本站是一款Hexo宝钻蓝色主题，hexo-theme-dearmsdan                                              
 
 
+*/
+        }
+		window.console.log(str.getMultiLine());
+
+			
+}/* end window.onload */ 
+	}/* end else */ 
+	
+} /* end toc */
+
+/*  移动端样式  */
+function styleS(){
+if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+
+    // 背景色
+	/*$("html").css("background-image","url('')");*/
+	
+	
+    // 底部背景色
+	$('.main').css('background','aliceblue');
+	$('.main').css('max-height','100%');
+	
+
+	/* 首页 排版 */
+	$('.dearmsdan-bg').css('box-shadow','none');
+	$('.dearmsdan-bg').css('-webkit-box-shadow','none');
+//	$('.main-content').css('background-color','#ECECEE');
+	$('.dearmsdan-post').css('background-color','rgba(255, 255, 255, 0.52)');
+	$('.dearmsdan-post').css('padding','30px');
+	$('.dearmsdan-post').css('margin-bottom','20px');
+	$('.main-content').addClass('m-content');
+	$('.dearmsdan-title').css('opacity','1');
+	
+	/* 文章 内容页 排版 */
+	$('.dearmsdan-bg div').removeClass('div_bg');
+	$('.dearmsdan-bg div').addClass('divbg');
+	$('.dearmsdan-bg div').css("background-color","rgba(255, 255, 255, 0.8)");
+	$('#dearmsdanPost').addClass('dearmsdanPost');
+	
+	
+	
+		$('.dearmsdan-post').css('padding','15px');
+		//$('.dearmsdan-post').css('background-color','rgba(223, 223, 223, 0.52)');
+		$('.main').css('background','rgba(255, 255, 255, 0)');//#d6ecff
+		$('.dearmsdan-bg').css('background','#254663');
+	
+	
+	
+		$('.main').css('background-color','rgba(240, 248, 255, 0.5)');
+	
+	
+	
+	
+
+	}else{
+		
+	
+	
+		Observer();
+	
+	}
+} /* end styleS */	
+
+
+/* 观察者模式 */
+function Observer(){
+	$('#dearmsdan-logo').click( 
+		function () { 
+			alert("你是观察者");
+			$('.nav-list').addClass('dearmsdan-none');
+			$('.dearmsdan-bg').addClass('dearmsdan-none');
+			$('.main-content').addClass('dearmsdan-none');
+			$('.container-fluid').addClass('dearmsdan-none');
+			$('#dearmsdan-vbg').css("opacity","1");
+			$('#dearmsdan-vbg').css("z-index","5201314");
+			$('.navbar').css("background-color","transparent");
+			$('.navbar').css("box-shadow","none");
+			$('#dearmsdan-logo').css("position","relative");
+			$('#dearmsdan-logo').css("left","-100px");
+			console.log("你是观察者null");
+			
+		});
+}/* end Observer */
+	
+													
+/* 图片懒加载 */
+function dearmsdanlazyload(){
+		var imgs = document.querySelectorAll('img');
+		
+		//pimg.css('display','none');
+		function lazyload(){
+			var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+			var winTop = window.innerHeight;
+			for(var i=0;i < imgs.length;i++){
+				var flag=imgs[i].hasAttribute('dearmsdan-src');
+				if(flag){
+					imgs[i].src = imgs[i].getAttribute('dearmsdan-src');
+				   }
+			}
+		}
+		
+	
+		function throttle(method,delay){
+			var timer = null;
+				var context = this, args=arguments;
+			/*return function(){*/
+				clearTimeout(timer);
+				timer=setTimeout(function(){
+					method.apply(context,args);
+				},delay);
+			/*}*/
+		}
+	throttle(lazyload,200);
+	
+	
+	/* 滚动指定位置加载该处的图片window.onscroll = throttle(lazyload,200); */
+		
+	
+} /* end Obimg */
+ if (window.addEventListener) { window.addEventListener("load",dearmsdanlazyload, false);} 
+   else if (window.attachEvent) {window.attachEvent("onload",dearmsdanlazyload); }
+    else{ window.onload = dearmsdanlazyload; }
+
+
+
+});  /* end */
+</script>
+		</div>
+
+
+	
+	<link rel="stylesheet" type="text/css" href="/resources/toc/toc.css"> 
+	<script src="/resources/toc/jquery.pageslide.js"></script> 
+	
+  <script type="text/javascript" src="/js/copycode/clipboard.min.js"></script>  
+
+
+ 
 	
 		
 

@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>markdown 如何编写文章.md</title>
-    <url>/blog/2019/11/25/demo/</url>
+    <url>/2019/11/25/demo/</url>
     <content><![CDATA[<p>Markdown 的使用和快捷键方法.</p>
 <a id="more"></a>
 
@@ -335,7 +335,7 @@
   </entry>
   <entry>
     <title>记录 hexo-theme-dearmsdan 结构，hexo的基本介绍</title>
-    <url>/blog/2020/02/10/structure/</url>
+    <url>/2020/02/10/structure/</url>
     <content><![CDATA[<blockquote>
 <blockquote>
 <p>什么是 Hexo？<br><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
@@ -970,7 +970,7 @@ return arr;}
   </entry>
   <entry>
     <title>git Please tell me who you are.</title>
-    <url>/blog/2019/12/29/git/1912292348/</url>
+    <url>/2019/12/29/git/1912292348/</url>
     <content><![CDATA[<p>git 上传代码出现的问题!Please tell me who you are.</p>
 <a id="more"></a>
 
@@ -1025,7 +1025,7 @@ Branch 'master' set up to track remote branch 'master' from 'https://github.com/
   </entry>
   <entry>
     <title>java环境变量配置</title>
-    <url>/blog/2019/12/30/java/1912300034/</url>
+    <url>/2019/12/30/java/1912300034/</url>
     <content><![CDATA[<p>java环境变量配置 <a href="https://www.runoob.com/w3cnote/windows10-java-setup.html" target="_blank" rel="noopener">相关链接</a></p>
 <a id="more"></a>
 
@@ -1053,7 +1053,7 @@ Branch 'master' set up to track remote branch 'master' from 'https://github.com/
   </entry>
   <entry>
     <title>windows My sql 解压版安装方法</title>
-    <url>/blog/2019/12/30/sql/1912301045/</url>
+    <url>/2019/12/30/sql/1912301045/</url>
     <content><![CDATA[<p>My sql 解压版安装方法 <a href="https://www.cnblogs.com/shenliang123/p/3203546.html" target="_blank" rel="noopener">相关链接</a>  <a href="https://www.cnblogs.com/ayyl/p/5978418.html" target="_blank" rel="noopener">相关链接</a>  </p>
 <a id="more"></a>
 
@@ -1109,7 +1109,7 @@ Branch 'master' set up to track remote branch 'master' from 'https://github.com/
   </entry>
   <entry>
     <title>Linux中查看jdk安装目录、卸载jdk、rpm命令、rm命令参数</title>
-    <url>/blog/2020/04/29/sys/linux/20200429/</url>
+    <url>/2020/04/29/sys/linux/20200429/</url>
     <content><![CDATA[<p>来源于：Linux社区  作者：Linux(防止走丢~)：<a href="https://www.linuxidc.com/Linux/2018-11/155295.htm" target="_blank" rel="noopener">https://www.linuxidc.com/Linux/2018-11/155295.htm</a></p>
 <a id="more"></a>
 
@@ -1178,7 +1178,7 @@ Branch 'master' set up to track remote branch 'master' from 'https://github.com/
   </entry>
   <entry>
     <title>windows 禁止更新的问题</title>
-    <url>/blog/2019/12/31/sys/win/1912311726/</url>
+    <url>/2019/12/31/sys/win/1912311726/</url>
     <content><![CDATA[<p>windows 禁止更新的问题</p>
 <a id="more"></a>
 

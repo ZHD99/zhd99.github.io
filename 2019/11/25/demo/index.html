@@ -4277,6 +4277,28 @@ function dearmsdanlazyload(){
 
 
  
+  <script>
+	//  /sw-cache.js
+         //  $('.brand a:nth-child(2) span').text('installing');
+    if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw-cache.js')
+                    .then(function (reg) {
+                    }).catch(function (error) {
+                    console.log('cache failed with ' + error);
+                });
+        }
+   if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.addEventListener('controllerchange', function (ev) 	{
+                try {
+					window.location.reload();
+                }catch (e) {
+                    console.log("controllerchange");
+                }
+            });
+    }
+
+	</script>
+
 	
 		
 

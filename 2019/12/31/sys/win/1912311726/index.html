@@ -2047,6 +2047,1636 @@ window.vditorSpeechRange=getSelection().getRangeAt(0).cloneRange();var rect=getS
 
 
 
+<script src="/js/diy/date.js"></script>
+<script src="/js/diy/particleCanvas.js"></script>
+	
+
+<script>
+dearmsdanDate();
+function dearmsdanDate() {
+  document.write('<a href="#" style="display:none" target="_blank"><div id="date"></div><font color="#DF0A10">星期<span id="wk"></span></font>&nbsp;<span id="clk"></span><br />农历<span id="nongli"></span></a>')
+  cal_u()
+  cal_s()
+  setInterval("cal_s()", 999)
+}
+
+
+var season = 0;  // 四季判断标识
+var festival = [];  // 节日标识
+var dearmsdanCanvas = null;  // 自定义画布标识
+(function(d){
+var traditional,month,date;
+traditional = d[0];
+month = d[1];
+date = d[2];
+	/* console.log("元旦快乐"+month+ '===='+date); */
+	if(month == 1 && date == 1){
+	   var fv = ['元旦快乐',1.1];
+	   var festival = function(){
+		   return fv;
+	   }
+	   this.festival = festival();
+	  };
+	
+	/* t春节 */
+var arr = ['正月初一','正月初二','正月初三','正月初四','正月初五','正月初六','正月初七','正月初八','正月初九','正月初十']; 
+	for(var i=0; i <= arr.length; i++){
+		if(traditional == arr[i]){
+			var fv = ['新年快乐',2.1];
+			var festival = function(){
+				return fv;
+			}
+			this.festival = festival();
+	   }
+	}
+	/* t情人节 */
+	if(month == 2 && date == 14){
+	   var fv = ['情人节快乐',2.14];
+	   var festival = function(){
+		   return fv;
+	   }
+	   this.festival = festival();
+	   }
+	/* f植树节 */
+	if(month == 3 && date == 12){
+	   		console.log("植树节"+month+ '====' +date);
+	   }
+	/* f愚人节 */
+	if(month == 4 && date == 1){
+	   		console.log("愚人节"+month+ '====' +date);
+	   }
+	/* t清明节 */
+	if ((month == 4) && ((date == 4) || (date == 5) || (date == 6))){
+	   var fv = ['清明节安康',4.4];
+	   var festival = function(){
+		   return fv;
+	   }
+	   this.festival = festival();
+	}
+	/* f劳动节 */
+	if(month == 5 && date == 1){
+	   		console.log("劳动节"+month+ '====' +date);
+	   }
+	/* t儿童节 */
+	if(month == 6 && date == 1){
+	   var fv = ['儿童快乐',6.1];
+	   var festival = function(){
+		   return fv;
+	   }
+	   this.festival = festival();
+	   }
+	/* f端午节 */
+	if(traditional == '五月初五'){
+	   		console.log("端午节"+month+ '====' +date);
+	   }
+	/* t七夕 */
+	if(traditional == '七月初七'){
+		   var fv = ['七夕快乐',7.7];
+		   var festival = function(){
+			   return fv;
+		   }
+		   this.festival = festival();
+	   }
+	/* f教师节 */
+	if(month == 9 && date == 10){
+	   		console.log("教师节"+month+ '====' +date);
+	   }
+	/* f国庆节、国庆、中秋双庆 */
+	if(month == 10 && date == 1){
+		if(traditional == '八月十五'){
+	   		console.log("国庆节、中秋节双庆"+month+ '====' +date);
+		   }else{
+			   console.log("国庆节"+month+ '====' +date);
+		   }
+	   }
+	/* f中秋 */
+	if(traditional == '八月十五'){
+		if(month == 10 && date == 1){
+			
+		}else{
+			console.log("中秋节"+month+ '====' +date);
+		}
+	   }
+	/* f重阳节 */
+	if(traditional == '九月初九'){
+	   		console.log("重阳节"+month+ '====' +date);
+	   }
+	/* f万圣节 */
+	if(month == 11 && date == 1){
+	   		console.log("万圣节"+month+ '====' +date);
+	   }
+	/* f感恩节 */
+	if(month == 11 && date == 26){
+	   		console.log("感恩节"+month+ '====' +date);
+	   }
+	/* f平安节 */
+	if(month == 12 && date == 24){
+	   		console.log("平安夜"+month+ '====' +date);
+	   }
+	/* f圣诞节 */
+	if(month == 12 && date == 25){
+	   		console.log("圣诞节"+month+ '====' +date);
+	   }
+	
+	
+	
+	/*console.log("春季"+month+ '====' +date);*/
+	if(month >= 1 && month <= 3){
+		var cun = 1;
+		var season1 = function(){
+        return cun;
+    	}
+		season = season1();
+		
+	   }
+	/*console.log("夏季"+month+ '====' +date);*/
+	if(month >= 4 && month <= 6){
+		var cun = 2;
+		var season1 = function(){
+        return cun;
+    	}
+		season = season1();
+	   }
+	/*console.log("秋季"+month+ '====' +date);*/
+	if(month >= 7 && month <= 9){
+		var cun = 3;
+		var season1 = function(){
+        return cun;
+    	}
+		season = season1();
+		
+	   }
+	/*console.log("冬季"+month+ '====' +date);*/
+	if(month >= 10 && month <= 12){
+		var cun = 4;
+		var season1 = function(){
+        return cun;
+    	}
+		season = season1();
+	   }
+	
+})(arrdate);
+
+
+	//console.log(season);
+$(".dearmsdan-festival").attr("id","dearmsdanSeason");
+if(season == 1){
+var particleCanvas = new particleCanvas("dearmsdanSeason", [{
+	"type": {
+		"typeName": "image",
+		"url": "/resources/season/flake.png"
+	},
+	"number": 5,
+	"op": {
+		"min": 1,
+		"max": 1
+	},
+	"size": {
+		"min": 40,
+		"max": 60
+	},
+	"zoom": {
+		"min": 1,
+		"max": 1
+	},
+	"speed": {
+		"min": 1,
+		"max": 1
+	},
+	"angle": {
+		"value": 150,
+		"float": 50
+	},
+	"rota": {
+		"value": 30,
+		"speed": 1.6,
+		"floatValue": 120,
+		"floatSpeed": 2
+	},
+	"reIn": "reverseDirection"
+}]);
+}
+if(season == 2){
+var particleCanvas = new particleCanvas("dearmsdanSeason", [{
+	"type": {
+		"typeName": "image",
+		"url": "/resources/season/watermelon.png"
+	},
+	"number": 8,
+	"op": {
+		"min": 0.4,
+		"max": 1
+	},
+	"size": {
+		"min": 30,
+		"max": 60
+	},
+	"zoom": {
+		"min": 1,
+		"max": 1
+	},
+	"speed": {
+		"min": 2,
+		"max": 2
+	},
+	"angle": {
+		"value": 150,
+		"float": 50
+	},
+	"rota": {
+		"value": 30,
+		"speed": 0.8,
+		"floatValue": 120,
+		"floatSpeed": 2
+	},
+	"reIn": "reverseDirection"
+}]);
+}
+if(season == 3){
+var particleCanvas = new particleCanvas("dearmsdanSeason", [{
+	"type": {
+		"typeName": "image",
+		"url": "/resources/season/butterfly.png"
+	},
+	"number": 30,
+	"op": {
+		"min": 0.5,
+		"max": 1
+	},
+	"size": {
+		"min": 8,
+		"max": 22
+	},
+	"zoom": {
+		"min": 1,
+		"max": 1
+	},
+	"speed": {
+		"min": 1,
+		"max": 1
+	},
+	"angle": {
+		"value": 150,
+		"float": 50
+	},
+	"rota": {
+		"value": 30,
+		"speed": 1.6,
+		"floatValue": 120,
+		"floatSpeed": 2
+	},
+	"reIn": "reverseDirection"
+}]);
+}
+if(season == 4){
+var particleCanvas = new particleCanvas("dearmsdanSeason", [{
+	"type": {
+		"typeName": "image",
+		"url": "/resources/season/snowflake.png"
+	},
+	"number": 50,
+	"op": {
+		"min": 0.1,
+		"max": 1
+	},
+	"size": {
+		"min": 20,
+		"max": 60
+	},
+	"zoom": {
+		"min": 1,
+		"max": 1
+	},
+	"speed": {
+		"min": 1,
+		"max": 1
+	},
+	"angle": {
+		"value": 150,
+		"float": 50
+	},
+	"rota": {
+		"value": 30,
+		"speed": 1.6,
+		"floatValue": 120,
+		"floatSpeed": 2
+	},
+	"reIn": "reverseDirection"
+}]);
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+	.navred>li>a:hover, .navred>li>a:focus, .navred>li>a.active{
+    background-color: rgb(255, 210, 210);
+    border-left: 5px solid rgb(222, 41, 41);
+	}
+	.navred > li > div{
+    background-color: #e2a4a4;
+	}
+	.navred >li > div> ul> li:hover{
+    background-color: #f6abab!important
+	}
+</style>
+<script>
+if(festival[1] == 1.1){
+console.log(festival[0]);
+// 超链接
+$('a').css('color','#b23232');
+// 导航栏
+$('.navbar-default').css('background-color','rgba(255, 135, 135, 0.8)');
+// 侧边栏
+$('#dearmsdan .sidebar').css('background-color','#ffd1d1');
+$('#dearmsdan .sidebar').css('box-shadow','none');
+// 一级导航
+$('.nav').addClass('navred');
+// bg
+$('.dearmsdan-bg').css('background-color','rgba(255, 0, 0, 0.5)');
+	
+	
+	
+$(".dearmsdan-festival").attr("id","c");
+	var w = c.width = window.innerWidth,
+		h = c.height = window.innerHeight,
+		ctx = c.getContext( '2d' ),
+		
+		hw = w / 2, // half-width
+		hh = h / 2,
+		
+		opts = {
+			strings: [ '元旦到了！' , '用简单装饰祝福你，元旦快乐！','新年新气象~' ],
+			charSize: 22,
+			charSpacing: 35,
+			lineHeight: 50,
+			
+			cx: w / 2,
+			cy: h / 2,
+			
+			fireworkPrevPoints: 10,
+			fireworkBaseLineWidth: 5,
+			fireworkAddedLineWidth: 8,
+			fireworkSpawnTime: 200,
+			fireworkBaseReachTime: 30,
+			fireworkAddedReachTime: 30,
+			fireworkCircleBaseSize: 20,
+			fireworkCircleAddedSize: 10,
+			fireworkCircleBaseTime: 30,
+			fireworkCircleAddedTime: 30,
+			fireworkCircleFadeBaseTime: 10,
+			fireworkCircleFadeAddedTime: 5,
+			fireworkBaseShards: 5,
+			fireworkAddedShards: 5,
+			fireworkShardPrevPoints: 3,
+			fireworkShardBaseVel: 4,
+			fireworkShardAddedVel: 2,
+			fireworkShardBaseSize: 3,
+			fireworkShardAddedSize: 3,
+			gravity: .1,
+			upFlow: -.1,
+			letterContemplatingWaitTime: 360,
+			balloonSpawnTime: 20,
+			balloonBaseInflateTime: 10,
+			balloonAddedInflateTime: 10,
+			balloonBaseSize: 20,
+			balloonAddedSize: 20,
+			balloonBaseVel: .4,
+			balloonAddedVel: .4,
+			balloonBaseRadian: -( Math.PI / 2 - .5 ),
+			balloonAddedRadian: -1,
+		},
+		calc = {
+			totalWidth: opts.charSpacing * Math.max( opts.strings[0].length, opts.strings[1].length )
+		},
+		
+		Tau = Math.PI * 2,
+		TauQuarter = Tau / 4,
+		
+		letters = [];
+
+ctx.font = opts.charSize + 'px Verdana';
+
+function Letter( char, x, y ){
+	this.char = char;
+	this.x = x;
+	this.y = y;
+	
+	this.dx = -ctx.measureText( char ).width / 2;
+	this.dy = +opts.charSize / 2;
+	
+	this.fireworkDy = this.y - hh;
+	
+	var hue = x / calc.totalWidth * 360;
+	
+	this.color = 'hsl(hue,80%,50%)'.replace( 'hue', hue );
+	this.lightAlphaColor = 'hsla(hue,80%,light%,alp)'.replace( 'hue', hue );
+	this.lightColor = 'hsl(hue,80%,light%)'.replace( 'hue', hue );
+	this.alphaColor = 'hsla(hue,80%,50%,alp)'.replace( 'hue', hue );
+	
+	this.reset();
+}
+Letter.prototype.reset = function(){
+	
+	this.phase = 'firework';
+	this.tick = 0;
+	this.spawned = false;
+	this.spawningTime = opts.fireworkSpawnTime * Math.random() |0;
+	this.reachTime = opts.fireworkBaseReachTime + opts.fireworkAddedReachTime * Math.random() |0;
+	this.lineWidth = opts.fireworkBaseLineWidth + opts.fireworkAddedLineWidth * Math.random();
+	this.prevPoints = [ [ 0, hh, 0 ] ];
+}
+Letter.prototype.step = function(){
+	
+	if( this.phase === 'firework' ){
+		
+		if( !this.spawned ){
+			
+			++this.tick;
+			if( this.tick >= this.spawningTime ){
+				
+				this.tick = 0;
+				this.spawned = true;
+			}
+			
+		} else {
+			
+			++this.tick;
+			
+			var linearProportion = this.tick / this.reachTime,
+					armonicProportion = Math.sin( linearProportion * TauQuarter ),
+					
+					x = linearProportion * this.x,
+					y = hh + armonicProportion * this.fireworkDy;
+			
+			if( this.prevPoints.length > opts.fireworkPrevPoints )
+				this.prevPoints.shift();
+			
+			this.prevPoints.push( [ x, y, linearProportion * this.lineWidth ] );
+			
+			var lineWidthProportion = 1 / ( this.prevPoints.length - 1 );
+			
+			for( var i = 1; i < this.prevPoints.length; ++i ){
+				
+				var point = this.prevPoints[ i ],
+						point2 = this.prevPoints[ i - 1 ];
+					
+				ctx.strokeStyle = this.alphaColor.replace( 'alp', i / this.prevPoints.length );
+				ctx.lineWidth = point[ 2 ] * lineWidthProportion * i;
+				ctx.beginPath();
+				ctx.moveTo( point[ 0 ], point[ 1 ] );
+				ctx.lineTo( point2[ 0 ], point2[ 1 ] );
+				ctx.stroke();
+			
+			}
+			
+			if( this.tick >= this.reachTime ){
+				
+				this.phase = 'contemplate';
+				
+				this.circleFinalSize = opts.fireworkCircleBaseSize + opts.fireworkCircleAddedSize * Math.random();
+				this.circleCompleteTime = opts.fireworkCircleBaseTime + opts.fireworkCircleAddedTime * Math.random() |0;
+				this.circleCreating = true;
+				this.circleFading = false;
+				
+				this.circleFadeTime = opts.fireworkCircleFadeBaseTime + opts.fireworkCircleFadeAddedTime * Math.random() |0;
+				this.tick = 0;
+				this.tick2 = 0;
+				
+				this.shards = [];
+				
+				var shardCount = opts.fireworkBaseShards + opts.fireworkAddedShards * Math.random() |0,
+						angle = Tau / shardCount,
+						cos = Math.cos( angle ),
+						sin = Math.sin( angle ),
+						
+						x = 1,
+						y = 0;
+				
+				for( var i = 0; i < shardCount; ++i ){
+					var x1 = x;
+					x = x * cos - y * sin;
+					y = y * cos + x1 * sin;
+					
+					this.shards.push( new Shard( this.x, this.y, x, y, this.alphaColor ) );
+				}
+			}
+			
+		}
+	} else if( this.phase === 'contemplate' ){
+		
+		++this.tick;
+		
+		if( this.circleCreating ){
+			
+			++this.tick2;
+			var proportion = this.tick2 / this.circleCompleteTime,
+					armonic = -Math.cos( proportion * Math.PI ) / 2 + .5;
+			
+			ctx.beginPath();
+			ctx.fillStyle = this.lightAlphaColor.replace( 'light', 50 + 50 * proportion ).replace( 'alp', proportion );
+			ctx.beginPath();
+			ctx.arc( this.x, this.y, armonic * this.circleFinalSize, 0, Tau );
+			ctx.fill();
+			
+			if( this.tick2 > this.circleCompleteTime ){
+				this.tick2 = 0;
+				this.circleCreating = false;
+				this.circleFading = true;
+			}
+		} else if( this.circleFading ){
+		
+			ctx.fillStyle = this.lightColor.replace( 'light', 70 );
+			ctx.fillText( this.char, this.x + this.dx, this.y + this.dy );
+			
+			++this.tick2;
+			var proportion = this.tick2 / this.circleFadeTime,
+					armonic = -Math.cos( proportion * Math.PI ) / 2 + .5;
+			
+			ctx.beginPath();
+			ctx.fillStyle = this.lightAlphaColor.replace( 'light', 100 ).replace( 'alp', 1 - armonic );
+			ctx.arc( this.x, this.y, this.circleFinalSize, 0, Tau );
+			ctx.fill();
+			
+			if( this.tick2 >= this.circleFadeTime )
+				this.circleFading = false;
+			
+		} else {
+			
+			ctx.fillStyle = this.lightColor.replace( 'light', 70 );
+			ctx.fillText( this.char, this.x + this.dx, this.y + this.dy );
+		}
+		
+		for( var i = 0; i < this.shards.length; ++i ){
+			
+			this.shards[ i ].step();
+			
+			if( !this.shards[ i ].alive ){
+				this.shards.splice( i, 1 );
+				--i;
+			}
+		}
+		
+		if( this.tick > opts.letterContemplatingWaitTime ){
+			
+			this.phase = 'balloon';
+			
+			this.tick = 0;
+			this.spawning = true;
+			this.spawnTime = opts.balloonSpawnTime * Math.random() |0;
+			this.inflating = false;
+			this.inflateTime = opts.balloonBaseInflateTime + opts.balloonAddedInflateTime * Math.random() |0;
+			this.size = opts.balloonBaseSize + opts.balloonAddedSize * Math.random() |0;
+			
+			var rad = opts.balloonBaseRadian + opts.balloonAddedRadian * Math.random(),
+					vel = opts.balloonBaseVel + opts.balloonAddedVel * Math.random();
+			
+			this.vx = Math.cos( rad ) * vel;
+			this.vy = Math.sin( rad ) * vel;
+		}
+	} else if( this.phase === 'balloon' ){
+			
+		ctx.strokeStyle = this.lightColor.replace( 'light', 80 );
+		
+		if( this.spawning ){
+			
+			++this.tick;
+			ctx.fillStyle = this.lightColor.replace( 'light', 70 );
+			ctx.fillText( this.char, this.x + this.dx, this.y + this.dy );
+			
+			if( this.tick >= this.spawnTime ){
+				this.tick = 0;
+				this.spawning = false;
+				this.inflating = true;	
+			}
+		} else if( this.inflating ){
+			
+			++this.tick;
+			
+			var proportion = this.tick / this.inflateTime,
+			    x = this.cx = this.x,
+					y = this.cy = this.y - this.size * proportion;
+			
+			ctx.fillStyle = this.alphaColor.replace( 'alp', proportion );
+			ctx.beginPath();
+			generateBalloonPath( x, y, this.size * proportion );
+			ctx.fill();
+			
+			ctx.beginPath();
+			ctx.moveTo( x, y );
+			ctx.lineTo( x, this.y );
+			ctx.stroke();
+			
+			ctx.fillStyle = this.lightColor.replace( 'light', 70 );
+			ctx.fillText( this.char, this.x + this.dx, this.y + this.dy );
+			
+			if( this.tick >= this.inflateTime ){
+				this.tick = 0;
+				this.inflating = false;
+			}
+			
+		} else {
+			
+			this.cx += this.vx;
+			this.cy += this.vy += opts.upFlow;
+			
+			ctx.fillStyle = this.color;
+			ctx.beginPath();
+			generateBalloonPath( this.cx, this.cy, this.size );
+			ctx.fill();
+			
+			ctx.beginPath();
+			ctx.moveTo( this.cx, this.cy );
+			ctx.lineTo( this.cx, this.cy + this.size );
+			ctx.stroke();
+			
+			ctx.fillStyle = this.lightColor.replace( 'light', 70 );
+			ctx.fillText( this.char, this.cx + this.dx, this.cy + this.dy + this.size );
+			
+			if( this.cy + this.size < -hh || this.cx < -hw || this.cy > hw  )
+				this.phase = 'done';
+			
+		}
+	}
+}
+function Shard( x, y, vx, vy, color ){
+	
+	var vel = opts.fireworkShardBaseVel + opts.fireworkShardAddedVel * Math.random();
+	
+	this.vx = vx * vel;
+	this.vy = vy * vel;
+	
+	this.x = x;
+	this.y = y;
+	
+	this.prevPoints = [ [ x, y ] ];
+	this.color = color;
+	
+	this.alive = true;
+	
+	this.size = opts.fireworkShardBaseSize + opts.fireworkShardAddedSize * Math.random();
+}
+Shard.prototype.step = function(){
+	
+	this.x += this.vx;
+	this.y += this.vy += opts.gravity;
+	
+	if( this.prevPoints.length > opts.fireworkShardPrevPoints )
+		this.prevPoints.shift();
+	
+	this.prevPoints.push( [ this.x, this.y ] );
+	
+	var lineWidthProportion = this.size / this.prevPoints.length;
+	
+	for( var k = 0; k < this.prevPoints.length - 1; ++k ){
+		
+		var point = this.prevPoints[ k ],
+				point2 = this.prevPoints[ k + 1 ];
+		
+		ctx.strokeStyle = this.color.replace( 'alp', k / this.prevPoints.length );
+		ctx.lineWidth = k * lineWidthProportion;
+		ctx.beginPath();
+		ctx.moveTo( point[ 0 ], point[ 1 ] );
+		ctx.lineTo( point2[ 0 ], point2[ 1 ] );
+		ctx.stroke();
+		
+	}
+	
+	if( this.prevPoints[ 0 ][ 1 ] > hh )
+		this.alive = false;
+}
+function generateBalloonPath( x, y, size ){
+	
+	ctx.moveTo( x, y );
+	ctx.bezierCurveTo( x - size / 2, y - size / 2,
+									 	 x - size / 4, y - size,
+									   x,            y - size );
+	ctx.bezierCurveTo( x + size / 4, y - size,
+									   x + size / 2, y - size / 2,
+									   x,            y );
+}
+
+function anim(){
+	
+	window.requestAnimationFrame( anim );
+	
+	ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+	ctx.fillRect( 0, 0, w, h );
+	
+	ctx.translate( hw, hh );
+	
+	var done = true;
+	for( var l = 0; l < letters.length; ++l ){
+		
+		letters[ l ].step();
+		if( letters[ l ].phase !== 'done' )
+			done = false;
+	}
+	
+	ctx.translate( -hw, -hh );
+	
+	if( done )
+		for( var l = 0; l < letters.length; ++l )
+			letters[ l ].reset();
+}
+
+for( var i = 0; i < opts.strings.length; ++i ){
+	for( var j = 0; j < opts.strings[ i ].length; ++j ){
+		letters.push( new Letter( opts.strings[ i ][ j ], 
+														j * opts.charSpacing + opts.charSpacing / 2 - opts.strings[ i ].length * opts.charSize / 2,
+														i * opts.lineHeight + opts.lineHeight / 2 - opts.strings.length * opts.lineHeight / 2 ) );
+	}
+}
+
+anim();
+
+window.addEventListener( 'resize', function(){
+	
+	w = c.width = window.innerWidth;
+	h = c.height = window.innerHeight;
+	
+	hw = w / 2;
+	hh = h / 2;
+	
+	ctx.font = opts.charSize + 'px Verdana';
+})
+	
+}
+</script>
+
+	
+
+
+
+<style>
+</style>
+<script>
+if(festival[1] == 2.1){
+	console.log(festival[0]);
+
+// 超链接
+$('a').css('color','#b23232');
+// 导航栏
+$('.navbar-default').css('background-color','rgba(255, 135, 135, 0.8)');
+// 侧边栏
+$('#dearmsdan .sidebar').css('background-color','#ffd1d1');
+$('#dearmsdan .sidebar').css('box-shadow','none');
+// 一级导航
+$('.nav').addClass('navred');
+// bg
+$('.dearmsdan-bg').css('background-color','rgba(255, 0, 0, 0.5)');
+	
+	var ctx = document.querySelector('.dearmsdan-festival').getContext('2d')
+ctx.canvas.width = window.innerWidth
+ctx.canvas.height = window.innerHeight
+
+var sparks = []
+var fireworks = []
+var i = 20; while(i--) {
+   fireworks.push(
+      new Firework(Math.random()*window.innerWidth, window.innerHeight*Math.random())
+   )
+}
+
+render()
+function render() {
+   setTimeout(render, 1000/60)
+   ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+   ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+   for(var firework of fireworks) {
+      if(firework.dead) continue
+      firework.move()
+      firework.draw()
+   }
+   for(var spark of sparks) {
+      if(spark.dead) continue
+      spark.move()
+      spark.draw()
+   }
+   
+   if(Math.random() < 0.05) {
+      fireworks.push(new Firework())
+   }
+}
+
+function Spark(x, y, color) {
+   this.x = x
+   this.y = y
+   this.dir = Math.random() * (Math.PI*2)
+   this.dead = false
+   this.color = color
+   this.speed = Math.random() * 3 + 3;
+   this.walker = new Walker({ radius: 20, speed: 0.25 })
+   this.gravity = 0.25
+   this.dur = this.speed / 0.1
+   this.move = function() {
+      this.dur--
+      if(this.dur < 0) this.dead = true
+      
+      if(this.speed < 0) return
+      if(this.speed > 0) this.speed -= 0.1
+      var walk = this.walker.step()
+      this.x += Math.cos(this.dir + walk) * this.speed
+      this.y += Math.sin(this.dir + walk) * this.speed
+      this.y += this.gravity
+      this.gravity += 0.05
+      
+   }
+   this.draw = function() {
+      drawCircle(this.x, this.y, 3, this.color)
+   }
+}
+
+function Firework(x, y) {
+   this.xmove = new Walker({radius: 10, speed: 0.5})
+   this.x = x || Math.random() * ctx.canvas.width
+   this.y = y || ctx.canvas.height
+   this.height = Math.random()*ctx.canvas.height/2
+   this.dead = false
+   this.color = randomColor()
+   
+   this.move = function() {
+      this.x += this.xmove.step()
+      if(this.y > this.height) this.y -= 1; 
+      else this.burst()
+      
+   }
+   this.draw = function() {
+      drawCircle(this.x, this.y, 1, this.color)
+   }
+   this.burst = function() {
+      this.dead = true
+      var i = 100; while(i--) sparks.push(new Spark(this.x, this.y, this.color))
+   }
+}
+
+function drawCircle(x, y, radius, color) {
+   color = color || '#FFF'
+   ctx.fillStyle = color
+   ctx.fillRect(x-radius/2, y-radius/2, radius, radius)
+}
+
+function randomColor(){
+   return ['#ff6767','#ff0000','#ff8800','#ff00fc','#66cbe1'][Math.floor(Math.random() * 5)];
+}
+
+function Walker(options){
+   this.step = function(){
+      this.direction = Math.sign(this.target) * this.speed
+      this.value += this.direction
+      this.target
+         ? this.target -= this.direction
+         : (this.value)
+            ? (this.wander) 
+               ? this.target = this.newTarget() 
+               : this.target = -this.value
+            : this.target = this.newTarget()  
+      return this.direction
+   }
+      
+   this.newTarget = function() {
+      return Math.round(Math.random()*(this.radius*2)-this.radius)
+   }
+   
+   this.start = 0
+   this.value = 0
+   this.radius = options.radius
+   this.target = this.newTarget()
+   this.direction = Math.sign(this.target)
+   this.wander = options.wander
+   this.speed = options.speed || 1
+}
+
+} // end
+</script>
+
+
+
+
+<style>
+	.navfen>li>a:hover, .navfen>li>a:focus, .navfen>li>a.active{
+    background-color: rgb(255, 158, 180);
+    border-left: 5px solid rgb(222, 41, 41);
+	}
+	.navfen > li > div{
+    background-color: #e2a4a4;
+	}
+	.navfen >li > div> ul> li:hover{
+    background-color: #f6abab!important
+	}
+canvas#valentinesDay {
+  display: block;
+  background: #ee9ca7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+</style>
+<script>
+if(festival[1] == 2.14 || festival[1] == 7.7){
+	console.log(festival[0]);
+// 超链接
+$('a').css('color','#b23232');
+// 导航栏
+$('.navbar-default').css('background-color','rgba(255, 204, 223, 0.8)');
+// 侧边栏
+$('#dearmsdan .sidebar').css('background-color','rgba(255, 204, 223, 0.8)');
+$('#dearmsdan .sidebar').css('box-shadow','none');
+// 一级导航
+$('.nav').addClass('navfen');
+// bg
+$('.dearmsdan-bg').css('background-color','rgba(255, 136, 181, 1)');
+	
+	
+(function () {
+  'use strict';
+  window.addEventListener('load', function () {
+$(".dearmsdan-festival").attr("id","valentinesDay");
+    var canvas = document.getElementById('valentinesDay');
+
+    if (!canvas || !canvas.getContext) {
+      return false;
+    }
+
+    /********************
+      Random Number
+    ********************/
+
+    function rand(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    /********************
+      Var
+    ********************/
+
+    // canvas 
+    var ctx = canvas.getContext('2d');
+    var X = canvas.width = window.innerWidth;
+    var Y = canvas.height = window.innerHeight;
+
+    // heart
+    var heartNum = 1;
+    var hearts = [];
+    var miniHeartNum = 100;
+    var miniHearts =[];
+
+    var rad = Math.PI / 180;
+    var GRAVITY = 0.01;
+
+    /********************
+      Animation
+    ********************/
+
+    window.requestAnimationFrame =
+      window.requestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      function (cb) {
+        setTimeout(cb, 17);
+      };
+
+    /********************
+      MiniHeart
+    ********************/
+    
+    function MiniHeart(ctx, x, y, r) {
+      this.ctx = ctx;
+      this.init(x, y, r);
+    }
+
+    MiniHeart.prototype.init = function (x, y, r) {
+      this.ctx = ctx;
+      this.r = r;
+      this.x1 = x;
+      this.y1 = y;
+      this.a = rand(0, 360);
+      this.num = 22.5;
+      this.v = {
+        x: rand(-6, 6) * Math.random(),
+        y: rand(-6, 6) * Math.random()
+      };
+      this.x2 = this.x1 + this.r * Math.cos(this.a * rad);
+      this.y2 = this.y1 + this.r * Math.sin(this.a * rad);
+      this.cx1 = this.x1 + this.r * Math.cos((this.a + this.num) * rad);
+      this.cy1 = this.y1 + this.r * Math.sin((this.a + this.num) * rad);
+      this.cx2 = this.x1 + this.r * Math.cos((this.a - this.num) * rad);
+      this.cy2 = this.y1 + this.r * Math.sin((this.a - this.num) * rad);
+      this.chord = 2 * this.r * Math.sin(this.num * rad / 2);
+    };
+
+    MiniHeart.prototype.draw = function () {
+      ctx = this.ctx;
+      ctx.save();
+      ctx.beginPath();
+      ctx.fillStyle = 'rgb(251, 125, 175)';
+      ctx.strokeStyle = 'rgb(251, 125, 175)';
+      ctx.moveTo(this.x2, this.y2);
+      ctx.arc(this.cx1, this.cy1, this.chord, (270 + this.a) * rad, (270 + this.a + 225) * rad);
+      ctx.lineTo(this.x1, this.y1);
+      ctx.closePath();
+      ctx.fill();
+      ctx.moveTo(this.x2, this.y2);
+      ctx.arc(this.cx2, this.cy2, this.chord, (90 + this.a) * rad, (90 + this.a + 135) * rad, true);
+      ctx.lineTo(this.x1, this.y1);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.restore();
+    };
+    
+    MiniHeart.prototype.wrapPosition = function() {
+      if (this.y1 > Y || this.x1 < 0 || this.x1 > X) {
+        this.init(X / 2, Y / 2, rand(5, 30));
+      }
+    };
+
+    MiniHeart.prototype.updatePosition = function() {
+      this.v.y += GRAVITY;
+      this.x1 += this.v.x;
+      this.x2 += this.v.x;
+      this.cx1 += this.v.x;
+      this.cx2 += this.v.x;
+      this.y1 += this.v.y;
+      this.y2 += this.v.y;
+      this.cy1 += this.v.y;
+      this.cy2 += this.v.y;
+    };
+
+    MiniHeart.prototype.render = function () {
+      this.updatePosition();
+      this.wrapPosition();
+      this.draw();
+    };
+
+    /********************
+      Heart
+    ********************/
+
+    function Heart(ctx, x, y, r) {
+      this.ctx = ctx;
+      this.init(x, y, r);
+    }
+
+    Heart.prototype.init = function (x, y, r) {
+      this.ctx = ctx;
+      this.r = r;
+      this.x1 = x;
+      this.y1 = y + this.r / 1.5
+      this.a = -90;
+      this.num = 22.5;
+      this.color = {
+        r: 251,
+        g: 125,
+        b: 175,
+        a: 1
+      };
+      this.x2 = this.x1 + this.r * Math.cos(this.a * rad);
+      this.y2 = this.y1 + this.r * Math.sin(this.a * rad);
+      this.cx1 = this.x1 + this.r * Math.cos((this.a + this.num) * rad);
+      this.cy1 = this.y1 + this.r * Math.sin((this.a + this.num) * rad);
+      this.cx2 = this.x1 + this.r * Math.cos((this.a - this.num) * rad);
+      this.cy2 = this.y1 + this.r * Math.sin((this.a - this.num) * rad);
+      this.chord = 2 * this.r * Math.sin(this.num * rad / 2);
+    };
+
+    Heart.prototype.draw = function () {
+      ctx = this.ctx;
+      ctx.save();
+      ctx.fillStyle = this.gradient();
+      ctx.shadowColor = '#f9005f';
+      ctx.shadowOffsetX = 5;
+      ctx.shadowOffsetY = 5;
+      ctx.shadowBlur = 5;
+      ctx.beginPath();
+      ctx.moveTo(this.x2, this.y2);
+      ctx.arc(this.cx1, this.cy1, this.chord, (270 + this.a) * rad, (270 + this.a + 225) * rad);
+      ctx.lineTo(this.x1, this.y1);
+      ctx.moveTo(this.x2, this.y2);
+      ctx.arc(this.cx2, this.cy2, this.chord, (90 + this.a) * rad, (90 + this.a + 135) * rad, true);
+      ctx.lineTo(this.x1, this.y1);
+      ctx.fill();
+      ctx.restore();
+    };
+
+    Heart.prototype.gradient = function () {
+      var col = this.color.r + "," + this.color.g + "," + this.color.b;
+      var g = this.ctx.createRadialGradient(this.x1, this.y1 - this.r / 1.5, 0, this.x1, this.y1 - this.r / 1.5, this.r);
+      g.addColorStop(0, "rgba(" + col + ", " + (this.color.a * 0) + ")");
+      g.addColorStop(0.5, "rgba(" + col + ", " + (this.color.a * 0.5) + ")");
+      g.addColorStop(1, "rgba(" + col + ", " + (this.color.a * 1) + ")");
+      return g;
+    };
+
+    Heart.prototype.render = function () {
+      this.draw();
+    };
+    
+    /********************
+      Create
+    ********************/
+     
+    for (var i = 0; i < heartNum; i++) {
+      var heart = new Heart(ctx, X / 2, Y / 2, 150);
+      hearts.push(heart);
+    }
+
+    for (var i = 0; i < miniHeartNum; i++) {
+      var miniHeart = new MiniHeart(ctx, X / 2, Y / 2, rand(5, 30));
+      miniHearts.push(miniHeart);
+    }
+
+    /********************
+      Render
+    ********************/
+    
+    function render() {
+      ctx.clearRect(0, 0, X, Y);
+      for (var i = 0; i < hearts.length; i++) {
+        hearts[i].render();
+      }
+      for (var i = 0; i < miniHearts.length; i++) {
+        miniHearts[i].render();
+      }
+      requestAnimationFrame(render);
+    }
+
+    render();
+
+    /********************
+      Resize
+    ********************/
+    
+    function onResize() {
+      X = canvas.width = window.innerWidth;
+      Y = canvas.height = window.innerHeight;
+      hearts[0].init(X / 2, Y / 2, 150);
+    }
+
+    /********************
+      Event
+    ********************/
+
+    window.addEventListener('resize', function () {
+      onResize();
+    });
+
+  });
+  // Author
+  console.log('File Name / mellomelloMellow.js\nCreated Date / January 15, 2020\nAuthor / Toshiya Marukubo\nTwitter / https://twitter.com/toshiyamarukubo');
+})();
+
+}
+</script>
+
+
+
+
+<style>
+</style>
+<script>
+if(festival[1] == 4.4){
+	console.log(festival[0]);
+		$('html').css({"filter":"grayscale(100%)"});
+	(function(){
+		$(".dearmsdan-festival").attr("id","qingmingFestival");
+var c = document.getElementById("qingmingFestival");
+var ctx = c.getContext("2d");
+var w = c.width = window.innerWidth;
+var h = c.height = window.innerHeight;
+var clearColor = 'rgba(0, 0, 0, .1)';
+var max = 30;
+var drops = [];
+
+function random(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+function O() {}
+
+O.prototype = {
+	init: function() {
+		this.x = random(0, w);
+		this.y = 0;
+		this.color = 'hsl(180, 100%, 50%)';
+		this.w = 2;
+		this.h = 1;
+		this.vy = random(4, 5);
+		this.vw = 3;
+		this.vh = 1;
+		this.size = 2;
+		this.hit = random(h * .8, h * .9);
+		this.a = 1;
+		this.va = .96;
+	},
+	draw: function() {
+		if (this.y > this.hit) {
+			ctx.beginPath();
+			ctx.moveTo(this.x, this.y - this.h / 2);
+
+			ctx.bezierCurveTo(
+				this.x + this.w / 2, this.y - this.h / 2,
+				this.x + this.w / 2, this.y + this.h / 2,
+				this.x, this.y + this.h / 2);
+
+			ctx.bezierCurveTo(
+				this.x - this.w / 2, this.y + this.h / 2,
+				this.x - this.w / 2, this.y - this.h / 2,
+				this.x, this.y - this.h / 2);
+
+			ctx.strokeStyle = 'hsla(180, 100%, 50%, '+this.a+')';
+			ctx.stroke();
+			ctx.closePath();
+			
+		} else {
+			ctx.fillStyle = this.color;
+			ctx.fillRect(this.x, this.y, this.size, this.size * 5);
+		}
+		this.update();
+	},
+	update: function() {
+		if(this.y < this.hit){
+			this.y += this.vy;
+		} else {
+			if(this.a > .03){
+				this.w += this.vw;
+				this.h += this.vh;
+				if(this.w > 100){
+					this.a *= this.va;
+					this.vw *= .98;
+					this.vh *= .98;
+				}
+			} else {
+				this.init();
+			}
+		}
+		
+	}
+}
+
+function resize(){
+	w = c.width = window.innerWidth;
+	h = c.height = window.innerHeight;
+}
+
+function setup(){
+	for(var i = 0; i < max; i++){
+		(function(j){
+			setTimeout(function(){
+				var o = new O();
+				o.init();
+				drops.push(o);
+			}, j * 200)
+		}(i));
+	}
+}
+
+
+function anim() {
+	ctx.fillStyle = "#fff";
+	ctx.fillRect(0,0,w,h);
+	for(var i in drops){
+		drops[i].draw();
+	}
+	requestAnimationFrame(anim);
+}
+
+
+window.addEventListener("resize", resize);
+
+setup();
+anim();		
+	
+	})()
+}
+</script>
+
+
+
+
+<style>
+	.navlan>li>a:hover, .navlan>li>a:focus, .navlan>li>a.active{
+    background-color: rgba(9, 200, 255, 0.37);
+    border-left: 5px solid rgb(78, 41, 222);
+	}
+	.navlan > li > div{
+    background-color: #a4d9e2;
+	}
+	.navlan >li > div> ul> li:hover{
+    background-color: #abf2f6!important
+	}
+canvas#childrensDay {
+    display: block;
+    background: #ABE7FF;
+}
+</style>
+<script>
+if(festival[1] == 6.1){
+	console.log(festival[0]);
+// 超链接
+//$('a').css('color','#b23232');
+// 导航栏
+$('.navbar-default').css('background-color','rgba(187, 209, 255, 0.8)');
+// 侧边栏
+$('#dearmsdan .sidebar').css('background-color','rgba(148, 202, 255, 0.8)');
+$('#dearmsdan .sidebar').css('box-shadow','none');
+// 一级导航
+$('.nav').addClass('navlan');
+	
+	
+$(".dearmsdan-festival").attr("id","childrensDay");
+		/*
+* File Name / pinwheel.js
+* Created Date / Aug 14, 2020
+* Aurhor / Toshiya Marukubo
+* Twitter / https://twitter.com/toshiyamarukubo
+*/
+
+(function () {
+  'use strict';
+  window.addEventListener('load', function () {
+    var canvas = document.getElementById('childrensDay');
+
+    if (!canvas || !canvas.getContext) {
+      return false;
+    }
+
+    /********************
+      Random Number
+    ********************/
+
+    function rand(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    
+    /********************
+      Var
+    ********************/
+
+    var ctx = canvas.getContext('2d');
+    var X = canvas.width = window.innerWidth;
+    var Y = canvas.height = window.innerHeight;
+    var mouseX = null;
+    var mouseY = null;
+    var bubbles = [];
+    var bubbleNum = 150;
+    var shapes = [];
+    var rad = Math.PI * 2 / 4;
+    var style = {
+      black: 'black',
+      white: 'white',
+      lineWidth: 4,
+    };
+
+    if (X < 768) {
+      bubbleNum = 100;
+    }
+
+    /********************
+      Animation
+    ********************/
+
+    window.requestAnimationFrame =
+      window.requestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      function(cb) {
+        setTimeout(cb, 17);
+      };
+
+    /********************
+      Bubble
+    ********************/
+
+    function Bubble(ctx, x, y) {
+      this.ctx = ctx;
+      this.init(x, y);
+    }
+    
+    Bubble.prototype.init = function(x, y) {
+      this.x = x;
+      this.y = y;
+      this.r = rand(20, 50);
+      this.ga = Math.random() * Math.random() * Math.random();
+      this.v = {
+        x: rand(-1, 1) * Math.random() * Math.random(),
+        y: Math.random()
+      };
+      this.random = Math.random();
+      this.a = rand(0, 360);
+      this.rad = this.a * Math.PI / 180;
+      this.as = rand(0, 360) * Math.PI / 180;
+    };
+    
+    Bubble.prototype.draw = function() {
+      var ctx  = this.ctx;
+      ctx.save();
+      ctx.fillStyle = 'white';
+      ctx.strokeStyle = 'white';
+      ctx.lineCap = 'round';
+      ctx.lineWidth = this.r / 4;
+      ctx.globalAlpha = this.ga;
+      ctx.translate(this.x, this.y);
+      ctx.rotate(this.rad);
+      ctx.translate(-this.x, -this.y);
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
+      ctx.fill();
+      ctx.globalAlpha = this.ga * 1.1;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r * 0.7, this.as, this.as + 1, false);
+      ctx.stroke();
+      ctx.restore();
+    };
+
+    Bubble.prototype.updatePosition = function() {
+      if (this.y > Y - Y / 3) {
+        this.v.x += 0.1;
+        this.v.y -= 0.01;
+      }
+      this.x += this.v.x;
+      this.y += this.v.y;
+    };
+
+    Bubble.prototype.updateParams = function(i) {
+      this.a += this.random;
+      this.rad = this.a * Math.PI / 180;
+    };
+
+    Bubble.prototype.wrapPosition = function() {
+      if (this.x > X + this.r / 2) {
+        this.init(rand(0, X), rand(0 - Y / 5, 0));
+      }
+    };
+
+    Bubble.prototype.render = function(i) {
+      this.updateParams(i);
+      this.updatePosition();
+      this.wrapPosition();
+      this.draw();
+    };
+
+    for (var i = 0; i < bubbleNum; i++) {
+      var b = new Bubble(ctx, rand(0, X), rand(0, Y / 2));
+      bubbles.push(b);
+    }
+
+    /********************
+      Shape
+    ********************/
+     
+    function Shape(ctx, x, y) {
+      this.ctx = ctx;
+      this.init(x, y);
+    }
+    
+    Shape.prototype.init = function(x, y) {
+      this.x = x;
+      this.y = y;
+      this.r = rand(20, 30);
+      this.a = 0;
+      this.rad = this.a * Math.PI / 180;
+      this.random = Math.random();
+      this.c = rand(0, 360);
+      this.a1 = rand(-10, 10);
+      this.rad1 = this.a1 * Math.PI / 180;
+    };
+    
+    Shape.prototype.draw = function() {
+      var ctx  = this.ctx;
+      ctx.save();
+      ctx.fillStyle = 'hsl(' + this.c + ', 100%, 80%)';
+      ctx.strokeStyle = 'hsl(' + this.c + ', 80%, 60%)';
+      ctx.translate(this.x, this.y);
+      ctx.rotate(this.rad1);
+      ctx.translate(-this.x, -this.y);
+      ctx.lineWidth = this.r / 10;
+      ctx.beginPath();
+      ctx.moveTo(this.x, this.y);
+      ctx.lineTo(this.x, Y + 10);
+      ctx.stroke();
+      ctx.lineWidth = 1;
+      ctx.translate(this.x, this.y);
+      ctx.rotate(Math.tan(this.rad));
+      ctx.translate(-this.x, -this.y);
+      ctx.fillRect(this.x - this.r, this.y - this.r, this.r * 2, this.r * 2);
+      ctx.fillStyle = 'hsl(' + this.c + ', 80%, 60%)';
+      for (var j = 0; j < 4; j++) {
+        ctx.translate(this.x, this.y);
+        ctx.rotate(90 * Math.PI / 180);
+        ctx.translate(-this.x, -this.y);
+        ctx.beginPath();
+        ctx.moveTo(Math.cos(rad * 0) * this.r + this.x, Math.sin(rad * 0) * this.r + this.y + this.r);
+        for (var i = 1; i < 4; i++) {
+          if (i !== 2) {
+            ctx.lineTo(Math.cos(rad * i) * this.r + this.x, Math.sin(rad * i) * this.r + this.y + this.r);
+          }
+        }
+        ctx.closePath();
+        ctx.fill();
+      }
+      ctx.restore();
+    };
+
+    Shape.prototype.updateParams = function() {
+      this.a += this.random;
+      this.rad = this.a * Math.PI / 180;
+    };
+
+    Shape.prototype.render = function(i) {
+      this.updateParams();
+      this.draw();
+    };
+
+    for (var i = 0; i < X;) {
+      var dist = rand(1, 50);
+      var s = new Shape(ctx, i += dist, rand(Y - Y / 3, Y - Y / 6));
+      shapes.push(s);
+    }
+
+    /********************
+      Render
+    ********************/
+    
+    function render() {
+      ctx.clearRect(0, 0, X, Y);
+      for (var i = 0; i < shapes.length; i++) {
+        shapes[i].render(i);
+      }
+      for (var i = 0; i < bubbles.length; i++) {
+        bubbles[i].render(i);
+      }
+      requestAnimationFrame(render);
+    }
+
+    render();
+
+    /********************
+      Event
+    ********************/
+    
+    function onResize() {
+      X = canvas.width = window.innerWidth;
+      Y = canvas.height = window.innerHeight;
+      if (X < 768) {
+        bubbleNum = 100;
+      } else {
+        bubbleNum = 200;
+      }
+      shapes = [];
+      bubbles = [];
+      for (var i = 0; i < X;) {
+        var dist = rand(1, 50);
+        var s = new Shape(ctx, i += dist, rand(Y - Y / 3, Y - Y / 6));
+        shapes.push(s);
+      }
+      for (var i = 0; i < bubbleNum; i++) {
+        var b = new Bubble(ctx, rand(0, X), rand(0, Y / 2));
+        bubbles.push(b);
+      }
+    }
+
+    window.addEventListener('resize', function() {
+      onResize();
+    });
+
+    canvas.addEventListener('click', function(e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      var num = rand(1, 20);
+      for (var i = 0; i < num; i++) {
+        var b = new Bubble(ctx, rand(mouseX - 100, mouseX + 100), rand(mouseY - 100, mouseY + 100));
+        bubbles.push(b);
+      }
+    }, false);
+
+  });
+})();
+
+		
+		
+		
+		
+}
+</script>
 
 
 
@@ -2061,7 +3691,7 @@ $(document).ready(function () {
 	$(document).pjax('a[target!=_blank]', '.main', {fragment: '.main',timeout: 8000});
 
 	$(document).on('pjax:error', function() {
-		alert("慢点吧，等等我~");
+		alert("网络慢，等等我吧~");
 		  history.back();
 	});
 	
@@ -2258,22 +3888,6 @@ if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobi
 	
 
 	}else{
-
-
-		
-	// 背景滤镜
-	$(window).scroll(function (e) {
-	  var scrollSeviye = $(this).scrollTop();
-	  if (scrollSeviye > 2400) {
-	    scrollSeviye = 2400;
-	  }
-	  var buyutme = (scrollSeviye / 6000) + 1;
-	  $('.visible').css('-webkit-filter', 'blur(' + scrollSeviye / 120 + 'px)');
-	 // $('.visible,#dearmsdan-vbg,.dearmsdan-bg').css('-webkit-filter', 'blur(' + scrollSeviye / 120 + 'px)');
-	 // $('.visible,#dearmsdan-vbg,.dearmsdan-bg').css('transform', 'scale(' + buyutme + ')');
-	});
-
-
 		
 	
 		$('.dearmsdan-bg').css('background','none');
